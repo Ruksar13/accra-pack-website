@@ -1,0 +1,238 @@
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  ShieldCheck, 
+  ArrowUpRight, 
+  Factory, 
+  Building2, 
+  Globe2,
+  Briefcase
+} from "lucide-react";
+import { CERTIFICATIONS, PRODUCT_CATEGORIES } from "@/data/websiteData";
+
+export default function Footer() {
+  return (
+    <footer className="bg-slate-950 text-slate-300 border-t border-slate-800">
+      {/* Top Value / Certifications Marquee Bar */}
+      <div className="border-b border-slate-900 bg-slate-900/50 py-5 px-4">
+        <div className="max-w-[1440px] mx-auto flex flex-wrap items-center justify-between gap-4">
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span className="text-xs font-semibold tracking-wider uppercase text-slate-400">
+              International Standards &amp; Accreditations
+            </span>
+          </div>
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+            {CERTIFICATIONS.slice(0, 6).map((cert) => (
+              <span
+                key={cert.code}
+                className="px-2.5 py-1 text-xs font-medium rounded bg-slate-800/80 text-teal-300 border border-slate-700/60"
+              >
+                {cert.code}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Main Footer Content */}
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+          {/* Brand Info */}
+          <div className="lg:col-span-2 space-y-4">
+            <Link href="/" className="inline-block bg-white p-3 rounded-lg shadow-sm" title="Accra Pac - Home">
+              <div className="relative h-10 w-48">
+                <Image
+                  src="/accra-pac-logo.png"
+                  alt="Accra Pac India"
+                  fill
+                  className="object-contain object-left"
+                />
+              </div>
+            </Link>
+
+            <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
+              India&apos;s pioneering contract manufacturer for aerosols and liquids. 
+              Delivering high-precision OEM, private label, and CDMO solutions 
+              for world-class healthcare, personal care, and industrial brands.
+            </p>
+
+            <div className="pt-2 space-y-2 text-xs text-slate-400">
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+                <span>WHO-GMP Certified &bull; US FDA Registered &bull; NFPA 30B Compliant</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Factory className="w-4 h-4 text-cyan-400 shrink-0" />
+                <span>120+ Million Units Annual Capacity &bull; 11 Specialized Lines</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Solutions & Core Pages (Aligned with Index) */}
+          <div>
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
+              Solutions &amp; Navigation
+            </h4>
+            <ul className="space-y-2.5 text-sm">
+              <li>
+                <Link href="/about" className="text-slate-400 hover:text-teal-400 transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/#why-choose-us" className="text-slate-400 hover:text-teal-400 transition-colors">
+                  Why Choose Accra Pac
+                </Link>
+              </li>
+              <li>
+                <Link href="/about#history" className="text-slate-400 hover:text-teal-400 transition-colors">
+                  History &amp; Milestones (Roadmap)
+                </Link>
+              </li>
+              <li>
+                <Link href="/capabilities" className="text-slate-400 hover:text-teal-400 transition-colors">
+                  Manufacturing Capabilities
+                </Link>
+              </li>
+              <li>
+                <Link href="/contract-manufacturing" className="text-slate-400 hover:text-teal-400 transition-colors">
+                  Contract Manufacturing
+                </Link>
+              </li>
+              <li>
+                <Link href="/oem-private-labelling" className="text-slate-400 hover:text-teal-400 transition-colors">
+                  OEM &amp; Private Labelling
+                </Link>
+              </li>
+              <li>
+                <Link href="/cdmo" className="text-slate-400 hover:text-teal-400 transition-colors">
+                  CDMO &amp; Custom R&amp;D
+                </Link>
+              </li>
+              <li>
+                <Link href="/quality" className="text-slate-400 hover:text-teal-400 transition-colors">
+                  Quality &amp; Compliance
+                </Link>
+              </li>
+              <li>
+                <Link href="/export" className="text-slate-400 hover:text-teal-400 transition-colors">
+                  Global Export
+                </Link>
+              </li>
+              <li>
+                <Link href="/careers" className="text-teal-400 hover:text-teal-300 font-semibold flex items-center gap-1">
+                  <Briefcase className="w-3.5 h-3.5" />
+                  <span>Careers at Accra Pac</span>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Product Categories (with #hairid anchor) */}
+          <div>
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
+              Products We Manufacture
+            </h4>
+            <ul className="space-y-2.5 text-sm">
+              <li>
+                <Link href="/products#pharma-otc" className="text-slate-400 hover:text-teal-400 transition-colors truncate block">
+                  Pharmaceutical OTC &amp; Health
+                </Link>
+              </li>
+              <li>
+                <Link href="/products#personal-care" className="text-slate-400 hover:text-teal-400 transition-colors truncate block">
+                  Personal Care &amp; Grooming
+                </Link>
+              </li>
+              <li>
+                <Link href="/products#hairid" className="text-slate-400 hover:text-teal-400 transition-colors truncate block">
+                  Hair Care &amp; Styling
+                </Link>
+              </li>
+              <li>
+                <Link href="/products#ayurveda-herbal" className="text-slate-400 hover:text-teal-400 transition-colors truncate block">
+                  Ayurveda &amp; Herbal
+                </Link>
+              </li>
+              <li>
+                <Link href="/products#fragrances" className="text-slate-400 hover:text-teal-400 transition-colors truncate block">
+                  Fragrances &amp; Perfumes
+                </Link>
+              </li>
+              <li>
+                <Link href="/products#air-care" className="text-slate-400 hover:text-teal-400 transition-colors truncate block">
+                  Air Care &amp; Fresheners
+                </Link>
+              </li>
+              <li>
+                <Link href="/products" className="text-teal-400 hover:text-teal-300 font-medium inline-flex items-center gap-1 mt-1">
+                  View All 12 Sectors <ArrowUpRight className="w-3.5 h-3.5" />
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact / Locations */}
+          <div>
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
+              Offices &amp; Facilities
+            </h4>
+            <div className="space-y-4 text-xs text-slate-400">
+              <div>
+                <div className="font-semibold text-slate-200 flex items-center gap-1.5 mb-1">
+                  <Factory className="w-3.5 h-3.5 text-teal-400" />
+                  Manufacturing Plant
+                </div>
+                <p>Plot No. 1105, Phase III, G.I.D.C., Vapi, Gujarat – 396195, India</p>
+                <p className="text-slate-500 mt-0.5">Tel: +91-260-2430996</p>
+              </div>
+
+              <div>
+                <div className="font-semibold text-slate-200 flex items-center gap-1.5 mb-1">
+                  <Building2 className="w-3.5 h-3.5 text-cyan-400" />
+                  Mumbai Corporate Office
+                </div>
+                <p>503, Rajanigandha, Dadar (W), Mumbai – 400028</p>
+              </div>
+
+              <div>
+                <div className="font-semibold text-slate-200 flex items-center gap-1.5 mb-1">
+                  <Globe2 className="w-3.5 h-3.5 text-emerald-400" />
+                  USA Sales Office
+                </div>
+                <p>Accra Pac Holding Co., LLC, Fort Wayne, IN 46804</p>
+              </div>
+
+              <div className="pt-2 border-t border-slate-900">
+                <div className="text-slate-300 font-medium">Business Inquiries:</div>
+                <div className="text-teal-400 font-medium mt-0.5">Mr. Sahil Shah &bull; +91 98251 49522</div>
+                <div className="text-slate-400">sahil.shah@accrapacindia.com</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Legal Bar */}
+      <div className="border-t border-slate-900 py-6 px-4 text-xs text-slate-500">
+        <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p>
+            &copy; {new Date().getFullYear()} Accra Pac India Pvt. Ltd. All rights reserved. 
+            Legacy of aerosol manufacturing excellence since 1979.
+          </p>
+          <div className="flex items-center gap-6">
+            <Link href="/about" className="hover:text-slate-400 transition-colors">About Us</Link>
+            <Link href="/quality" className="hover:text-slate-400 transition-colors">Quality &amp; Compliance</Link>
+            <Link href="/careers" className="hover:text-slate-400 transition-colors">Careers</Link>
+            <Link href="/contact" className="hover:text-slate-400 transition-colors">Contact Us</Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
