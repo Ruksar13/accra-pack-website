@@ -5,13 +5,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { 
   FlaskConical, 
-  Microscope, 
+  Gauge, 
   ShieldCheck, 
   CheckCircle2, 
   ArrowRight, 
-  Flame, 
-  Layers, 
-  Sparkles
+  Factory, 
+  FileText, 
+  Scale, 
+  Zap,
+  Microscope
 } from "lucide-react";
 import QuoteModal from "@/components/QuoteModal";
 
@@ -21,137 +23,158 @@ export default function CDMOPage() {
   return (
     <div className="flex flex-col">
       {/* 1. Header Banner */}
-      <section className="bg-slate-950 text-white py-16 sm:py-20 border-b border-slate-800">
+      <section className="bg-slate-950 text-white py-16 sm:py-24 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
-            <span className="text-xs font-semibold uppercase tracking-wider text-teal-400">
+            <span className="text-xs font-semibold uppercase tracking-wider text-teal-400 bg-teal-950 border border-teal-500/30 px-3.5 py-1.5 rounded-full inline-block">
               Solutions &bull; Model 03
             </span>
-            <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
-              CDMO &amp; Custom R&amp;D
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
+              CDMO
             </h1>
-            <p className="text-xl text-teal-300 font-semibold">
-              Contract Development &amp; Manufacturing, Under One Roof.
+            <p className="text-xl sm:text-2xl text-teal-400 font-bold">
+              Contract Development and Manufacturing, Under One Roof
             </p>
+            {/* Exact text from client doc */}
             <p className="text-base sm:text-lg text-slate-300 font-normal leading-relaxed">
-              Arrive with an idea, a therapeutic brief, or a target market opportunity. As an integrated CDMO, our formulation scientists, analytical chemists, and packaging engineers take your product from bench concept through stability validation, pilot scale-up, and commercial manufacturing.
+              Some brands arrive with a finished formulation, others with an idea. As a CDMO, we take your product from concept and formulation through testing, scale-up and commercial manufacturing, so you work with one partner from first brief to final shipment.
             </p>
           </div>
         </div>
       </section>
 
-      {/* 2. End-to-End CDMO Journey */}
-      <section className="py-20 bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-7 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-50 px-3 py-1 rounded-full">
-                Concept to Commercialization
-              </span>
-              <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
-                Eliminate the Costly Hand-Off Between R&amp;D Lab &amp; Filling Plant
-              </h2>
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                Developing a formulation in a separate third-party laboratory and then handing it off to a commercial filler is where costly delays, foam instability, and can corrosion surprises typically happen. At Accra Pac, the team that develops your formula is the team that manufactures it on commercial lines.
-              </p>
+      {/* 2. What We Offer */}
+      <section className="py-20 sm:py-24 bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="text-center max-w-2xl mx-auto space-y-2">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-teal-700 bg-teal-50 px-3.5 py-1.5 rounded-full border border-teal-200 inline-block">
+              End-to-End Science &amp; Scale
+            </span>
+            <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
+              What We Offer
+            </h2>
+          </div>
 
-              <div className="space-y-3 pt-2 text-xs text-slate-700">
-                <div className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
-                  <div>
-                    <strong className="text-slate-900">In-House GC &amp; HPLC Instrumentation:</strong> Analytical validation of raw materials, active pharmaceutical ingredients (APIs), volatile organic compounds (VOC), and batch homogeneity.
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                title: "Concept & Feasibility",
+                desc: "We turn your idea or brief into a clear development plan covering formulation approach, format, packaging and regulatory considerations."
+              },
+              {
+                title: "Custom Formulation Development",
+                desc: "New formulations from scratch, or an adaptation of one from our ready library."
+              },
+              {
+                title: "Analytical Testing",
+                desc: "In-house GC, HPLC and microbiology testing to validate every formulation."
+              },
+              {
+                title: "Stability Testing",
+                desc: "Stability and shelf-life evaluation, including six flame-proof chambers for aerosol products, plus packaging compatibility testing."
+              },
+              {
+                title: "Regulatory & Documentation Support",
+                desc: "COA, SDS and technical documentation for domestic sale and export."
+              },
+              {
+                title: "Scale-Up & Commercial Manufacturing",
+                desc: "Validated pilot batches, then scheduled production on our qualified aerosol and liquid lines."
+              }
+            ].map((item, i) => (
+              <div
+                key={item.title}
+                className="p-7 rounded-2xl bg-slate-50 border border-slate-200 hover:border-teal-400 hover:shadow-lg transition-all space-y-3 group flex flex-col justify-between"
+              >
+                <div className="space-y-2">
+                  <div className="text-teal-700 font-black text-xs uppercase tracking-wider">
+                    <span>CDMO Phase 0{i + 1}</span>
                   </div>
-                </div>
-
-                <div className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
-                  <div>
-                    <strong className="text-slate-900">Six Flame-Proof Stability Chambers:</strong> Accelerated real-time and elevated temperature stability testing (40&deg;C / 75% RH) to evaluate can lining integrity, valve swelling, and propellant pressure.
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
-                  <div>
-                    <strong className="text-slate-900">Regulatory Dossier Preparation:</strong> Support for US FDA 21 CFR filings, WHO-GMP audit records, Safety Data Sheets (SDS), and Certificate of Analysis (COA).
-                  </div>
+                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-teal-700 transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                    {item.desc}
+                  </p>
                 </div>
               </div>
-
-              <div className="pt-2">
-                <button
-                  onClick={() => setIsQuoteOpen(true)}
-                  className="px-6 py-3 rounded-xl bg-slate-900 hover:bg-teal-700 text-white font-semibold text-xs shadow transition-all"
-                >
-                  Schedule an R&amp;D Technical Consultation
-                </button>
-              </div>
-            </div>
-
-            <div className="lg:col-span-5 bg-slate-900 text-white rounded-3xl overflow-hidden border border-slate-800 space-y-4 shadow-2xl">
-              <div className="relative h-48 w-full bg-slate-950">
-                <Image
-                  src="/images/manufacturing/qc-lab-testing.jpg"
-                  alt="CDMO R&D and QC Testing Lab"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 500px"
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent" />
-                <div className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-teal-300 border border-slate-700">
-                  R&amp;D Formulation &amp; Analytical Lab
-                </div>
-              </div>
-
-              <div className="p-6 sm:p-7 pt-0 space-y-4">
-                <h3 className="text-base font-bold text-white border-b border-slate-800 pb-3">
-                  CDMO 10-Step Workflow
-                </h3>
-                <div className="space-y-2 text-xs">
-                  {[
-                    "1. Product Idea & Brief",
-                    "2. Technical & Commercial Feasibility",
-                    "3. Formulation Development from Scratch",
-                    "4. Bench Prototype Sampling",
-                    "5. Analytical GC/HPLC & Stability Testing",
-                    "6. Can Lining & Valve Packaging Compatibility",
-                    "7. Customer Sign-Off on Final Formulation",
-                    "8. Scale-Up & Pilot Batch Validation",
-                    "9. Commercial High-Speed Scheduled Filling",
-                    "10. Quality Release & UN-Certified Export"
-                  ].map((step, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-slate-300">
-                      <span className="w-1.5 h-1.5 rounded-full bg-teal-400 shrink-0"></span>
-                      <span>{step}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 3. CTA */}
-      <section className="py-16 bg-slate-900 text-white">
-        <div className="max-w-4xl mx-auto px-4 text-center space-y-5">
-          <h2 className="text-2xl sm:text-3xl font-extrabold">
-            Have an Innovative Formulation Brief?
-          </h2>
-          <p className="text-sm text-slate-300 max-w-xl mx-auto">
-            Speak directly with our formulation chemists and packaging engineers under a bilateral NDA.
-          </p>
-          <button
-            onClick={() => setIsQuoteOpen(true)}
-            className="px-6 py-3 rounded-xl bg-teal-400 hover:bg-teal-300 text-slate-950 font-bold text-xs transition-colors shadow"
-          >
-            Start Your CDMO Project
-          </button>
+      {/* 3. CDMO Workflow (9 Steps) */}
+      <section className="py-20 sm:py-24 bg-slate-950 text-white border-b border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="text-center max-w-2xl mx-auto space-y-2">
+            <span className="text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-950 border border-teal-500/30 px-3.5 py-1.5 rounded-full inline-block">
+              Integrated Roadmap
+            </span>
+            <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
+              CDMO Workflow
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-9 gap-3">
+            {[
+              "1. Idea & Brief",
+              "2. Feasibility",
+              "3. Formulation Development",
+              "4. Prototype Sampling",
+              "5. Analytical & Stability Testing",
+              "6. Customer Approval",
+              "7. Scale-Up & Pilot Batch",
+              "8. Commercial Manufacturing",
+              "9. Quality Release & Dispatch"
+            ].map((step, idx) => (
+              <div
+                key={step}
+                className="p-4 rounded-2xl bg-slate-900 border border-slate-800 text-center space-y-2 hover:border-teal-400 transition-all flex flex-col justify-between"
+              >
+                <div className="w-8 h-8 mx-auto rounded-full bg-teal-400 text-slate-950 text-xs font-black flex items-center justify-center">
+                  0{idx + 1}
+                </div>
+                <div className="text-xs font-bold text-slate-200 leading-snug">
+                  {step.split(". ")[1]}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      <QuoteModal isOpen={isQuoteOpen} onClose={() => setIsQuoteOpen(false)} preselectedCategory="CDMO & Custom R&D" />
+      {/* 4. Why CDMO With Accra Pac */}
+      <section className="py-20 sm:py-24 bg-white border-b border-slate-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+          <span className="text-xs font-extrabold uppercase tracking-widest text-teal-700 bg-teal-50 px-3.5 py-1.5 rounded-full border border-teal-200 inline-block">
+            One Team, Zero Friction
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+            Why CDMO With Accra Pac
+          </h2>
+          {/* Exact content from client doc */}
+          <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+            Development and manufacturing are usually handled by different companies, and the handoff is where delays and surprises happen. Here, the team that develops your product is the team that manufactures it, with one quality system and one point of contact from first sample to commercial batch.
+          </p>
+
+          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button
+              onClick={() => setIsQuoteOpen(true)}
+              className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-sm bg-teal-700 hover:bg-teal-800 text-white shadow-md transition-all"
+            >
+              Discuss Your Product Idea
+            </button>
+            <Link
+              href="/contact"
+              className="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-sm bg-slate-100 hover:bg-slate-200 text-slate-800 transition-colors"
+            >
+              Talk to Our R&amp;D Team
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <QuoteModal isOpen={isQuoteOpen} onClose={() => setIsQuoteOpen(false)} />
     </div>
   );
 }
-

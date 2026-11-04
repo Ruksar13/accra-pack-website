@@ -16,13 +16,10 @@ import {
   Eye, 
   Users,
   Compass,
-  Building2
+  Building2,
+  Lock,
+  Leaf
 } from "lucide-react";
-import { 
-  TIMELINE_MILESTONES, 
-  SITE_STATS, 
-  CERTIFICATIONS 
-} from "@/data/websiteData";
 import QuoteModal from "@/components/QuoteModal";
 import HistoryTimeline from "@/components/HistoryTimeline";
 
@@ -32,262 +29,152 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col">
       {/* 1. Header Banner */}
-      <section className="bg-slate-950 text-white py-16 sm:py-20 border-b border-slate-800">
+      <section className="bg-slate-950 text-white py-16 sm:py-24 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl space-y-4">
-            <span className="text-xs font-semibold uppercase tracking-wider text-teal-400">
-              Corporate Heritage & Capabilities
+          <div className="max-w-4xl space-y-4">
+            <span className="text-xs font-semibold uppercase tracking-wider text-teal-400 bg-teal-950/80 border border-teal-500/30 px-3.5 py-1.5 rounded-full inline-block">
+              About Accra Pac
             </span>
-            <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
-              Pioneering Aerosol & Liquid Contract Manufacturing
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
+              Your Manufacturing Partner from Concept to Commercial Success
             </h1>
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-              From introducing India&apos;s first automatic aerosol line in 1979 to operating a modern 120-million-unit facility today, Accra Pac partners with global brands to engineer, formulate, and manufacture world-class products.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 2. Executive Story & Heritage */}
-      <section className="py-16 sm:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-7 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-50 px-3 py-1 rounded-full">
-                Our Story
-              </span>
-              <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
-                Decades of Proven Manufacturing, Not Just Promises
-              </h2>
-              <div className="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
-                <p>
-                  Accra Pac India was founded in 1979 in Vapi, Gujarat, commissioning one of the country&apos;s first state-of-the-art automatic aerosol filling facilities. Over four decades of dedicated specialization, we transformed from an aerosol pioneer into an integrated OEM and private label contract manufacturing partner.
-                </p>
-                <p>
-                  Today, we support leading multinational FMCG corporations, pharmaceutical manufacturers, and ambitious private labels across personal care, healthcare, household hygiene, and industrial sectors. Our turnkey model unites formulation R&D, pilot stability testing, propellant filling, valve crimping, secondary packaging, and export logistics inside a single, tightly controlled facility.
-                </p>
-                <p>
-                  With US FDA registration, WHO-GMP certification, and international compliance across North America, Europe, and Asia, our partners focus on brand building and retail distribution while we manage the exacting technical complexities of manufacturing.
-                </p>
-              </div>
-
-              <div className="pt-2 flex flex-wrap gap-4 text-xs font-semibold text-slate-700">
-                <div className="flex items-center gap-1.5 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200">
-                  <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                  <span>WHO-GMP & US FDA Registered</span>
-                </div>
-                <div className="flex items-center gap-1.5 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200">
-                  <Factory className="w-4 h-4 text-cyan-600" />
-                  <span>11 Specialized Filling Lines</span>
-                </div>
-                <div className="flex items-center gap-1.5 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200">
-                  <Globe2 className="w-4 h-4 text-teal-600" />
-                  <span>Exporting to 20+ Countries</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="lg:col-span-5">
-              <div className="bg-slate-900 rounded-3xl overflow-hidden text-white shadow-2xl border border-slate-800">
-                {/* Plant Photo */}
-                <div className="relative h-56 w-full bg-slate-950 overflow-hidden">
-                  <Image
-                    src="/images/manufacturing/plant-infrastructure.jpg"
-                    alt="Accra Pac Vapi Gujarat Facility"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 500px"
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent" />
-                  <div className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-teal-300 border border-slate-700">
-                    Vapi Manufacturing Complex
-                  </div>
-                  <div className="absolute bottom-3 left-4 text-xs font-bold text-white">
-                    G.I.D.C. Vapi, Gujarat &bull; Near Mumbai Port
-                  </div>
-                </div>
-
-                <div className="p-6 sm:p-7 space-y-4">
-                  <div className="space-y-3 text-xs">
-                    <div className="flex justify-between items-center py-2 border-b border-slate-800">
-                      <span className="text-slate-400">Annual Output Capacity:</span>
-                      <span className="font-bold text-teal-300">120+ Million Units</span>
-                    </div>
-                    <div className="flex justify-between items-center py-2 border-b border-slate-800">
-                      <span className="text-slate-400">Filling Lines:</span>
-                      <span className="font-bold text-white">5 Aerosol + 6 Liquid Lines</span>
-                    </div>
-                    <div className="flex justify-between items-center py-2 border-b border-slate-800">
-                      <span className="text-slate-400">R&amp;D Formulation Library:</span>
-                      <span className="font-bold text-teal-300">500+ Validated Recipes</span>
-                    </div>
-                    <div className="flex justify-between items-center py-2 border-b border-slate-800">
-                      <span className="text-slate-400">Commercialized Products:</span>
-                      <span className="font-bold text-white">750+ Unique SKUs</span>
-                    </div>
-                    <div className="flex justify-between items-center py-2 border-b border-slate-800">
-                      <span className="text-slate-400">Stability Testing:</span>
-                      <span className="font-bold text-teal-300">6 Flame-Proof Chambers</span>
-                    </div>
-                    <div className="flex justify-between items-center py-2">
-                      <span className="text-slate-400">Safety Standards:</span>
-                      <span className="font-bold text-white">NFPA 30B Level 3 Aerosol Storage</span>
-                    </div>
-                  </div>
-
-                  <button
-                    onClick={() => setIsQuoteOpen(true)}
-                    className="w-full py-3 rounded-xl bg-teal-400 hover:bg-teal-300 text-slate-950 font-bold text-xs transition-colors text-center shadow"
-                  >
-                    Schedule a Plant Audit &amp; Technical Meeting
-                  </button>
-                </div>
-              </div>
+            <div className="space-y-4 text-base sm:text-lg text-slate-300 leading-relaxed font-normal pt-2">
+              <p>
+                Choosing a manufacturing partner is one of the most important decisions a brand makes, because your product&apos;s quality, consistency and market readiness rest in their hands. Accra Pac has carried that responsibility as a pioneer of aerosol manufacturing in India, and is now a trusted global OEM and private label partner for aerosol, liquid and cosmetic products.
+              </p>
+              <p>
+                We partner with brands from the first idea to the final export shipment, helping global brands, private label companies and ambitious entrepreneurs build products ready to compete anywhere.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. History of Accra Pac — Interactive Chronological Evolution Roadmap with Directional Arrows */}
-      <section id="history" className="py-20 bg-slate-950 text-white border-y border-slate-800">
+      {/* 2. Our Journey (Interactive Chronological Timeline) */}
+      <section id="history" className="py-20 sm:py-24 bg-slate-50 border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="text-center max-w-2xl mx-auto space-y-2">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-teal-700 bg-teal-100/70 px-3.5 py-1.5 rounded-full border border-teal-200 inline-block">
+              Milestones &amp; Evolution
+            </span>
+            <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
+              Our Journey
+            </h2>
+          </div>
+
+          <HistoryTimeline theme="light" />
+        </div>
+      </section>
+
+      {/* 3. Why Global Brands Choose Accra Pac */}
+      <section className="py-20 sm:py-24 bg-slate-950 text-white border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-950/80 border border-teal-500/30 px-3.5 py-1 rounded-full">
-              45+ Years Technical Evolution (1979 &rarr; Present)
+            <span className="text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-950 border border-teal-500/30 px-3.5 py-1.5 rounded-full inline-block">
+              Proven Global Track Record
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-              The History of Accra Pac
+            <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
+              Why Global Brands Choose Accra Pac
             </h2>
-            <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
-              From commissioning India&apos;s first automatic aerosol line in 1979 to operating an audit-ready, 120-million-unit WHO-GMP and US FDA registered manufacturing complex today. Follow each milestone phase below.
-            </p>
           </div>
 
-          {/* Dedicated Roadmap Component with Directional Arrows */}
-          <HistoryTimeline />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="p-8 rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-teal-400 transition-all space-y-3">
+              <div className="w-12 h-12 rounded-xl bg-teal-950 text-teal-400 flex items-center justify-center font-bold">
+                <Award className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-white">
+                Proven with leading names
+              </h3>
+              <p className="text-sm text-slate-300 leading-relaxed font-normal">
+                Brands such as Reckitt Benckiser, Henkel, Colgate, Hindustan Unilever, GSK, 3M, Godrej and Philips have tested us, trusted us and returned.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-cyan-400 transition-all space-y-3">
+              <div className="w-12 h-12 rounded-xl bg-cyan-950 text-cyan-400 flex items-center justify-center font-bold">
+                <Factory className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-white">
+                One partner, every step
+              </h3>
+              <p className="text-sm text-slate-300 leading-relaxed font-normal">
+                Formulation, filling, packaging, regulatory documentation, testing, warehousing and export support happen under one roof, so you never manage five vendors.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-emerald-400 transition-all space-y-3">
+              <div className="w-12 h-12 rounded-xl bg-emerald-950 text-emerald-400 flex items-center justify-center font-bold">
+                <ShieldCheck className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-white">
+                Built for international standards
+              </h3>
+              <p className="text-sm text-slate-300 leading-relaxed font-normal">
+                Our certifications and quality systems are made for regulated markets. See{" "}
+                <Link href="/quality" className="text-teal-400 hover:underline font-semibold">
+                  Quality &amp; Compliance
+                </Link>.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-amber-400 transition-all space-y-3">
+              <div className="w-12 h-12 rounded-xl bg-amber-950 text-amber-400 flex items-center justify-center font-bold">
+                <Lock className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-white">
+                Your ideas stay yours
+              </h3>
+              <p className="text-sm text-slate-300 leading-relaxed font-normal">
+                Strict confidentiality and secure manufacturing practices protect every formulation and project.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* 4. Mission, Vision & Core Values */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            {/* Mission */}
-            <div className="p-8 rounded-2xl bg-teal-900/10 border border-teal-100 space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-teal-700 text-white flex items-center justify-center">
-                <Target className="w-5 h-5" />
-              </div>
-              <h3 className="text-xl font-bold text-slate-900">Our Mission</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                To help global and domestic consumer brands successfully engineer, manufacture, and scale innovative aerosol and liquid products through world-class OEM and turnkey CDMO solutions.
-              </p>
-            </div>
-
-            {/* Vision */}
-            <div className="p-8 rounded-2xl bg-cyan-900/10 border border-cyan-100 space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-cyan-700 text-white flex items-center justify-center">
-                <Eye className="w-5 h-5" />
-              </div>
-              <h3 className="text-xl font-bold text-slate-900">Our Vision</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                To be recognized globally among the leading contract development and manufacturing partners for aerosols, celebrated not only for manufacturing capacity, but for the market-leading brands we build together.
-              </p>
-            </div>
-          </div>
-
-          {/* Core Guiding Values */}
-          <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-700">
-              Guiding Principles
+      {/* 4. Why Manufacturing in India? */}
+      <section className="py-20 sm:py-24 bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="text-center max-w-2xl mx-auto space-y-2">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-teal-700 bg-teal-50 px-3.5 py-1.5 rounded-full border border-teal-200 inline-block">
+              Strategic Advantages
             </span>
-            <h3 className="text-2xl font-bold text-slate-900">
-              What Governs Every Batch We Fill
-            </h3>
+            <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
+              Why Manufacturing in India?
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-6 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-              <div className="font-bold text-slate-900 text-base">Quality First, Safety Always</div>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Every batch is produced under defined quality, safety, and traceability controls. Audit-ready compliance on every single shift.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-              <div className="font-bold text-slate-900 text-base">Absolute IP Confidentiality</div>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Customer formulations, proprietary specifications, and commercial strategies are protected under strict NDA and restricted access.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-              <div className="font-bold text-slate-900 text-base">Co-Development Partnership</div>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                We view each project as a long-term strategic relationship, providing hands-on formulation troubleshooting and scale-up guidance.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
-              <div className="font-bold text-slate-900 text-base">Continuous Innovation</div>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Investing ahead of customer demand in automated lines, eco-propellants, EcoVadis sustainability, and international certifications.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. Why Manufacture in India with Accra Pac? */}
-      <section className="py-20 bg-slate-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-12 space-y-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-400">
-              Global Manufacturing Economics
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
-              Why Global Brands Choose India with Accra Pac
-            </h2>
-            <p className="text-sm text-slate-300">
-              India has emerged as one of the world&apos;s most competitive and reliable contract manufacturing hubs for cosmetics and pharmaceuticals. Accra Pac delivers the easiest, safest route to leverage this advantage.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 title: "Skilled Technical Workforce",
-                desc: "Experienced chemical engineers, analytical chemists, and formulation scientists with decades of specialized aerosol knowledge."
+                desc: "A skilled workforce and a mature ecosystem for aerosols, cosmetics and pharmaceuticals."
               },
               {
-                title: "Mature Packaging Ecosystem",
-                desc: "Direct access to top-tier domestic and global suppliers of aluminium cans, tinplate, specialized valves, and precision actuators."
+                title: "Cost Competitiveness",
+                desc: "Competitive costs without compromising quality."
               },
               {
-                title: "Competitive Production Economics",
-                desc: "Achieve significant unit cost reductions without compromising international quality, raw material grades, or batch reproducibility."
+                title: "Logistics Infrastructure",
+                desc: "Established export infrastructure and shipping networks."
               },
               {
-                title: "Established Export Corridors",
-                desc: "Proximity to Mumbai sea ports (JNPT) and air hubs provides swift container departures to North America, the Middle East, and Europe."
-              },
-              {
-                title: "English-Speaking Technical Team",
-                desc: "Seamless communication across engineering documentation, technical specifications, batch records, and regulatory filings."
-              },
-              {
-                title: "International Quality Benchmarks",
-                desc: "Manufacturing held to US FDA, WHO-GMP, and ISO 22716 standards, ensuring effortless customs release in destination markets."
+                title: "Reliable Supply Chain",
+                desc: "English-speaking business environment and a reliable supply chain."
               }
             ].map((adv) => (
               <div
                 key={adv.title}
-                className="p-6 rounded-xl bg-slate-950/70 border border-slate-800 space-y-2"
+                className="p-7 rounded-2xl bg-slate-50 border border-slate-200 hover:border-teal-400 hover:shadow-lg transition-all space-y-3 group"
               >
-                <div className="flex items-center gap-2 text-teal-400 font-bold text-sm">
-                  <CheckCircle2 className="w-4 h-4 shrink-0" />
-                  <span>{adv.title}</span>
+                <div className="w-10 h-10 rounded-xl bg-teal-100/80 text-teal-800 flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
+                  <CheckCircle2 className="w-5 h-5 text-teal-700" />
                 </div>
-                <p className="text-xs text-slate-400 leading-relaxed">
+                <h3 className="text-base font-bold text-slate-900 group-hover:text-teal-700 transition-colors">
+                  {adv.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
                   {adv.desc}
                 </p>
               </div>
@@ -296,27 +183,172 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 6. CTA */}
-      <section className="py-16 bg-white border-t border-slate-200">
-        <div className="max-w-4xl mx-auto px-4 text-center space-y-6">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-            Discuss Your Production Requirements with Our Leadership
+      {/* 5. Mission, Vision & What Guides Us */}
+      <section className="py-20 sm:py-24 bg-slate-950 text-white border-b border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+          {/* Mission & Vision */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="p-8 rounded-3xl bg-slate-900/90 border border-slate-800 space-y-4">
+              <div className="flex items-center gap-3 text-teal-400">
+                <Target className="w-6 h-6" />
+                <h3 className="text-2xl font-bold text-white">Our Mission</h3>
+              </div>
+              <p className="text-base text-slate-300 leading-relaxed font-normal">
+                To help brands successfully develop, manufacture and scale innovative aerosol and liquid products through world-class OEM and private label manufacturing solutions.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-3xl bg-slate-900/90 border border-slate-800 space-y-4">
+              <div className="flex items-center gap-3 text-cyan-400">
+                <Eye className="w-6 h-6" />
+                <h3 className="text-2xl font-bold text-white">Our Vision</h3>
+              </div>
+              <p className="text-base text-slate-300 leading-relaxed font-normal">
+                To become one of the world&apos;s leading OEM and private label manufacturing partners for aerosol and liquid products, recognized not only for our scale and technical expertise, but for the brands we&apos;ve helped build and grow globally.
+              </p>
+            </div>
+          </div>
+
+          {/* What Guides Us */}
+          <div className="space-y-8">
+            <div className="text-center max-w-2xl mx-auto space-y-2">
+              <span className="text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-950 border border-teal-500/30 px-3.5 py-1.5 rounded-full inline-block">
+                Core Principles
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
+                What Guides Us
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  title: "Quality First, Safety Always",
+                  desc: "Every batch is produced under defined quality, safety and traceability controls."
+                },
+                {
+                  title: "Integrity",
+                  desc: "Customer formulations, specifications and intellectual property are handled under strict confidentiality."
+                },
+                {
+                  title: "Partnership, Not Just Production",
+                  desc: "We see every project as a long-term relationship."
+                },
+                {
+                  title: "Continuous Improvement",
+                  desc: "We keep investing in technology, compliance and capability so you never have to look elsewhere as you grow."
+                }
+              ].map((val) => (
+                <div
+                  key={val.title}
+                  className="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-teal-400/60 transition-all space-y-3 group"
+                >
+                  <h3 className="text-base font-bold text-white group-hover:text-teal-300 transition-colors">
+                    {val.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-400 leading-relaxed font-normal">
+                    {val.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Leadership Team, Life at Accra Pac & Sustainability */}
+      <section className="py-20 sm:py-24 bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Leadership */}
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-4 flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="w-12 h-12 rounded-xl bg-teal-100 text-teal-800 flex items-center justify-center font-bold">
+                  <Users className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900">
+                  Leadership Team
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                  Our leadership combines decades of hands-on manufacturing experience with a global outlook. The philosophy is simple: invest ahead of demand, protect every customer&apos;s confidentiality, and never let scale come at the cost of quality.
+                </p>
+              </div>
+              <div className="pt-3 border-t border-slate-200 text-[11px] text-slate-400">
+                [Leadership profiles to be added once the client shares names, titles and bios.]
+              </div>
+            </div>
+
+            {/* Life at Accra Pac */}
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-4 flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="w-12 h-12 rounded-xl bg-cyan-100 text-cyan-800 flex items-center justify-center font-bold">
+                  <FlaskConical className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900">
+                  Life at Accra Pac
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                  Behind every batch is a multidisciplinary team of formulation scientists, chemists, quality professionals, production experts and regulatory specialists who have spent years perfecting the craft.
+                </p>
+              </div>
+              <div className="pt-3 border-t border-slate-200 text-[11px] text-slate-400">
+                [Team photos and stories to be added based on client input.]
+              </div>
+            </div>
+
+            {/* Sustainability */}
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-4 flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold">
+                  <Leaf className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900">
+                  Sustainability &amp; Responsibility
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                  We manufacture responsibly, with efficient use of resources, environmental compliance, workplace safety and fair treatment of every person on our production floor.
+                </p>
+              </div>
+              <div className="pt-3 border-t border-slate-200 text-[11px] text-slate-400">
+                [Specific initiatives or policies to be added once confirmed by the client.]
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Bottom CTA Banner */}
+      <section className="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 text-white py-20 border-t border-slate-800">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+          <span className="text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-950 px-3.5 py-1.5 rounded-full border border-teal-500/30">
+            Confidential Consultation
+          </span>
+          <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-white">
+            Ready to Bring Your Product to Market?
           </h2>
-          <p className="text-sm text-slate-600 max-w-xl mx-auto">
-            From new formulation development to technology transfer of an established product line, our technical team is ready to evaluate your specifications.
+          {/* Exact content from client doc */}
+          <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
+            Whether you&apos;re developing a new formulation or launching a private label brand, our team is ready to help.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+
+          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={() => setIsQuoteOpen(true)}
-              className="px-6 py-3 rounded-xl bg-slate-900 hover:bg-teal-700 text-white font-semibold text-sm transition-all shadow"
+              className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-sm bg-teal-400 hover:bg-teal-300 text-slate-950 shadow-lg shadow-teal-500/20 transition-all"
             >
-              Request a Technical Proposal
+              Request a Quote
             </button>
             <Link
               href="/contact"
-              className="px-6 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-sm transition-colors"
+              className="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-sm bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 transition-colors"
             >
-              Contact Our Vapi Plant
+              Schedule a Consultation
+            </Link>
+            <Link
+              href="/contact"
+              className="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-sm bg-slate-900 hover:bg-slate-800 text-teal-300 border border-teal-500/30 transition-colors"
+            >
+              Talk to Our Experts
             </Link>
           </div>
         </div>
@@ -326,4 +358,3 @@ export default function AboutPage() {
     </div>
   );
 }
-

@@ -64,12 +64,57 @@ export interface InsightArticle {
 }
 
 export const SITE_STATS: StatItem[] = [
-  { value: "120M+", label: "Annual Units", detail: "High-speed annual filling capacity" },
-  { value: "500+", label: "Ready Formulations", detail: "Proven R&D formula library" },
-  { value: "750+", label: "Products Developed", detail: "Commercialized across categories" },
-  { value: "11", label: "Specialized Lines", detail: "5 Aerosol & 6 Liquid Filling Lines" },
-  { value: "20+", label: "Global Markets", detail: "Exporting across USA, Middle East & Asia" },
-  { value: "100+", label: "Enterprise Brands", detail: "Long-term client partnerships" },
+  { value: "45+ Years", label: "Since 1979", detail: "Aerosol & liquid manufacturing pioneer" },
+  { value: "2005", label: "Exporting Since", detail: "Long-term international relationships" },
+  { value: "500+", label: "Ready Formulations", detail: "Fast-track R&D formulation library" },
+  { value: "750+", label: "Products Developed", detail: "Formulations brought to commercial scale" },
+  { value: "100+", label: "Customers Served", detail: "Global and Indian brand partners" },
+  { value: "120+ Million", label: "Units Annual Capacity", detail: "Scalable automated high-speed filling" },
+  { value: "5 Aerosol | 6 Liquid", label: "Filling Lines", detail: "11 dedicated production lines" },
+];
+
+export const INDUSTRIES_WE_SERVE = [
+  { name: "Pharmaceutical & Healthcare Companies", icon: "Stethoscope" },
+  { name: "Personal Care & Beauty Brands", icon: "Sparkles" },
+  { name: "FMCG Companies", icon: "ShoppingBag" },
+  { name: "Private Label & Retail Brands", icon: "Store" },
+  { name: "Household & Hygiene Brands", icon: "Home" },
+  { name: "Automotive & Industrial Companies", icon: "Car" },
+  { name: "Startups & Emerging Brands", icon: "Rocket" },
+  { name: "Exporters & Distributors", icon: "Globe" }
+];
+
+export const WHY_CHOOSE_ACCRA_PAC = [
+  {
+    title: "One Partner, Under One Roof",
+    desc: "Formulation, filling, packaging, testing and export support in one facility.",
+    icon: "Building2"
+  },
+  {
+    title: "Ready Formulation Library",
+    desc: "Launch faster with formulas already proven to work.",
+    icon: "FlaskConical"
+  },
+  {
+    title: "International Certifications",
+    desc: "Manufacturing held to global quality standards.",
+    icon: "Award"
+  },
+  {
+    title: "Real Export Experience",
+    desc: "Trusted by brands across the USA, Middle East, Africa and Asia.",
+    icon: "Globe2"
+  },
+  {
+    title: "Scalable Production",
+    desc: "From pilot runs to full commercial volumes.",
+    icon: "Factory"
+  },
+  {
+    title: "Complete Traceability",
+    desc: "Full documentation and quality control on every batch.",
+    icon: "ShieldCheck"
+  }
 ];
 
 export const TRUSTED_CLIENTS: ClientItem[] = [
@@ -259,51 +304,51 @@ export const PRODUCT_CATEGORIES: CategoryItem[] = [
   },
   {
     id: "insect-repellents",
-    name: "Insect Repellents & Pest Care",
-    tagline: "Targeted insect control and protective barrier sprays",
+    name: "Insect Repellents",
+    tagline: "Repellent and household pest sprays for personal and home use",
     image: "/images/products/herbal-spray.jpg",
     shortDesc: "Aerosols engineered for mosquito, crawling insect, and pest defense with specialized valves for directional or wide sprays.",
     applications: ["Personal mosquito protection", "Crawling insect knockout", "Bedbug & ant control", "Outdoor barrier sprays"],
-    formats: ["Multi-Insect Aerosols", "Lizard & Rat Deterrent Sprays", "Herbal Mosquito Mists", "Bedbug Barrier Sprays"],
-    packaging: ["High-Pressure Aerosol Cans", "Extension Nozzle Actuators", "Trigger Packs"],
+    formats: ["Mosquito Repellent", "Lizard Spray", "Multi Insect Spray", "Bedbug Spray", "Ant Spray", "Rat Repellent Spray"],
+    packaging: ["Aerosol cans", "Pump sprays", "Trigger sprays"],
     compliance: ["Insecticide Regulatory Compliant", "NFPA 30B Storage"],
-    popularProducts: ["Instant Knockdown Mosquito Spray", "Herbal Bug Repellent", "Rat Defense Spray"]
+    popularProducts: ["Mosquito Repellent", "Multi Insect Spray", "Rat Repellent Spray"]
   },
   {
     id: "automotive-care",
-    name: "Automotive Care & Maintenance",
-    tagline: "Engine, brake, and detailing technical aerosols",
+    name: "Automotive Care",
+    tagline: "Vehicle care aerosols filled to NFPA 30B safety standards",
     image: "/images/products/automotive-spray.jpg",
-    shortDesc: "Technical aerosols formulated for tough vehicle maintenance, degreasing, brake cleaning, and interior dashboard detailing.",
-    applications: ["Brake & carburetor cleaning", "Dashboard & vinyl restoration", "Tire dressing", "Underbody protection"],
-    formats: ["Brake & Choke Cleaners", "Dashboard Polish Sprays", "Tire Foam Restorers", "Anti-Rust Penetrating Sprays"],
-    packaging: ["Heavy-Duty Steel Cans", "360-degree Inverted Valves", "Target Straw Actuators"],
+    shortDesc: "Technical aerosols formulated for vehicle maintenance, degreasing, brake cleaning, and interior dashboard detailing.",
+    applications: ["Interior cleaning", "Brake cleaning", "Choke & carburetor cleaning", "Dashboard & tire care"],
+    formats: ["Automotive Interior Cleaners", "Brake Cleaners", "Choke & Carburetor Cleaners", "Dashboard Care", "Tire Care"],
+    packaging: ["Technical-grade aerosol cans with valves and actuators suited to flammable formulations"],
     compliance: ["NFPA 30B Safety", "High Pressure Tested"],
-    popularProducts: ["Fast-Dry Brake Cleaner", "Silicone Dash Gloss", "Foam Tire Shine"]
+    popularProducts: ["Brake Cleaners", "Choke & Carburetor Cleaners", "Dashboard Care"]
   },
   {
     id: "industrial-maintenance",
-    name: "Industrial & Technical Aerosols",
-    tagline: "Heavy-duty lubricants, penetrating oils, and rust defense",
+    name: "Industrial & Maintenance",
+    tagline: "Technical aerosols for equipment upkeep and protection",
     image: "/images/manufacturing/plant-infrastructure.jpg",
     shortDesc: "Industrial-grade maintenance aerosols designed to withstand harsh shop environments, high friction, and extreme temperatures.",
-    applications: ["Machinery lubrication", "Seized bolt release", "Electrical contact cleaning", "Rust corrosion inhibition"],
-    formats: ["Penetrating Oils", "Silicone Lubricant Sprays", "Dry Graphite Sprays", "Refrigerant & Technical Aerosols"],
-    packaging: ["Industrial Cans (up to 16 oz)", "Precision Needle Actuators", "Flammable-Rated Pack"],
+    applications: ["Equipment upkeep", "Corrosion protection", "Industrial cleaning", "Refrigerant management"],
+    formats: ["Lubricants", "Penetrating Oils", "Silicone Sprays", "Rust Protection", "Specialty Technical Aerosols", "Refrigerant Aerosols"],
+    packaging: ["Industrial-grade aerosol cans with valves and actuators suited to higher-pressure or flammable formulations"],
     compliance: ["NFPA 30B Level 3 Aerosol", "SDS / Hazmat Certified"],
-    popularProducts: ["Multi-Purpose Lubricant Spray", "Pure Silicone Release", "Contact Cleaner"]
+    popularProducts: ["Lubricants", "Penetrating Oils", "Silicone Sprays"]
   },
   {
     id: "professional-medical",
-    name: "Medical & Professional Care",
-    tagline: "Clinical sprays, dental lubricants, and sports cryo",
+    name: "Medical Device & Professional Care",
+    tagline: "Sprays for clinics and healthcare professionals",
     image: "/images/manufacturing/qc-lab-testing.jpg",
     shortDesc: "Specialized clinical sprays for dental equipment maintenance and rapid sports recovery cooling under pharma-grade control.",
-    applications: ["Dental handpiece lubrication", "Cryo cold therapy for sports sprains", "Clinical instrument prep"],
-    formats: ["Dental Handpiece Lubricant Spray", "Sub-Zero Cooling Spray (Cryo Mist)"],
-    packaging: ["Precision Dental Adaptor Cans", "Fast-Discharge Cooling Cans"],
+    applications: ["Dental handpiece maintenance", "Clinical cooling", "Professional medical equipment"],
+    formats: ["Dental Lubricant Spray", "Cooling Spray"],
+    packaging: ["Aerosol cans", "Pump sprays"],
     compliance: ["WHO-GMP", "Cleanroom Filling Controls"],
-    popularProducts: ["Dental Turbine Lubricant", "Rapid Freeze Sports Spray"]
+    popularProducts: ["Dental Lubricant Spray", "Cooling Spray"]
   }
 ];
 
@@ -764,33 +809,33 @@ export const SPOTLIGHT_PRODUCTS: SpotlightProduct[] = [
 export const TIMELINE_MILESTONES: TimelineMilestone[] = [
   {
     period: "1979",
-    title: "Founding in Vapi, Gujarat",
-    description: "Established India's first state-of-the-art automatic aerosol filling facility, introducing automated propellant handling to the subcontinent."
+    title: "Established in Vapi",
+    description: "Accra Pac is established in Vapi, Gujarat, with one of India's first state-of-the-art automatic aerosol plants."
   },
   {
-    period: "1980s – 1990s",
-    title: "Propellant Innovation & Multi-Format",
-    description: "Pioneered the transition to ozone-friendly hydrocarbon LPG propellants. Expanded into liquids, creams, lotions, and roll-on formats under one roof."
+    period: "1980s–1990s",
+    title: "Propellant & Multi-Format Expansion",
+    description: "Introduces ozone-friendly LPG propellant technology and expands into liquids, creams, lotions and semi-solids."
   },
   {
     period: "2005",
-    title: "Global Export Launch",
-    description: "Shipped initial major export orders to North America and the Middle East, establishing dedicated export compliance and hazmat packaging protocols."
+    title: "First Major Export Order",
+    description: "Ships its first major export order and begins long-term relationships with international markets."
   },
   {
     period: "2010s",
-    title: "CDMO & Analytical Labs",
-    description: "Added Bag-on-Valve (BOV) filling, dedicated high-speed roll-on lines, and built in-house GC and HPLC analytical chemistry and microbiology testing laboratories."
+    title: "Filling Lines & Analytical Testing",
+    description: "Adds filling lines, a dedicated roll-on line, BOV capability and in-house analytical testing."
   },
   {
     period: "2020s",
-    title: "Global Compliance Milestones",
-    description: "Crossed 750+ commercial formulations. Earned WHO-GMP, US FDA registration, ISO 22716, ISO 9001/14001/45001, SEDEX and EcoVadis sustainability rating."
+    title: "Certifications & Global Credentials",
+    description: "Earns ISO, WHO-GMP and US FDA credentials and expands exports across the Middle East, Africa and Asia."
   },
   {
     period: "Today",
-    title: "120M+ Capacity & Modern Infrastructure",
-    description: "Operating 5 aerosol lines and 6 liquid lines from our NFPA 30B compliant Vapi plant, serving enterprise brands and fast-growing private labels globally."
+    title: "End-to-End Global Partner",
+    description: "Supports brands from first formulation to global export."
   }
 ];
 

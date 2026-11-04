@@ -42,10 +42,10 @@ export default function CapabilitiesPage() {
               Integrated Plant Infrastructure
             </span>
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
-              One Manufacturing Partner, Every Stage of Production
+              Facility &amp; Infrastructure
             </h1>
             <p className="text-base sm:text-lg text-slate-300 font-normal leading-relaxed">
-              Eliminate the chaos of juggling separate formulation labs, filling contractors, and packaging vendors. Aerosol compounding, precision liquid processing, quality testing, and export documentation happen inside our Vapi facility under a single unified quality system.
+              Dedicated aerosol and liquid filling lines, an in-house R&amp;D and QA laboratory and secure warehousing, strategically located in Vapi, Gujarat, with convenient access to Mumbai&apos;s international logistics infrastructure.
             </p>
           </div>
         </div>

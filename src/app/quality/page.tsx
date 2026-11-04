@@ -6,73 +6,182 @@ import Image from "next/image";
 import { 
   ShieldCheck, 
   Award, 
-  FlaskConical, 
-  FileText, 
+  FileCheck, 
+  Flame, 
+  Microscope, 
   CheckCircle2, 
   ArrowRight, 
-  Microscope, 
-  Flame, 
   Layers, 
-  Sparkles,
-  Scale
+  Download,
+  AlertTriangle
 } from "lucide-react";
-import { CERTIFICATIONS } from "@/data/websiteData";
 import QuoteModal from "@/components/QuoteModal";
 
-export default function QualityPage() {
+export default function QualityCompliancePage() {
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
 
   return (
     <div className="flex flex-col">
       {/* 1. Header Banner */}
-      <section className="bg-slate-950 text-white py-16 sm:py-20 border-b border-slate-800">
+      <section className="bg-slate-950 text-white py-16 sm:py-24 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
-            <span className="text-xs font-semibold uppercase tracking-wider text-teal-400">
-              Analytical Rigor &amp; Global Standards
+            <span className="text-xs font-semibold uppercase tracking-wider text-teal-400 bg-teal-950 border border-teal-500/30 px-3.5 py-1.5 rounded-full inline-block">
+              Audit-Ready Manufacturing
             </span>
-            <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
-              Quality Built Into Every Batch We Fill
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
+              Quality &amp; Compliance
             </h1>
+            <p className="text-xl sm:text-2xl text-teal-400 font-bold">
+              Audit-Ready, Every Batch
+            </p>
+            {/* Exact text from client doc */}
             <p className="text-base sm:text-lg text-slate-300 font-normal leading-relaxed">
-              When supplying regulated markets across the US, Middle East, and Asia, quality compliance isn&apos;t an afterthought — it is the foundation. Accra Pac operates an audit-ready, WHO-GMP and US FDA registered manufacturing facility.
+              Quality at Accra Pac is a system, not a slogan. Every batch is produced under defined quality, safety and traceability controls, and documented so it stands up to customer and regulatory audits.
             </p>
           </div>
         </div>
       </section>
 
-      {/* 2. Certifications & Compliance Grid */}
-      <section className="py-20 bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-50 px-3 py-1 rounded-full">
-              Credentials &amp; Standards
+      {/* 2. Certifications & Approvals (Grouped exactly as in doc) */}
+      <section className="py-20 sm:py-24 bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="text-center max-w-2xl mx-auto space-y-2">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-teal-700 bg-teal-50 px-3.5 py-1.5 rounded-full border border-teal-200 inline-block">
+              International Accreditations
             </span>
-            <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
-              International Quality Accreditations
+            <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
+              Certifications &amp; Approvals
             </h2>
-            <p className="text-sm text-slate-600">
-              Verified certifications that ensure seamless customs clearance, retail audit acceptance, and brand safety globally.
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
-            {CERTIFICATIONS.map((cert) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Group 1 */}
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-4">
+              <h3 className="text-lg font-bold text-slate-900 border-b border-slate-200 pb-3">
+                Quality, Environment &amp; Safety Systems
+              </h3>
+              <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
+                  <span>ISO 9001:2015, Quality Management</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
+                  <span>ISO 14001:2015, Environmental Management</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
+                  <span>ISO 45001:2018, Occupational Health &amp; Safety</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
+                  <span>ISO 22716:2007, Cosmetics GMP</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
+                  <span>WHO-GMP certified facility</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Group 2 */}
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-4">
+              <h3 className="text-lg font-bold text-slate-900 border-b border-slate-200 pb-3">
+                Regulatory &amp; Safety
+              </h3>
+              <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-cyan-600 shrink-0 mt-0.5" />
+                  <span>US FDA registered</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-cyan-600 shrink-0 mt-0.5" />
+                  <span>US EPA approved</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-cyan-600 shrink-0 mt-0.5" />
+                  <span>21 CFR compliant</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-cyan-600 shrink-0 mt-0.5" />
+                  <span>NFPA 30B compliant aerosol manufacturing and storage</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Group 3 */}
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-4">
+              <h3 className="text-lg font-bold text-slate-900 border-b border-slate-200 pb-3">
+                Responsible Business
+              </h3>
+              <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <span>SEDEX approved</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <span>EcoVadis registered</span>
+                </li>
+              </ul>
+              <div className="pt-4 text-[11px] text-slate-400 italic">
+                [Certification logos and downloadable certificates, subject to client approval.]
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Our Quality Process (5 Steps) */}
+      <section className="py-20 sm:py-24 bg-slate-950 text-white border-b border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="text-center max-w-2xl mx-auto space-y-2">
+            <span className="text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-950 border border-teal-500/30 px-3.5 py-1.5 rounded-full inline-block">
+              Systematic Gate Controls
+            </span>
+            <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
+              Our Quality Process
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+            {[
+              {
+                step: "1. Raw Material Inspection",
+                desc: "Every raw material and packaging component is checked before it enters production."
+              },
+              {
+                step: "2. In-Process Control",
+                desc: "Quality checks at every stage of filling and assembly."
+              },
+              {
+                step: "3. Finished Product Testing",
+                desc: "Each batch is tested before release."
+              },
+              {
+                step: "4. Batch Release",
+                desc: "Only approved batches move to dispatch."
+              },
+              {
+                step: "5. Documentation",
+                desc: "Records are completed and filed for every order."
+              }
+            ].map((p, idx) => (
               <div
-                key={cert.code}
-                className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-teal-400 hover:bg-teal-50/20 transition-all space-y-3"
+                key={p.step}
+                className="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-3 hover:border-teal-400 transition-all flex flex-col justify-between"
               >
-                <div className="flex items-center justify-between">
-                  <span className="text-lg font-black text-slate-900 tracking-tight">
-                    {cert.code}
-                  </span>
-                  <Award className="w-4 h-4 text-teal-600" />
+                <div className="w-8 h-8 rounded-full bg-teal-400 text-slate-950 text-xs font-black flex items-center justify-center">
+                  0{idx + 1}
                 </div>
-                <div>
-                  <h4 className="text-xs font-bold text-slate-800">{cert.title}</h4>
-                  <span className="text-[10px] uppercase font-semibold text-teal-700 tracking-wider">
-                    {cert.type}
-                  </span>
+                <div className="space-y-1.5">
+                  <h3 className="text-sm font-bold text-white">
+                    {p.step.split(". ")[1]}
+                  </h3>
+                  <p className="text-xs text-slate-300 leading-relaxed font-normal">
+                    {p.desc}
+                  </p>
                 </div>
               </div>
             ))}
@@ -80,186 +189,62 @@ export default function QualityPage() {
         </div>
       </section>
 
-      {/* 3. In-House Analytical Testing & Labs */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-100/60 px-3 py-1 rounded-full">
-                Laboratory Infrastructure
-              </span>
-              <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
-                GC, HPLC &amp; Microbiology Analytical Testing
-              </h2>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                Our in-house R&amp;D and Quality Control laboratories are equipped with analytical instrumentation to validate raw material purity, active pharmaceutical ingredient (API) assay, and aerosol stability before release.
-              </p>
-
-              <div className="space-y-3 text-xs text-slate-700">
-                <div className="p-4 rounded-xl bg-white border border-slate-200/80 space-y-1">
-                  <div className="font-bold text-slate-900 flex items-center gap-2">
-                    <FlaskConical className="w-4 h-4 text-teal-600" />
-                    Gas Chromatography (GC)
-                  </div>
-                  <p className="text-slate-600">
-                    High-precision analysis of propellant gas composition, volatile solvents, fragrance maceration profiles, and ethanol purities.
-                  </p>
-                </div>
-
-                <div className="p-4 rounded-xl bg-white border border-slate-200/80 space-y-1">
-                  <div className="font-bold text-slate-900 flex items-center gap-2">
-                    <Microscope className="w-4 h-4 text-cyan-600" />
-                    High-Performance Liquid Chromatography (HPLC)
-                  </div>
-                  <p className="text-slate-600">
-                    Quantitative active ingredient assay for OTC healthcare formulations (Minoxidil, Lidocaine, Menthol, Povidone-Iodine).
-                  </p>
-                </div>
-
-                <div className="p-4 rounded-xl bg-white border border-slate-200/80 space-y-1">
-                  <div className="font-bold text-slate-900 flex items-center gap-2">
-                    <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                    Microbiology Testing Suite
-                  </div>
-                  <p className="text-slate-600">
-                    Total aerobic microbial count (TAMC), total combined yeast &amp; mold count (TYMC), pathogen screening, and preservative challenge testing.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="lg:col-span-6 bg-slate-900 text-white rounded-3xl overflow-hidden border border-slate-800 space-y-6 shadow-2xl">
-              <div className="relative h-48 w-full bg-slate-950">
-                <Image
-                  src="/images/manufacturing/stability-chamber.jpg"
-                  alt="Six Flame-Proof Stability Testing Chambers"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 600px"
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent" />
-                <div className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-amber-300 border border-slate-700">
-                  Explosion-Proof Aerosol Testing
-                </div>
-              </div>
-
-              <div className="p-8 sm:p-10 pt-0 space-y-5">
-                <div className="flex items-center gap-3 pb-3 border-b border-slate-800">
-                  <div className="p-2.5 bg-amber-500/10 rounded-xl text-amber-400">
-                    <Flame className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-bold">Six Flame-Proof Stability Chambers</h4>
-                    <p className="text-xs text-slate-400">Aerosol Flammability &amp; Shelf-Life Evaluation</p>
-                  </div>
-                </div>
-
-                <p className="text-xs text-slate-300 leading-relaxed">
-                  Because aerosols hold pressurized flammable hydrocarbon propellants, standard stability ovens pose explosion hazards. Accra Pac engineered six dedicated, flame-proof stability chambers to evaluate:
-                </p>
-
-                <div className="space-y-2.5 text-xs text-slate-300">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-teal-400 shrink-0" />
-                    <span><strong>Accelerated Aging:</strong> 40&deg;C &plusmn; 2&deg;C / 75% RH &plusmn; 5% RH for 3 &amp; 6 months</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-teal-400 shrink-0" />
-                    <span><strong>Real-Time Monitoring:</strong> 25&deg;C &plusmn; 2&deg;C / 60% RH &plusmn; 5% RH up to 36 months</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-teal-400 shrink-0" />
-                    <span><strong>Can &amp; Lining Compatibility:</strong> Internal epoxy-phenolic corrosion evaluation</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-teal-400 shrink-0" />
-                    <span><strong>Valve Gasket Integrity:</strong> Zero swelling or propellant leakage under heat</span>
-                  </div>
-                </div>
-
-                <div className="pt-2 border-t border-slate-800">
-                  <button
-                    onClick={() => setIsQuoteOpen(true)}
-                    className="w-full py-2.5 rounded-xl bg-teal-400 hover:bg-teal-300 text-slate-950 font-bold text-xs transition-colors"
-                  >
-                    Request a Quality &amp; Compliance Audit Dossier
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. Complete Batch Traceability & Documentation */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-50 px-3 py-1 rounded-full">
-              Traceability &amp; Records
-            </span>
-            <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
-              Complete Documentation for Domestic &amp; Export Release
-            </h2>
-            <p className="text-sm text-slate-600">
-              Every shipment is backed by verifiable documentation meeting the stringent requirements of pharmaceutical and international retail audits.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2">
-              <div className="font-bold text-slate-900 text-sm">Certificate of Analysis (COA)</div>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Specific active assays, specific gravity, pH, pressure, spray pattern, and discharge rate validated and signed by QC head for every commercial batch.
+      {/* 4. Testing, Traceability & Safety Details */}
+      <section className="py-20 sm:py-24 bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-3">
+              <h3 className="text-xl font-bold text-slate-900">
+                Testing &amp; Validation
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed font-normal">
+                Every formulation is validated before commercial production, using in-house GC and HPLC analysis, microbiology testing, stability and shelf-life evaluation in six flame-proof chambers, and packaging compatibility testing.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2">
-              <div className="font-bold text-slate-900 text-sm">Safety Data Sheet (SDS)</div>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                GHS and OSHA compliant Safety Data Sheets detailing hazardous identification, proper handling, flammability classifications, and emergency measures.
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-3">
+              <h3 className="text-xl font-bold text-slate-900">
+                Traceability &amp; Documentation
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed font-normal">
+                Every batch can be traced from raw material to production, testing, finished product and dispatch. COA, SDS and batch records are maintained for each commercial order.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2">
-              <div className="font-bold text-slate-900 text-sm">Batch Manufacturing Records</div>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Traceability from vendor raw material lots and packaging batches through compounding, filling, inline checks, and final release.
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-3">
+              <h3 className="text-xl font-bold text-slate-900">
+                Built for Audits and Export Markets
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed font-normal">
+                Our documentation and quality systems are structured to support customer audits and regulated export markets, without last-minute preparation.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2">
-              <div className="font-bold text-slate-900 text-sm">Export Hazmat Dossiers</div>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                UN packaging certificates, maritime IMDG Dangerous Goods declarations, and packing checklists for smooth international customs clearance.
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-3">
+              <h3 className="text-xl font-bold text-slate-900">
+                Safety
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed font-normal">
+                Aerosol manufacturing and storage follow NFPA 30B safety guidelines, with systems designed for flammable formulations.
               </p>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* 5. CTA */}
-      <section className="py-16 bg-slate-900 text-white border-t border-slate-800">
-        <div className="max-w-4xl mx-auto px-4 text-center space-y-5">
-          <h2 className="text-2xl sm:text-3xl font-extrabold">
-            Ready to Audit Our Quality Systems?
-          </h2>
-          <p className="text-sm text-slate-300 max-w-xl mx-auto">
-            We welcome technical audits from prospective brand partners and QA teams at our Vapi manufacturing complex.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button
-              onClick={() => setIsQuoteOpen(true)}
-              className="px-6 py-3 rounded-xl bg-teal-400 hover:bg-teal-300 text-slate-950 font-bold text-xs transition-colors shadow"
-            >
-              Request Plant Audit Schedule
-            </button>
-            <Link
-              href="/contact"
-              className="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs border border-slate-700 transition-colors"
-            >
-              Contact Regulatory Affairs
-            </Link>
+          <div className="text-center pt-4">
+            <div className="inline-flex flex-col sm:flex-row items-center gap-4">
+              <button
+                onClick={() => setIsQuoteOpen(true)}
+                className="px-8 py-4 rounded-xl font-bold text-sm bg-teal-700 hover:bg-teal-800 text-white shadow-md transition-all"
+              >
+                Discuss Your Compliance Requirement
+              </button>
+              <button
+                onClick={() => setIsQuoteOpen(true)}
+                className="px-8 py-4 rounded-xl font-semibold text-sm bg-slate-100 hover:bg-slate-200 text-slate-800 transition-colors"
+              >
+                Download Certificates
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -268,4 +253,3 @@ export default function QualityPage() {
     </div>
   );
 }
-

@@ -30,62 +30,62 @@ const EXTENDED_MILESTONES: MilestoneExtended[] = [
   {
     period: "1979",
     yearNumber: "01",
-    phase: "Foundation Era",
-    title: "Founding in Vapi, Gujarat",
-    tag: "India's 1st Automatic Aerosol Line",
-    description: "Commissioned India's first state-of-the-art automatic aerosol filling facility in G.I.D.C. Vapi, establishing early industrial standards for pressurized gas packaging.",
+    phase: "Established in Vapi",
+    title: "Established in Vapi, Gujarat",
+    tag: "First Automatic Aerosol Plant",
+    description: "Accra Pac is established in Vapi, Gujarat, with one of India's first state-of-the-art automatic aerosol plants.",
     icon: Factory,
-    highlights: ["Automated propellant handling", "Pioneered commercial aerosol filling in India", "Vapi industrial hub setup"]
+    highlights: ["Automatic aerosol plant", "Propellant filling pioneer", "Vapi facility founded"]
   },
   {
-    period: "1980s – 1990s",
+    period: "1980s–1990s",
     yearNumber: "02",
-    phase: "Propellant & Format Innovation",
-    title: "Eco-Propellant Transition & Liquids",
-    tag: "Ozone-Safe Hydrocarbon LPG",
-    description: "Successfully transitioned production lines away from CFCs to ozone-friendly purified hydrocarbon propellants (LPG/DME), while expanding into specialized liquid and roll-on filling.",
+    phase: "Propellant & Multi-Format",
+    title: "Propellant & Format Expansion",
+    tag: "Ozone-Friendly LPG Technology",
+    description: "Introduces ozone-friendly LPG propellant technology and expands into liquids, creams, lotions and semi-solids.",
     icon: FlaskConical,
-    highlights: ["Eco-friendly propellant conversion", "Integrated roll-on & liquid lines", "Deodorants & personal grooming expansion"]
+    highlights: ["Ozone-friendly LPG propellants", "Expanded into liquids and creams", "Semi-solid formulation lines"]
   },
   {
     period: "2005",
     yearNumber: "03",
-    phase: "Global Expansion",
-    title: "International Export Corridors",
-    tag: "North America & Middle East",
-    description: "Commenced high-volume commercial export shipments to North America and the Middle East, developing stringent IMDG dangerous goods and UN-certified export packaging protocols.",
+    phase: "Export Journey",
+    title: "First Major Export Order",
+    tag: "Long-Term Global Relationships",
+    description: "Ships its first major export order and begins long-term relationships with international markets.",
     icon: Globe2,
-    highlights: ["US FDA facility registration", "UN-certified hazmat cartons", "Direct container routing via Mumbai port"]
+    highlights: ["First major international shipment", "Export compliance protocols", "Global market relationships"]
   },
   {
     period: "2010s",
     yearNumber: "04",
-    phase: "CDMO & Quality Infrastructure",
-    title: "Advanced CDMO & Analytical Labs",
-    tag: "GC, HPLC & 6 Stability Chambers",
-    description: "Constructed dedicated in-house analytical testing laboratories with Gas Chromatography and HPLC, added Bag-on-Valve (BOV) technology, and built six flame-proof stability testing chambers.",
+    phase: "Filling Lines & Analytical Labs",
+    title: "Lines & In-House Analytical Testing",
+    tag: "Roll-On & BOV Capability",
+    description: "Adds filling lines, a dedicated roll-on line, BOV capability and in-house analytical testing.",
     icon: ShieldCheck,
-    highlights: ["Bag-on-Valve (BOV) barrier lines", "Six flame-proof stability ovens", "In-house microbiological challenge lab"]
+    highlights: ["Dedicated roll-on filling line", "Bag-on-Valve (BOV) systems", "In-house analytical testing"]
   },
   {
     period: "2020s",
     yearNumber: "05",
-    phase: "Regulatory Accreditations",
-    title: "Global Compliance Milestones",
-    tag: "WHO-GMP & US FDA Registered",
-    description: "Surpassed 500+ validated formulations in our R&D library. Earned official WHO-GMP certification, ISO 22716 Cosmetics GMP, ISO 9001/14001/45001, and EcoVadis sustainability rating.",
+    phase: "Global Credentials",
+    title: "ISO, WHO-GMP & US FDA",
+    tag: "Export Footprint Expansion",
+    description: "Earns ISO, WHO-GMP and US FDA credentials and expands exports across the Middle East, Africa and Asia.",
     icon: Award,
-    highlights: ["WHO-GMP & ISO 22716 audits cleared", "500+ ready formulation library", "EcoVadis & SEDEX sustainability rating"]
+    highlights: ["WHO-GMP certified facility", "US FDA registered", "Exports across Middle East, Africa & Asia"]
   },
   {
-    period: "Today & Future",
+    period: "Today",
     yearNumber: "06",
-    phase: "Scale & Modern Excellence",
-    title: "120M+ Capacity & Modern Plant",
-    tag: "11 Specialized Filling Lines",
-    description: "Operating 5 high-speed Aerosol lines and 6 precision Liquid lines from our NFPA 30B compliant Vapi complex, serving global enterprise FMCG brands and high-growth private labels.",
+    phase: "Global Manufacturing Partner",
+    title: "End-to-End Manufacturing",
+    tag: "Concept to Global Export",
+    description: "Supports brands from first formulation to global export.",
     icon: Sparkles,
-    highlights: ["120M+ annual units capacity", "11 high-speed filling lines", "Exporting across 20+ countries worldwide"]
+    highlights: ["Concept to commercial success", "120M+ units capacity", "11 aerosol & liquid filling lines"]
   }
 ];
 

@@ -39,8 +39,8 @@ Pioneering aerosol contract filling and private labelling since 1979 from Vapi, 
 
 ```bash
 # Clone the repository
-git clone https://github.com/ruksardevoloper/accra-pac-website.git
-cd accra-pac-website
+git clone https://github.com/Ruksar13/accra-pack-website.git
+cd accra-pack-website
 
 # Install dependencies
 npm install

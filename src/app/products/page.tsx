@@ -105,7 +105,7 @@ export default function ProductsPage() {
               Products We Manufacture
             </h1>
             <p className="text-sm sm:text-base text-slate-300 font-normal leading-relaxed">
-              Explore our 12 specialized manufacturing sectors with market-tested formulations, custom active variants, and export-compliant packaging formats.
+              Our range is organized into 12 categories, each backed by dedicated formulations and packaging formats. Choose a category to see what we make.
             </p>
           </div>
         </div>
@@ -392,6 +392,109 @@ export default function ProductsPage() {
                 })
               )}
             </main>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. FOR EVERY CATEGORY (FROM CLIENT DOC) */}
+      <section className="py-16 bg-slate-50 border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+          <div className="text-center max-w-2xl mx-auto space-y-2">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-teal-700 bg-teal-100/70 px-3.5 py-1.5 rounded-full border border-teal-200 inline-block">
+              Universal Standards
+            </span>
+            <h2 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">
+              For Every Category
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-6 rounded-2xl bg-white border border-slate-200 space-y-2 shadow-sm">
+              <div className="flex items-center gap-2 text-teal-700 font-bold text-sm">
+                <CheckCircle2 className="w-5 h-5 text-teal-600" />
+                <span>Private Label &amp; OEM</span>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Use one of our ready formulations or a custom one developed for you.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-white border border-slate-200 space-y-2 shadow-sm">
+              <div className="flex items-center gap-2 text-cyan-700 font-bold text-sm">
+                <ShieldCheck className="w-5 h-5 text-cyan-600" />
+                <span>Certifications</span>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Manufactured at our ISO-certified, WHO-GMP certified and US FDA registered facility.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-white border border-slate-200 space-y-2 shadow-sm">
+              <div className="flex items-center gap-2 text-emerald-700 font-bold text-sm">
+                <Package className="w-5 h-5 text-emerald-600" />
+                <span>Documentation</span>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                COA, SDS and batch records for every commercial order, with regulatory support for domestic and export markets.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. FREQUENTLY ASKED QUESTIONS (FROM CLIENT DOC) */}
+      <section className="py-16 sm:py-20 bg-white border-b border-slate-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          <div className="text-center space-y-2">
+            <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-50 px-3 py-1 rounded-full border border-teal-200">
+              Clear Answers
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900">
+              Frequently Asked Questions
+            </h2>
+          </div>
+
+          <div className="space-y-4">
+            {[
+              {
+                q: "Can I use my own formulation?",
+                a: "Yes. We manufacture to your formula, adapt one from our library, or develop a custom one."
+              },
+              {
+                q: "Can you manufacture across several categories for one brand?",
+                a: "Yes. Many brands launch a full range through us as one project."
+              },
+              {
+                q: "Can you support export markets?",
+                a: "Yes. We support the documentation and packaging that export markets require."
+              },
+              {
+                q: "Can't find your product?",
+                a: "Tell us what you need. Our library covers more than the list above, and our R&D team can develop new products."
+              }
+            ].map((faq, i) => (
+              <div key={i} className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+                <h3 className="text-sm font-bold text-slate-900">{faq.q}</h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="pt-4 text-center">
+            <div className="inline-flex flex-col sm:flex-row items-center gap-4">
+              <button
+                onClick={() => handleOpenQuote("Products Page Inquiry")}
+                className="px-8 py-3.5 rounded-xl font-bold text-xs bg-teal-700 hover:bg-teal-800 text-white shadow-md transition-all"
+              >
+                Request a Quote
+              </button>
+              <Link
+                href="/contact"
+                className="px-8 py-3.5 rounded-xl font-semibold text-xs bg-slate-100 hover:bg-slate-200 text-slate-800 transition-colors"
+              >
+                Talk to Our Team
+              </Link>
+            </div>
           </div>
         </div>
       </section>
