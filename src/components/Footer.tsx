@@ -44,13 +44,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="inline-block bg-white p-3 rounded-lg shadow-sm" title="Accra Pac - Home">
-              <div className="relative h-10 w-48">
+            <Link href="/" className="inline-block group" title="Accra Pac - Return to Home">
+              <div className="relative h-14 sm:h-16 w-56 sm:w-64">
                 <Image
-                  src="/accra-pac-logo.png"
-                  alt="Accra Pac India"
+                  src="/accra-pac-logo-white.png"
+                  alt="Accra Pac India - Highest Quality Aerosol Filler"
                   fill
-                  className="object-contain object-left"
+                  className="object-contain object-left transition-transform duration-300 group-hover:scale-[1.02]"
                 />
               </div>
             </Link>

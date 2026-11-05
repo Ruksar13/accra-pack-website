@@ -101,15 +101,15 @@ export default function Navbar() {
             {/* Logo: Clicking navigates to Home */}
             <Link 
               href="/" 
-              className="flex items-center shrink-0 group" 
+              className="flex items-center shrink-0 group py-1" 
               title="Accra Pac - Return to Home"
             >
-              <div className="relative h-11 w-44 sm:w-52 xl:w-56">
+              <div className="relative h-14 sm:h-16 w-52 sm:w-64 xl:w-72 shrink-0">
                 <Image
                   src="/accra-pac-logo.png"
                   alt="Accra Pac - Highest Quality Aerosol Filler"
                   fill
-                  sizes="(max-width: 640px) 176px, (max-width: 1280px) 208px, 224px"
+                  sizes="(max-width: 640px) 208px, (max-width: 1280px) 256px, 288px"
                   className="object-contain object-left transition-transform duration-300 group-hover:scale-[1.02]"
                   priority
                 />
