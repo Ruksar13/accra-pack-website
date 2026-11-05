@@ -42,7 +42,7 @@ export default function ExportPage() {
 
       {/* 2. Interactive World Map Section */}
       <section className="py-20 sm:py-24 bg-slate-900 border-b border-slate-800 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 reveal">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-950/80 border border-teal-500/30 px-3.5 py-1.5 rounded-full inline-block">
               Active Trade Lanes
@@ -57,7 +57,7 @@ export default function ExportPage() {
 
           <WorldMap />
 
-          <div className="p-5 rounded-2xl bg-slate-950 border border-slate-800 text-center text-xs text-slate-300 space-y-2">
+          <div className="p-5 rounded-2xl bg-slate-950 border border-slate-800 text-center text-xs text-slate-300 space-y-2 hover-lift">
             <div className="font-bold text-teal-400 uppercase tracking-wider">
               Destinations Served:
             </div>
@@ -66,7 +66,7 @@ export default function ExportPage() {
                 "USA", "UAE", "Oman", "Singapore", "Malaysia", "Russia",
                 "Sri Lanka", "Bhutan", "Congo", "Ethiopia", "Djibouti", "Bangladesh"
               ].map((c) => (
-                <span key={c} className="px-3 py-1 rounded-lg bg-slate-900 text-slate-200 border border-slate-800 font-semibold">
+                <span key={c} className="px-3 py-1 rounded-lg bg-slate-900 text-slate-200 border border-slate-800 font-semibold hover:border-teal-400 transition-colors">
                   {c}
                 </span>
               ))}
@@ -77,7 +77,7 @@ export default function ExportPage() {
 
       {/* 3. Export Competency Details */}
       <section className="py-20 sm:py-24 bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-xs font-extrabold uppercase tracking-widest text-teal-700 bg-teal-50 px-3.5 py-1.5 rounded-full border border-teal-200 inline-block">
               Seamless Logistics
@@ -87,8 +87,8 @@ export default function ExportPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 space-y-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-container">
+            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 space-y-3 hover-lift">
               <div className="w-12 h-12 rounded-xl bg-teal-100 text-teal-800 flex items-center justify-center font-bold">
                 <Ship className="w-6 h-6 text-teal-700" />
               </div>
@@ -98,7 +98,7 @@ export default function ExportPage() {
               </p>
             </div>
 
-            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 space-y-3">
+            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 space-y-3 hover-lift">
               <div className="w-12 h-12 rounded-xl bg-cyan-100 text-cyan-800 flex items-center justify-center font-bold">
                 <PackageCheck className="w-6 h-6 text-cyan-700" />
               </div>
@@ -108,7 +108,7 @@ export default function ExportPage() {
               </p>
             </div>
 
-            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 space-y-3">
+            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 space-y-3 hover-lift">
               <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold">
                 <FileText className="w-6 h-6 text-emerald-700" />
               </div>
@@ -122,7 +122,7 @@ export default function ExportPage() {
           <div className="text-center pt-4">
             <button
               onClick={() => setIsQuoteOpen(true)}
-              className="px-8 py-4 rounded-xl font-bold text-sm bg-teal-700 hover:bg-teal-800 text-white shadow-md transition-all"
+              className="px-8 py-4 rounded-xl font-bold text-sm bg-teal-700 hover:bg-teal-800 text-white shadow-md transition-all hover-lift"
             >
               Discuss Your Export Requirements
             </button>

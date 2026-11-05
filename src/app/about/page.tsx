@@ -52,7 +52,7 @@ export default function AboutPage() {
 
       {/* 2. Our Journey (Interactive Chronological Timeline) */}
       <section id="history" className="py-20 sm:py-24 bg-slate-50 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-xs font-extrabold uppercase tracking-widest text-teal-700 bg-teal-100/70 px-3.5 py-1.5 rounded-full border border-teal-200 inline-block">
               Milestones &amp; Evolution
@@ -68,7 +68,7 @@ export default function AboutPage() {
 
       {/* 3. Why Global Brands Choose Accra Pac */}
       <section className="py-20 sm:py-24 bg-slate-950 text-white border-b border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <span className="text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-950 border border-teal-500/30 px-3.5 py-1.5 rounded-full inline-block">
               Proven Global Track Record
@@ -78,8 +78,8 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="p-8 rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-teal-400 transition-all space-y-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 stagger-container">
+            <div className="p-8 rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-teal-400 transition-all space-y-3 hover-lift">
               <div className="w-12 h-12 rounded-xl bg-teal-950 text-teal-400 flex items-center justify-center font-bold">
                 <Award className="w-6 h-6" />
               </div>
@@ -91,7 +91,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="p-8 rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-cyan-400 transition-all space-y-3">
+            <div className="p-8 rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-cyan-400 transition-all space-y-3 hover-lift">
               <div className="w-12 h-12 rounded-xl bg-cyan-950 text-cyan-400 flex items-center justify-center font-bold">
                 <Factory className="w-6 h-6" />
               </div>
@@ -103,7 +103,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="p-8 rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-emerald-400 transition-all space-y-3">
+            <div className="p-8 rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-emerald-400 transition-all space-y-3 hover-lift">
               <div className="w-12 h-12 rounded-xl bg-emerald-950 text-emerald-400 flex items-center justify-center font-bold">
                 <ShieldCheck className="w-6 h-6" />
               </div>
@@ -118,7 +118,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="p-8 rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-amber-400 transition-all space-y-3">
+            <div className="p-8 rounded-3xl bg-slate-900/90 border border-slate-800 hover:border-amber-400 transition-all space-y-3 hover-lift">
               <div className="w-12 h-12 rounded-xl bg-amber-950 text-amber-400 flex items-center justify-center font-bold">
                 <Lock className="w-6 h-6" />
               </div>
@@ -135,7 +135,7 @@ export default function AboutPage() {
 
       {/* 4. Why Manufacturing in India? */}
       <section className="py-20 sm:py-24 bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-xs font-extrabold uppercase tracking-widest text-teal-700 bg-teal-50 px-3.5 py-1.5 rounded-full border border-teal-200 inline-block">
               Strategic Advantages
@@ -145,7 +145,7 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-container">
             {[
               {
                 title: "Skilled Technical Workforce",
@@ -166,7 +166,7 @@ export default function AboutPage() {
             ].map((adv) => (
               <div
                 key={adv.title}
-                className="p-7 rounded-2xl bg-slate-50 border border-slate-200 hover:border-teal-400 hover:shadow-lg transition-all space-y-3 group"
+                className="p-7 rounded-2xl bg-slate-50 border border-slate-200 hover:border-teal-400 hover:shadow-lg transition-all space-y-3 group hover-lift"
               >
                 <div className="w-10 h-10 rounded-xl bg-teal-100/80 text-teal-800 flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
                   <CheckCircle2 className="w-5 h-5 text-teal-700" />
@@ -185,10 +185,10 @@ export default function AboutPage() {
 
       {/* 5. Mission, Vision & What Guides Us */}
       <section className="py-20 sm:py-24 bg-slate-950 text-white border-b border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 reveal">
           {/* Mission & Vision */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="p-8 rounded-3xl bg-slate-900/90 border border-slate-800 space-y-4">
+            <div className="p-8 rounded-3xl bg-slate-900/90 border border-slate-800 space-y-4 hover-lift">
               <div className="flex items-center gap-3 text-teal-400">
                 <Target className="w-6 h-6" />
                 <h3 className="text-2xl font-bold text-white">Our Mission</h3>
@@ -198,7 +198,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="p-8 rounded-3xl bg-slate-900/90 border border-slate-800 space-y-4">
+            <div className="p-8 rounded-3xl bg-slate-900/90 border border-slate-800 space-y-4 hover-lift">
               <div className="flex items-center gap-3 text-cyan-400">
                 <Eye className="w-6 h-6" />
                 <h3 className="text-2xl font-bold text-white">Our Vision</h3>
@@ -220,7 +220,7 @@ export default function AboutPage() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-container">
               {[
                 {
                   title: "Quality First, Safety Always",
@@ -241,7 +241,7 @@ export default function AboutPage() {
               ].map((val) => (
                 <div
                   key={val.title}
-                  className="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-teal-400/60 transition-all space-y-3 group"
+                  className="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-teal-400/60 transition-all space-y-3 group hover-lift"
                 >
                   <h3 className="text-base font-bold text-white group-hover:text-teal-300 transition-colors">
                     {val.title}
@@ -258,10 +258,10 @@ export default function AboutPage() {
 
       {/* 6. Leadership Team, Life at Accra Pac & Sustainability */}
       <section className="py-20 sm:py-24 bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Leadership */}
-            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-4 flex flex-col justify-between">
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-4 flex flex-col justify-between hover-lift">
               <div className="space-y-3">
                 <div className="w-12 h-12 rounded-xl bg-teal-100 text-teal-800 flex items-center justify-center font-bold">
                   <Users className="w-6 h-6" />
@@ -279,7 +279,7 @@ export default function AboutPage() {
             </div>
 
             {/* Life at Accra Pac */}
-            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-4 flex flex-col justify-between">
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-4 flex flex-col justify-between hover-lift">
               <div className="space-y-3">
                 <div className="w-12 h-12 rounded-xl bg-cyan-100 text-cyan-800 flex items-center justify-center font-bold">
                   <FlaskConical className="w-6 h-6" />
@@ -297,7 +297,7 @@ export default function AboutPage() {
             </div>
 
             {/* Sustainability */}
-            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-4 flex flex-col justify-between">
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-4 flex flex-col justify-between hover-lift">
               <div className="space-y-3">
                 <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold">
                   <Leaf className="w-6 h-6" />
@@ -319,7 +319,7 @@ export default function AboutPage() {
 
       {/* 7. Bottom CTA Banner */}
       <section className="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 text-white py-20 border-t border-slate-800">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 reveal">
           <span className="text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-950 px-3.5 py-1.5 rounded-full border border-teal-500/30">
             Confidential Consultation
           </span>

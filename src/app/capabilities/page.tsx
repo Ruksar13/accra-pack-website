@@ -53,27 +53,27 @@ export default function CapabilitiesPage() {
 
       {/* 2. Key Production Numbers */}
       <section className="bg-white py-12 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 text-center space-y-1">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 stagger-container">
+            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 text-center space-y-1 hover-lift">
               <div className="text-3xl sm:text-4xl font-extrabold text-teal-700">120M+</div>
               <div className="text-xs font-bold text-slate-800 uppercase tracking-wider">Annual Units Capacity</div>
               <div className="text-[11px] text-slate-500">Scalable from pilot runs to multi-million commercial orders</div>
             </div>
 
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 text-center space-y-1">
+            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 text-center space-y-1 hover-lift">
               <div className="text-3xl sm:text-4xl font-extrabold text-cyan-700">5 Lines</div>
               <div className="text-xs font-bold text-slate-800 uppercase tracking-wider">Aerosol Filling</div>
               <div className="text-[11px] text-slate-500">Hydrocarbon, BOV &amp; Compressed Gas systems</div>
             </div>
 
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 text-center space-y-1">
+            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 text-center space-y-1 hover-lift">
               <div className="text-3xl sm:text-4xl font-extrabold text-slate-900">6 Lines</div>
               <div className="text-xs font-bold text-slate-800 uppercase tracking-wider">Liquid &amp; Roll-On Filling</div>
               <div className="text-[11px] text-slate-500">Precision dosing from 2 ml up to 5 Liters</div>
             </div>
 
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 text-center space-y-1">
+            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 text-center space-y-1 hover-lift">
               <div className="text-3xl sm:text-4xl font-extrabold text-emerald-700">6 Chambers</div>
               <div className="text-xs font-bold text-slate-800 uppercase tracking-wider">Flame-Proof Stability</div>
               <div className="text-[11px] text-slate-500">Real-time &amp; accelerated shelf-life validation</div>
@@ -84,7 +84,7 @@ export default function CapabilitiesPage() {
 
       {/* 3. Deep Dive into Filling Technologies with Real Photography */}
       <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
             <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-100/60 px-3 py-1 rounded-full">
               Core Technologies
@@ -97,9 +97,9 @@ export default function CapabilitiesPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 stagger-container">
             {/* Tech 1: Aerosol Filling */}
-            <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:border-teal-400 transition-all flex flex-col justify-between group">
+            <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:border-teal-400 transition-all flex flex-col justify-between group hover-lift">
               <div className="relative h-48 w-full bg-slate-100 overflow-hidden">
                 <Image
                   src="/images/manufacturing/aerosol-filling-line.jpg"
@@ -148,7 +148,7 @@ export default function CapabilitiesPage() {
             </div>
 
             {/* Tech 2: BOV (Bag-on-Valve) */}
-            <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:border-cyan-400 transition-all flex flex-col justify-between group">
+            <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:border-cyan-400 transition-all flex flex-col justify-between group hover-lift">
               <div className="relative h-48 w-full bg-slate-100 overflow-hidden">
                 <Image
                   src="/images/manufacturing/liquid-filling-line.jpg"
@@ -197,7 +197,7 @@ export default function CapabilitiesPage() {
             </div>
 
             {/* Tech 3: Liquid & Roll-On Filling */}
-            <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:border-emerald-400 transition-all flex flex-col justify-between group">
+            <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:border-emerald-400 transition-all flex flex-col justify-between group hover-lift">
               <div className="relative h-48 w-full bg-slate-100 overflow-hidden">
                 <Image
                   src="/images/manufacturing/qc-lab-testing.jpg"
@@ -250,7 +250,7 @@ export default function CapabilitiesPage() {
 
       {/* 4. In-Process Quality Control (IPQC) & Stability Chambers with Real Photos */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
               <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-50 px-3 py-1 rounded-full">
@@ -263,30 +263,30 @@ export default function CapabilitiesPage() {
                 Rather than testing quality only at the end, every single commercial run is monitored by rigorous in-line quality controls to ensure consumer safety and container integrity.
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-700">
-                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-700 stagger-container">
+                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1 hover-lift">
                   <div className="font-bold text-slate-900">1. Raw Material Assay</div>
                   <p className="text-slate-500">Every active, solvent, and fragrance oil inspected against internal monograph specs before dispensing.</p>
                 </div>
 
-                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
+                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1 hover-lift">
                   <div className="font-bold text-slate-900">2. Crimp Dimensions</div>
                   <p className="text-slate-500">Micro-gauge verification of crimp height and crimp diameter every 30 minutes to guarantee leak prevention.</p>
                 </div>
 
-                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
+                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1 hover-lift">
                   <div className="font-bold text-slate-900">3. 100% Water Bath Testing</div>
                   <p className="text-slate-500">Every single aerosol can passes through an illuminated 55&deg;C hot water testing bath to detect micro-leaks.</p>
                 </div>
 
-                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
+                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1 hover-lift">
                   <div className="font-bold text-slate-900">4. Spray Pattern &amp; Discharge</div>
                   <p className="text-slate-500">Validation of spray cone angle, droplet size distribution, and discharge delivery rate per second.</p>
                 </div>
               </div>
             </div>
 
-            <div className="lg:col-span-6 bg-slate-900 text-white p-8 rounded-2xl border border-slate-800 space-y-5 overflow-hidden relative">
+            <div className="lg:col-span-6 bg-slate-900 text-white p-8 rounded-2xl border border-slate-800 space-y-5 overflow-hidden relative hover-lift">
               <div className="relative h-44 w-full rounded-xl overflow-hidden mb-2">
                 <Image
                   src="/images/manufacturing/stability-chamber.jpg"
@@ -331,7 +331,7 @@ export default function CapabilitiesPage() {
               <div className="pt-2">
                 <button
                   onClick={() => setIsQuoteOpen(true)}
-                  className="w-full py-2.5 rounded-lg bg-teal-400 hover:bg-teal-300 text-slate-950 font-bold text-xs transition-colors"
+                  className="w-full py-2.5 rounded-lg bg-teal-400 hover:bg-teal-300 text-slate-950 font-bold text-xs transition-colors shadow"
                 >
                   Request Technical Plant Tour / Dossier
                 </button>
@@ -343,9 +343,9 @@ export default function CapabilitiesPage() {
 
       {/* 5. Warehouse & Logistics Imagery Section */}
       <section className="py-16 bg-slate-50 border-t border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-5 relative h-64 sm:h-80 rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+            <div className="lg:col-span-5 relative h-64 sm:h-80 rounded-2xl overflow-hidden shadow-lg border border-slate-200 hover-lift">
               <Image
                 src="/images/manufacturing/warehouse-logistics.jpg"
                 alt="Dangerous Goods Warehouse & Logistics"
@@ -375,7 +375,7 @@ export default function CapabilitiesPage() {
 
       {/* 6. Frequently Asked Questions */}
       <section className="py-20 bg-white border-t border-slate-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 reveal">
           <div className="text-center space-y-2">
             <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-50 px-3 py-1 rounded-full">
               Production FAQ
@@ -404,7 +404,7 @@ export default function CapabilitiesPage() {
                 a: "Yes. Many of our enterprise partners manufacture a coordinated personal care line (e.g. an aerosol body spray, a roll-on antiperspirant, and a liquid shave balm) simultaneously at Accra Pac under one single audit, contract, and quality control team."
               }
             ].map((item, idx) => (
-              <div key={idx} className="bg-slate-50 p-6 rounded-xl border border-slate-200 shadow-sm space-y-2">
+              <div key={idx} className="bg-slate-50 p-6 rounded-xl border border-slate-200 shadow-sm space-y-2 hover-lift">
                 <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
                   <HelpCircle className="w-4 h-4 text-teal-600 shrink-0" />
                   {item.q}
@@ -420,7 +420,7 @@ export default function CapabilitiesPage() {
 
       {/* 7. CTA */}
       <section className="py-16 bg-slate-900 text-white">
-        <div className="max-w-4xl mx-auto px-4 text-center space-y-5">
+        <div className="max-w-4xl mx-auto px-4 text-center space-y-5 reveal">
           <h2 className="text-2xl sm:text-3xl font-extrabold">
             Let Us Engineer Your Next Formulation at Scale
           </h2>

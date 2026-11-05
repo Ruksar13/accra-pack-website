@@ -137,7 +137,7 @@ export default function HomePage() {
 
       {/* 2. ACCRA PAC, BY THE NUMBERS (ICON-LED STAT CARDS) — LIGHT THEME */}
       <section className="bg-white py-16 sm:py-20 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 reveal">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-xs font-extrabold uppercase tracking-widest text-teal-700 bg-teal-50 px-3.5 py-1.5 rounded-full border border-teal-200 inline-block">
               Scale &amp; Proven Track Record
@@ -147,14 +147,14 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 stagger-container">
             {SITE_STATS.map((stat, idx) => {
               const icons = [Award, Globe2, FlaskConical, PackageCheck, Building2, Factory, Gauge];
               const IconComp = icons[idx % icons.length];
               return (
                 <div 
                   key={stat.label} 
-                  className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-teal-400 hover:bg-white hover:shadow-lg transition-all duration-300 text-center space-y-2 flex flex-col justify-between group"
+                  className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-teal-400 hover:bg-white hover:shadow-lg transition-all duration-300 text-center space-y-2 flex flex-col justify-between group hover-lift"
                 >
                   <div className="w-10 h-10 mx-auto rounded-xl bg-teal-100/70 text-teal-800 flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
                     <IconComp className="w-5 h-5 text-teal-700" />
@@ -181,7 +181,7 @@ export default function HomePage() {
       <section className="py-20 sm:py-24 bg-slate-950 text-white border-y border-slate-800 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_-10%,rgba(20,184,166,0.15),transparent_75%)] pointer-events-none" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
           {/* Header with Exact Client Content */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-slate-800/80">
             <div className="max-w-3xl space-y-3">
@@ -226,7 +226,7 @@ export default function HomePage() {
               .map((client) => (
                 <div
                   key={client.name}
-                  className="group rounded-2xl bg-slate-900/90 border border-slate-800/90 hover:border-teal-400/60 hover:bg-slate-850 p-6 flex flex-col justify-between transition-all duration-300 shadow-xl hover:shadow-teal-500/10 space-y-4"
+                  className="group rounded-2xl bg-slate-900/90 border border-slate-800/90 hover:border-teal-400/60 hover:bg-slate-850 p-6 flex flex-col justify-between transition-all duration-300 shadow-xl hover:shadow-teal-500/10 space-y-4 hover-lift"
                 >
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
@@ -271,7 +271,7 @@ export default function HomePage() {
 
       {/* 4. WHY CHOOSE ACCRA PAC — LIGHT THEME */}
       <section id="why-choose-us" className="py-20 sm:py-24 bg-slate-50 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-xs font-extrabold uppercase tracking-widest text-teal-700 bg-teal-100/70 px-3.5 py-1.5 rounded-full border border-teal-200 inline-block">
               The Accra Pac Advantage
@@ -281,7 +281,7 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 stagger-container">
             {WHY_CHOOSE_ACCRA_PAC.map((item, idx) => {
               const iconList = [Building2, FlaskConical, Award, Globe2, Factory, ShieldCheck];
               const IconComp = iconList[idx % iconList.length];
@@ -289,7 +289,7 @@ export default function HomePage() {
               return (
                 <div
                   key={item.title}
-                  className="p-7 rounded-2xl bg-white border border-slate-200/90 hover:border-teal-400 hover:shadow-xl transition-all duration-300 space-y-4 group flex flex-col justify-between"
+                  className="p-7 rounded-2xl bg-white border border-slate-200/90 hover:border-teal-400 hover:shadow-xl transition-all duration-300 space-y-4 group flex flex-col justify-between hover-lift"
                 >
                   <div className="space-y-3">
                     <div className="w-12 h-12 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
@@ -304,7 +304,7 @@ export default function HomePage() {
                   </div>
                   <div className="pt-3 border-t border-slate-100 flex items-center gap-1.5 text-xs font-bold text-teal-700">
                     <span>Learn More</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform" />
                   </div>
                 </div>
               );
@@ -315,7 +315,7 @@ export default function HomePage() {
 
       {/* 5. ABOUT ACCRA PAC — DARK THEME */}
       <section className="py-20 sm:py-24 bg-slate-950 text-white border-b border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6">
@@ -333,7 +333,7 @@ export default function HomePage() {
               <div className="pt-2">
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm bg-teal-400 hover:bg-teal-300 text-slate-950 transition-all shadow-lg shadow-teal-500/20"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm bg-teal-400 hover:bg-teal-300 text-slate-950 transition-all shadow-lg shadow-teal-500/20 hover-lift"
                 >
                   <span>Read Our Full Story</span>
                   <ArrowRight className="w-4 h-4" />
@@ -343,7 +343,7 @@ export default function HomePage() {
 
             {/* Right Photo */}
             <div className="lg:col-span-5">
-              <div className="relative rounded-3xl overflow-hidden border border-slate-800 shadow-2xl aspect-[4/3] bg-slate-900 group">
+              <div className="relative rounded-3xl overflow-hidden border border-slate-800 shadow-2xl aspect-[4/3] bg-slate-900 group hover-lift">
                 <Image
                   src="/images/manufacturing/plant-infrastructure.jpg"
                   alt="Accra Pac Plant in Vapi Gujarat"
@@ -364,7 +364,7 @@ export default function HomePage() {
 
       {/* 6. MANUFACTURING SOLUTIONS — LIGHT THEME */}
       <section className="py-20 sm:py-24 bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <span className="text-xs font-extrabold uppercase tracking-widest text-teal-700 bg-teal-50 px-3.5 py-1.5 rounded-full border border-teal-200 inline-block">
               Integrated Production Formats
@@ -379,7 +379,7 @@ export default function HomePage() {
           </div>
 
           {/* Formats Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 stagger-container">
             {[
               { title: "Aerosols", desc: "Hydrocarbon, BOV & Compressed Gas" },
               { title: "Liquids", desc: "2 ml to 5 Liters precision batching" },
@@ -390,7 +390,7 @@ export default function HomePage() {
             ].map((f) => (
               <div 
                 key={f.title}
-                className="p-5 rounded-2xl bg-slate-50 border border-slate-200 text-center space-y-1.5 hover:border-teal-400 hover:bg-teal-50/20 transition-all"
+                className="p-5 rounded-2xl bg-slate-50 border border-slate-200 text-center space-y-1.5 hover:border-teal-400 hover:bg-teal-50/20 transition-all hover-lift"
               >
                 <div className="text-sm font-bold text-slate-900">{f.title}</div>
                 <div className="text-[11px] text-slate-500 leading-snug">{f.desc}</div>
@@ -412,7 +412,7 @@ export default function HomePage() {
 
       {/* 7. INDUSTRIES WE SERVE (ICON GRID) — DARK THEME */}
       <section className="py-20 sm:py-24 bg-slate-950 text-white border-b border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-950 border border-teal-500/30 px-3.5 py-1.5 rounded-full inline-block">
               Market Segments
@@ -422,7 +422,7 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-container">
             {INDUSTRIES_WE_SERVE.map((ind, idx) => {
               const icons = [Stethoscope, Sparkles, ShoppingBag, Store, Home, Car, Rocket, Globe2];
               const IconComp = icons[idx % icons.length];
@@ -430,7 +430,7 @@ export default function HomePage() {
               return (
                 <div
                   key={ind.name}
-                  className="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-teal-400/60 hover:bg-slate-850 transition-all duration-300 flex items-center gap-4 group"
+                  className="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-teal-400/60 hover:bg-slate-850 transition-all duration-300 flex items-center gap-4 group hover-lift"
                 >
                   <div className="w-12 h-12 rounded-xl bg-slate-800 text-teal-400 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-teal-950 transition-all">
                     <IconComp className="w-6 h-6 text-teal-400" />
@@ -447,7 +447,7 @@ export default function HomePage() {
 
       {/* 8. PRODUCT CATEGORIES (12 IMAGE CARDS LINKING TO PRODUCTS PAGE) — LIGHT THEME */}
       <section id="categories" className="py-20 sm:py-24 bg-slate-50 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-slate-200">
             <div className="max-w-3xl space-y-2">
               <span className="text-xs font-extrabold uppercase tracking-widest text-teal-700 bg-teal-100/70 px-3.5 py-1.5 rounded-full border border-teal-200 inline-block">
@@ -463,7 +463,7 @@ export default function HomePage() {
 
             <Link
               href="/products"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-extrabold text-white bg-teal-700 hover:bg-teal-800 transition-all shadow-md self-start md:self-auto shrink-0"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-extrabold text-white bg-teal-700 hover:bg-teal-800 transition-all shadow-md self-start md:self-auto shrink-0 hover-lift"
             >
               <span>Explore Products</span>
               <ArrowRight className="w-4 h-4" />
@@ -479,7 +479,7 @@ export default function HomePage() {
                 <Link
                   key={cat.id}
                   href={`/products#${anchor}`}
-                  className="group rounded-2xl bg-white border border-slate-200/90 overflow-hidden shadow-sm hover:shadow-xl hover:border-teal-400 transition-all duration-300 flex flex-col justify-between"
+                  className="group rounded-2xl bg-white border border-slate-200/90 overflow-hidden shadow-sm hover:shadow-xl hover:border-teal-400 transition-all duration-300 flex flex-col justify-between hover-lift"
                 >
                   <div>
                     {/* Category Image */}
@@ -516,7 +516,7 @@ export default function HomePage() {
                   <div className="p-6 pt-0">
                     <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-teal-700">
                       <span>View Category Formulations</span>
-                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform" />
                     </div>
                   </div>
                 </Link>
@@ -538,7 +538,7 @@ export default function HomePage() {
 
       {/* 9. OUR SOLUTIONS (GRAPHICAL TIMELINE & ROUTES) — DARK THEME */}
       <section className="py-20 sm:py-24 bg-slate-950 text-white border-b border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14 reveal">
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <span className="text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-950 border border-teal-500/30 px-3.5 py-1.5 rounded-full inline-block">
               Flexible Engagement Models
@@ -586,7 +586,7 @@ export default function HomePage() {
           {/* 3 Routes from Client Doc */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Route 1 */}
-            <div className="p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-teal-400 transition-all space-y-4 flex flex-col justify-between group">
+            <div className="p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-teal-400 transition-all space-y-4 flex flex-col justify-between group hover-lift">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-xl bg-teal-950 text-teal-400 flex items-center justify-center font-bold">
                   <Factory className="w-6 h-6" />
@@ -612,7 +612,7 @@ export default function HomePage() {
             </div>
 
             {/* Route 2 */}
-            <div className="p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-cyan-400 transition-all space-y-4 flex flex-col justify-between group">
+            <div className="p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-cyan-400 transition-all space-y-4 flex flex-col justify-between group hover-lift">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-xl bg-cyan-950 text-cyan-400 flex items-center justify-center font-bold">
                   <Package className="w-6 h-6" />
@@ -638,7 +638,7 @@ export default function HomePage() {
             </div>
 
             {/* Route 3 */}
-            <div className="p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-emerald-400 transition-all space-y-4 flex flex-col justify-between group">
+            <div className="p-8 rounded-3xl bg-slate-900/80 border border-slate-800 hover:border-emerald-400 transition-all space-y-4 flex flex-col justify-between group hover-lift">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-xl bg-emerald-950 text-emerald-400 flex items-center justify-center font-bold">
                   <FlaskConical className="w-6 h-6" />
@@ -667,7 +667,7 @@ export default function HomePage() {
           <div className="text-center pt-2">
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-sm bg-teal-400 hover:bg-teal-300 text-slate-950 transition-all shadow-lg shadow-teal-500/20"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-sm bg-teal-400 hover:bg-teal-300 text-slate-950 transition-all shadow-lg shadow-teal-500/20 hover-lift"
             >
               <span>Explore Our Solutions</span>
               <ArrowRight className="w-4 h-4" />
@@ -678,7 +678,7 @@ export default function HomePage() {
 
       {/* 10. R&D & INNOVATION — LIGHT THEME */}
       <section className="py-20 sm:py-24 bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 space-y-6">
               <span className="text-xs font-extrabold uppercase tracking-widest text-teal-700 bg-teal-50 px-3.5 py-1.5 rounded-full border border-teal-200 inline-block">
@@ -739,7 +739,7 @@ export default function HomePage() {
 
       {/* 11. QUALITY & COMPLIANCE — DARK THEME */}
       <section className="py-20 sm:py-24 bg-slate-950 text-white border-b border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <span className="text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-950 border border-teal-500/30 px-3.5 py-1.5 rounded-full inline-block">
               Audit-Ready Standards
@@ -755,7 +755,7 @@ export default function HomePage() {
 
           {/* Exact Certification Badges from Client Doc:
               ISO 9001 | ISO 14001 | ISO 22716 | ISO 45001 | WHO-GMP | US FDA */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 stagger-container">
             {[
               { code: "ISO 9001", label: "Quality Management" },
               { code: "ISO 14001", label: "Environmental Management" },
@@ -766,7 +766,7 @@ export default function HomePage() {
             ].map((cert) => (
               <div
                 key={cert.code}
-                className="p-5 rounded-2xl bg-slate-900 border border-slate-800 text-center space-y-1 hover:border-teal-400 transition-colors"
+                className="p-5 rounded-2xl bg-slate-900 border border-slate-800 text-center space-y-1 hover:border-teal-400 transition-colors hover-lift"
               >
                 <div className="text-lg font-black text-teal-400">{cert.code}</div>
                 <div className="text-xs text-slate-300">{cert.label}</div>
@@ -777,7 +777,7 @@ export default function HomePage() {
           <div className="text-center pt-2">
             <Link
               href="/quality"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-bold text-sm bg-teal-400 hover:bg-teal-300 text-slate-950 transition-all shadow-lg shadow-teal-500/20"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-bold text-sm bg-teal-400 hover:bg-teal-300 text-slate-950 transition-all shadow-lg shadow-teal-500/20 hover-lift"
             >
               <span>Explore Quality &amp; Compliance</span>
               <ArrowRight className="w-4 h-4" />
@@ -788,7 +788,7 @@ export default function HomePage() {
 
       {/* 12. EXPORT SOLUTIONS — LIGHT THEME */}
       <section className="py-20 sm:py-24 bg-slate-50 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-slate-200">
             <div className="max-w-3xl space-y-3">
               <span className="text-xs font-extrabold uppercase tracking-widest text-teal-700 bg-teal-100/70 px-3.5 py-1.5 rounded-full border border-teal-200 inline-block">
@@ -805,7 +805,7 @@ export default function HomePage() {
 
             <Link
               href="/export"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-bold text-white bg-teal-700 hover:bg-teal-800 transition-all shadow-md self-start md:self-auto shrink-0"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-bold text-white bg-teal-700 hover:bg-teal-800 transition-all shadow-md self-start md:self-auto shrink-0 hover-lift"
             >
               <span>Explore All Trade Lanes</span>
               <ArrowRight className="w-4 h-4" />
@@ -825,7 +825,7 @@ export default function HomePage() {
 
       {/* 13. FACILITY & INFRASTRUCTURE — DARK THEME */}
       <section className="py-20 sm:py-24 bg-slate-950 text-white border-b border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-slate-800/80">
             <div className="max-w-3xl space-y-3">
               <span className="text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-950 border border-teal-500/30 px-3.5 py-1.5 rounded-full inline-block">
@@ -842,7 +842,7 @@ export default function HomePage() {
 
             <Link
               href="/capabilities"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-bold text-slate-950 bg-teal-400 hover:bg-teal-300 transition-all shadow-md self-start md:self-auto shrink-0"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-bold text-slate-950 bg-teal-400 hover:bg-teal-300 transition-all shadow-md self-start md:self-auto shrink-0 hover-lift"
             >
               <span>Explore Facility</span>
               <ArrowRight className="w-4 h-4" />
@@ -852,7 +852,7 @@ export default function HomePage() {
           {/* 4 Image Cards: Factory | Production Line | Laboratory | Warehouse */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Card 1: Factory */}
-            <div className="group rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden hover:border-teal-400 transition-all flex flex-col justify-between">
+            <div className="group rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden hover:border-teal-400 transition-all flex flex-col justify-between hover-lift">
               <div>
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-950">
                   <Image
@@ -875,7 +875,7 @@ export default function HomePage() {
             </div>
 
             {/* Card 2: Production line */}
-            <div className="group rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden hover:border-teal-400 transition-all flex flex-col justify-between">
+            <div className="group rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden hover:border-teal-400 transition-all flex flex-col justify-between hover-lift">
               <div>
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-950">
                   <Image
@@ -898,7 +898,7 @@ export default function HomePage() {
             </div>
 
             {/* Card 3: Laboratory */}
-            <div className="group rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden hover:border-teal-400 transition-all flex flex-col justify-between">
+            <div className="group rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden hover:border-teal-400 transition-all flex flex-col justify-between hover-lift">
               <div>
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-950">
                   <Image
@@ -921,7 +921,7 @@ export default function HomePage() {
             </div>
 
             {/* Card 4: Warehouse */}
-            <div className="group rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden hover:border-teal-400 transition-all flex flex-col justify-between">
+            <div className="group rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden hover:border-teal-400 transition-all flex flex-col justify-between hover-lift">
               <div>
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-950">
                   <Image
@@ -948,7 +948,7 @@ export default function HomePage() {
 
       {/* 14. BOTTOM CTA — LET'S BUILD YOUR NEXT SUCCESS STORY */}
       <section className="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 text-white py-20 border-t border-slate-800">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 reveal">
           <span className="text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-950 px-3.5 py-1.5 rounded-full border border-teal-500/30">
             Start Your Manufacturing Journey
           </span>

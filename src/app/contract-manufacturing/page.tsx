@@ -46,7 +46,7 @@ export default function ContractManufacturingPage() {
 
       {/* 2. What We Offer */}
       <section className="py-20 sm:py-24 bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-xs font-extrabold uppercase tracking-widest text-teal-700 bg-teal-50 px-3.5 py-1.5 rounded-full border border-teal-200 inline-block">
               Full-Scope Capabilities
@@ -56,7 +56,7 @@ export default function ContractManufacturingPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-container">
             {[
               {
                 title: "Aerosol Manufacturing",
@@ -89,7 +89,7 @@ export default function ContractManufacturingPage() {
             ].map((item, i) => (
               <div
                 key={item.title}
-                className="p-7 rounded-2xl bg-slate-50 border border-slate-200 hover:border-teal-400 hover:shadow-lg transition-all space-y-3 group flex flex-col justify-between"
+                className="p-7 rounded-2xl bg-slate-50 border border-slate-200 hover:border-teal-400 hover:shadow-lg transition-all space-y-3 group flex flex-col justify-between hover-lift"
               >
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-teal-700 font-black text-xs uppercase tracking-wider">
@@ -110,7 +110,7 @@ export default function ContractManufacturingPage() {
 
       {/* 3. How It Works (7 Steps) */}
       <section className="py-20 sm:py-24 bg-slate-950 text-white border-b border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-950 border border-teal-500/30 px-3.5 py-1.5 rounded-full inline-block">
               7-Step Process
@@ -120,7 +120,7 @@ export default function ContractManufacturingPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 stagger-container">
             {[
               "1. Requirement & Specification Review",
               "2. Technology Transfer",
@@ -132,7 +132,7 @@ export default function ContractManufacturingPage() {
             ].map((step, idx) => (
               <div
                 key={step}
-                className="p-5 rounded-2xl bg-slate-900 border border-slate-800 text-center space-y-3 hover:border-teal-400 transition-all flex flex-col justify-between"
+                className="p-5 rounded-2xl bg-slate-900 border border-slate-800 text-center space-y-3 hover:border-teal-400 transition-all flex flex-col justify-between hover-lift"
               >
                 <div className="w-9 h-9 mx-auto rounded-full bg-teal-400 text-slate-950 text-xs font-black flex items-center justify-center">
                   0{idx + 1}
@@ -148,7 +148,7 @@ export default function ContractManufacturingPage() {
 
       {/* 4. Why Contract Manufacturing With Accra Pac */}
       <section className="py-20 sm:py-24 bg-white border-b border-slate-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 reveal">
           <span className="text-xs font-extrabold uppercase tracking-widest text-teal-700 bg-teal-50 px-3.5 py-1.5 rounded-full border border-teal-200 inline-block">
             Confidence &amp; Repeatability
           </span>

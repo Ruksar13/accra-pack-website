@@ -80,8 +80,8 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             {/* Product Image Column */}
-            <div className="lg:col-span-5">
-              <div className="relative aspect-square rounded-3xl overflow-hidden bg-slate-100 border border-slate-200 shadow-xl group">
+            <div className="lg:col-span-5 reveal">
+              <div className="relative aspect-square rounded-3xl overflow-hidden bg-slate-100 border border-slate-200 shadow-xl group hover-lift">
                 <Image
                   src={product.image}
                   alt={product.name}
@@ -103,7 +103,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
             </div>
 
             {/* Product Overview & Quick Specification Grid */}
-            <div className="lg:col-span-7 space-y-6">
+            <div className="lg:col-span-7 space-y-6 reveal">
               <div className="space-y-2">
                 <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-50 px-3 py-1 rounded-full">
                   Formulation Highlights
@@ -125,15 +125,15 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
 
               {/* Quick Spec Pills */}
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
-                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
+                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1 hover-lift">
                   <div className="text-[11px] text-slate-500">Quality Benchmark</div>
                   <div className="text-xs font-bold text-slate-900">WHO-GMP &bull; US FDA</div>
                 </div>
-                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
+                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1 hover-lift">
                   <div className="text-[11px] text-slate-500">Stability Testing</div>
                   <div className="text-xs font-bold text-teal-700">6 Flame-Proof Chambers</div>
                 </div>
-                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1 col-span-2 sm:col-span-1">
+                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1 col-span-2 sm:col-span-1 hover-lift">
                   <div className="text-[11px] text-slate-500">Manufacturing Plant</div>
                   <div className="text-xs font-bold text-slate-900">Vapi, Gujarat (India)</div>
                 </div>
@@ -143,7 +143,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
               <div className="pt-3 flex flex-col sm:flex-row items-center gap-3">
                 <a
                   href="#inquiry-form"
-                  className="w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-900 hover:bg-teal-700 text-white font-bold text-xs shadow transition-all text-center"
+                  className="w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-900 hover:bg-teal-700 text-white font-bold text-xs shadow transition-all text-center hover-lift"
                 >
                   Request Samples &amp; Pricing
                 </a>
@@ -162,7 +162,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
       {/* 3. Formulation Variants & Options */}
       <section className="py-16 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-          <div className="text-center max-w-2xl mx-auto space-y-2">
+          <div className="text-center max-w-2xl mx-auto space-y-2 reveal">
             <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-100/60 px-3 py-1 rounded-full">
               Formulation Versatility
             </span>
@@ -174,11 +174,11 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 stagger-container reveal">
             {product.formulationOptions.map((opt, idx) => (
               <div
                 key={idx}
-                className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-3 hover:border-teal-400 transition-all"
+                className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-3 hover:border-teal-400 transition-all hover-lift"
               >
                 <div className="w-8 h-8 rounded-lg bg-teal-50 text-teal-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
                   0{idx + 1}
@@ -200,9 +200,9 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           
           {/* Packaging & Customisation 2-Column Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 reveal">
             {/* Packaging */}
-            <div className="p-8 rounded-2xl bg-slate-50 border border-slate-200 space-y-4">
+            <div className="p-8 rounded-2xl bg-slate-50 border border-slate-200 space-y-4 hover-lift">
               <div className="w-10 h-10 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center">
                 <Package className="w-5 h-5" />
               </div>
@@ -218,7 +218,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
             </div>
 
             {/* Customisation */}
-            <div className="p-8 rounded-2xl bg-slate-50 border border-slate-200 space-y-4">
+            <div className="p-8 rounded-2xl bg-slate-50 border border-slate-200 space-y-4 hover-lift">
               <div className="w-10 h-10 rounded-xl bg-cyan-50 text-cyan-700 flex items-center justify-center">
                 <Sparkles className="w-5 h-5" />
               </div>
@@ -235,7 +235,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
           </div>
 
           {/* 8-Step Manufacturing Process */}
-          <div className="space-y-8">
+          <div className="space-y-8 reveal">
             <div className="text-center max-w-2xl mx-auto space-y-1">
               <span className="text-xs font-bold uppercase tracking-wider text-teal-700">
                 Production Integrity
@@ -245,9 +245,9 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
               </h3>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 text-center">
+            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 text-center stagger-container">
               {product.manufacturingProcess.map((step, idx) => (
-                <div key={idx} className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-800 space-y-1">
+                <div key={idx} className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-800 space-y-1 hover-lift">
                   <div className="text-[10px] font-extrabold text-teal-700 bg-teal-100/60 w-6 h-6 rounded-full flex items-center justify-center mx-auto">
                     {idx + 1}
                   </div>
@@ -258,7 +258,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
           </div>
 
           {/* Regulatory & Export Support */}
-          <div className="p-8 rounded-2xl bg-slate-900 text-white space-y-4">
+          <div className="p-8 rounded-2xl bg-slate-900 text-white space-y-4 reveal hover-lift">
             <div className="flex items-center gap-2 text-teal-400 font-bold text-sm">
               <ShieldCheck className="w-5 h-5" />
               <span>Regulatory Compliance &amp; Global Export Release</span>
@@ -278,7 +278,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
       {/* 5. Product Specific FAQs */}
       <section className="py-16 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-          <div className="text-center space-y-2">
+          <div className="text-center space-y-2 reveal">
             <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-100/60 px-3 py-1 rounded-full">
               Common Questions
             </span>
@@ -287,9 +287,9 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
             </h3>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-4 stagger-container reveal">
             {product.faqs.map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2">
+              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2 hover-lift">
                 <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
                   <HelpCircle className="w-4 h-4 text-teal-600 shrink-0" />
                   <span>{faq.q}</span>
@@ -306,7 +306,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
       {/* 6. On-Page Request a Quote Form */}
       <section id="inquiry-form" className="py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-slate-50 p-8 sm:p-12 rounded-3xl border border-slate-200 shadow-sm space-y-6">
+          <div className="bg-slate-50 p-8 sm:p-12 rounded-3xl border border-slate-200 shadow-sm space-y-6 reveal hover-lift">
             <div className="text-center space-y-2">
               <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-100/60 px-3 py-1 rounded-full">
                 Direct Inquiry

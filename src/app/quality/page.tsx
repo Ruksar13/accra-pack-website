@@ -45,7 +45,7 @@ export default function QualityCompliancePage() {
 
       {/* 2. Certifications & Approvals (Grouped exactly as in doc) */}
       <section className="py-20 sm:py-24 bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-xs font-extrabold uppercase tracking-widest text-teal-700 bg-teal-50 px-3.5 py-1.5 rounded-full border border-teal-200 inline-block">
               International Accreditations
@@ -55,9 +55,9 @@ export default function QualityCompliancePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-container">
             {/* Group 1 */}
-            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-4">
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-4 hover-lift">
               <h3 className="text-lg font-bold text-slate-900 border-b border-slate-200 pb-3">
                 Quality, Environment &amp; Safety Systems
               </h3>
@@ -86,7 +86,7 @@ export default function QualityCompliancePage() {
             </div>
 
             {/* Group 2 */}
-            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-4">
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-4 hover-lift">
               <h3 className="text-lg font-bold text-slate-900 border-b border-slate-200 pb-3">
                 Regulatory &amp; Safety
               </h3>
@@ -111,7 +111,7 @@ export default function QualityCompliancePage() {
             </div>
 
             {/* Group 3 */}
-            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-4">
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-4 hover-lift">
               <h3 className="text-lg font-bold text-slate-900 border-b border-slate-200 pb-3">
                 Responsible Business
               </h3>
@@ -135,7 +135,7 @@ export default function QualityCompliancePage() {
 
       {/* 3. Our Quality Process (5 Steps) */}
       <section className="py-20 sm:py-24 bg-slate-950 text-white border-b border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-950 border border-teal-500/30 px-3.5 py-1.5 rounded-full inline-block">
               Systematic Gate Controls
@@ -145,7 +145,7 @@ export default function QualityCompliancePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-4 stagger-container">
             {[
               {
                 step: "1. Raw Material Inspection",
@@ -170,7 +170,7 @@ export default function QualityCompliancePage() {
             ].map((p, idx) => (
               <div
                 key={p.step}
-                className="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-3 hover:border-teal-400 transition-all flex flex-col justify-between"
+                className="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-3 hover:border-teal-400 transition-all flex flex-col justify-between hover-lift"
               >
                 <div className="w-8 h-8 rounded-full bg-teal-400 text-slate-950 text-xs font-black flex items-center justify-center">
                   0{idx + 1}
@@ -191,9 +191,9 @@ export default function QualityCompliancePage() {
 
       {/* 4. Testing, Traceability & Safety Details */}
       <section className="py-20 sm:py-24 bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 stagger-container">
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-3 hover-lift">
               <h3 className="text-xl font-bold text-slate-900">
                 Testing &amp; Validation
               </h3>
@@ -202,7 +202,7 @@ export default function QualityCompliancePage() {
               </p>
             </div>
 
-            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-3">
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-3 hover-lift">
               <h3 className="text-xl font-bold text-slate-900">
                 Traceability &amp; Documentation
               </h3>
@@ -211,7 +211,7 @@ export default function QualityCompliancePage() {
               </p>
             </div>
 
-            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-3">
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-3 hover-lift">
               <h3 className="text-xl font-bold text-slate-900">
                 Built for Audits and Export Markets
               </h3>
@@ -220,7 +220,7 @@ export default function QualityCompliancePage() {
               </p>
             </div>
 
-            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-3">
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-3 hover-lift">
               <h3 className="text-xl font-bold text-slate-900">
                 Safety
               </h3>

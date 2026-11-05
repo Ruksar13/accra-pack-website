@@ -98,13 +98,13 @@ export default function InsightsPage() {
       {/* 3. Articles Grid */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-container reveal">
             {filteredArticles.map((article) => (
               <div
                 key={article.id}
                 id={article.id}
                 onClick={() => setActiveArticle(article)}
-                className="cursor-pointer bg-white p-7 rounded-2xl border border-slate-200 shadow-sm hover:border-teal-400 hover:shadow-md transition-all flex flex-col justify-between space-y-5 group scroll-mt-28"
+                className="cursor-pointer bg-white p-7 rounded-2xl border border-slate-200 shadow-sm hover:border-teal-400 hover:shadow-md transition-all flex flex-col justify-between space-y-5 group scroll-mt-28 hover-lift"
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between text-xs text-slate-500">

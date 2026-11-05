@@ -45,7 +45,7 @@ export default function CDMOPage() {
 
       {/* 2. What We Offer */}
       <section className="py-20 sm:py-24 bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-xs font-extrabold uppercase tracking-widest text-teal-700 bg-teal-50 px-3.5 py-1.5 rounded-full border border-teal-200 inline-block">
               End-to-End Science &amp; Scale
@@ -55,7 +55,7 @@ export default function CDMOPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-container">
             {[
               {
                 title: "Concept & Feasibility",
@@ -84,7 +84,7 @@ export default function CDMOPage() {
             ].map((item, i) => (
               <div
                 key={item.title}
-                className="p-7 rounded-2xl bg-slate-50 border border-slate-200 hover:border-teal-400 hover:shadow-lg transition-all space-y-3 group flex flex-col justify-between"
+                className="p-7 rounded-2xl bg-slate-50 border border-slate-200 hover:border-teal-400 hover:shadow-lg transition-all space-y-3 group flex flex-col justify-between hover-lift"
               >
                 <div className="space-y-2">
                   <div className="text-teal-700 font-black text-xs uppercase tracking-wider">
@@ -105,7 +105,7 @@ export default function CDMOPage() {
 
       {/* 3. CDMO Workflow (9 Steps) */}
       <section className="py-20 sm:py-24 bg-slate-950 text-white border-b border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-950 border border-teal-500/30 px-3.5 py-1.5 rounded-full inline-block">
               Integrated Roadmap
@@ -115,7 +115,7 @@ export default function CDMOPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-9 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-9 gap-3 stagger-container">
             {[
               "1. Idea & Brief",
               "2. Feasibility",
@@ -129,7 +129,7 @@ export default function CDMOPage() {
             ].map((step, idx) => (
               <div
                 key={step}
-                className="p-4 rounded-2xl bg-slate-900 border border-slate-800 text-center space-y-2 hover:border-teal-400 transition-all flex flex-col justify-between"
+                className="p-4 rounded-2xl bg-slate-900 border border-slate-800 text-center space-y-2 hover:border-teal-400 transition-all flex flex-col justify-between hover-lift"
               >
                 <div className="w-8 h-8 mx-auto rounded-full bg-teal-400 text-slate-950 text-xs font-black flex items-center justify-center">
                   0{idx + 1}
@@ -145,7 +145,7 @@ export default function CDMOPage() {
 
       {/* 4. Why CDMO With Accra Pac */}
       <section className="py-20 sm:py-24 bg-white border-b border-slate-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 reveal">
           <span className="text-xs font-extrabold uppercase tracking-widest text-teal-700 bg-teal-50 px-3.5 py-1.5 rounded-full border border-teal-200 inline-block">
             One Team, Zero Friction
           </span>

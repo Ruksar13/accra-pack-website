@@ -96,7 +96,7 @@ export default function ServicesPage() {
 
       {/* 3. Detailed Model Presentations */}
       <section className="py-16 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
           {/* MODEL 1: CONTRACT MANUFACTURING */}
           {activeTab === "contract-mfg" && (
             <div id="contract-mfg" className="space-y-12 animate-in fade-in duration-200">
@@ -115,27 +115,27 @@ export default function ServicesPage() {
                   </div>
                   <button
                     onClick={() => handleOpenQuote("Contract Manufacturing")}
-                    className="shrink-0 px-6 py-3 rounded-xl bg-slate-900 hover:bg-teal-700 text-white font-semibold text-xs transition-all shadow"
+                    className="shrink-0 px-6 py-3 rounded-xl bg-slate-900 hover:bg-teal-700 text-white font-semibold text-xs transition-all shadow hover-lift"
                   >
                     Initiate Tech Transfer
                   </button>
                 </div>
 
                 {/* Scope of Services */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-700">
-                  <div className="p-5 rounded-xl bg-slate-50 border border-slate-100 space-y-2">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-700 stagger-container">
+                  <div className="p-5 rounded-xl bg-slate-50 border border-slate-100 space-y-2 hover-lift">
                     <div className="font-bold text-slate-900 text-sm">Technology Transfer &amp; Validation</div>
                     <p className="text-slate-600 leading-relaxed">
                       Our formulation engineers review your batch manufacturing records (BMR) and execute pilot scale-up batches to confirm physical and chemical performance on our automated lines.
                     </p>
                   </div>
-                  <div className="p-5 rounded-xl bg-slate-50 border border-slate-100 space-y-2">
+                  <div className="p-5 rounded-xl bg-slate-50 border border-slate-100 space-y-2 hover-lift">
                     <div className="font-bold text-slate-900 text-sm">Automated Aerosol &amp; Liquid Lines</div>
                     <p className="text-slate-600 leading-relaxed">
                       5 Aerosol lines (1.5 oz - 16 oz, hydrocarbon/compressed gas/BOV) and 6 Liquid lines (2 ml - 5L, roll-ons, pump sprays) with inline tare checking and 100% leak detection.
                     </p>
                   </div>
-                  <div className="p-5 rounded-xl bg-slate-50 border border-slate-100 space-y-2">
+                  <div className="p-5 rounded-xl bg-slate-50 border border-slate-100 space-y-2 hover-lift">
                     <div className="font-bold text-slate-900 text-sm">Analytical QA &amp; Batch Traceability</div>
                     <p className="text-slate-600 leading-relaxed">
                       In-house GC, HPLC, and microbiology testing. Comprehensive Certificate of Analysis (COA), Safety Data Sheets (SDS), and traceable batch records provided for every commercial shipment.
