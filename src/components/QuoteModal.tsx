@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { 
   X, 
   CheckCircle2, 
@@ -10,7 +10,9 @@ import {
   Layers, 
   Building2, 
   Mail, 
-  Phone 
+  Phone,
+  Loader2,
+  AlertCircle
 } from "lucide-react";
 
 interface QuoteModalProps {
@@ -20,7 +22,6 @@ interface QuoteModalProps {
 }
 
 export default function QuoteModal({ isOpen, onClose, preselectedCategory }: QuoteModalProps) {
-  const [step, setStep] = useState(1);
   const [format, setFormat] = useState(preselectedCategory || "Aerosol Spray");
   const [formulationType, setFormulationType] = useState("Ready Library Formula (500+ available)");
   const [volume, setVolume] = useState("50,000 – 250,000 units");
@@ -32,76 +33,166 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
     country: "India",
     notes: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  // Sync preselectedCategory if provided
+  useEffect(() => {
+    if (preselectedCategory) {
+      setFormat(preselectedCategory);
+    }
+  }, [preselectedCategory]);
+
+  // Handle ESC key to close and lock body scroll when open
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+      window.addEventListener("keydown", handleKeyDown);
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setIsSubmitting(true);
+    setErrorMessage(null);
+
+    try {
+      const response = await fetch("/api/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          format,
+          formulationType,
+          volume,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to send quote request.");
+      }
+
+      setIsSubmitted(true);
+    } catch (err: any) {
+      console.error("Quote submission error:", err);
+      setErrorMessage(err.message || "An unexpected error occurred. Please try again or call +91 98251 49522.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleReset = () => {
     setIsSubmitted(false);
-    setStep(1);
+    setErrorMessage(null);
+    setFormData({
+      name: "",
+      company: "",
+      email: "",
+      phone: "",
+      country: "India",
+      notes: ""
+    });
     onClose();
   };
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4">
+    <div 
+      className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-4 md:p-6"
+      onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+    >
       <div 
-        className="relative bg-white rounded-2xl max-w-xl w-full shadow-2xl border border-slate-100 overflow-hidden animate-in fade-in zoom-in-95 duration-200"
+        className="relative bg-white rounded-2xl sm:rounded-3xl max-w-xl w-full shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[92vh] animate-in fade-in zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Header Bar */}
-        <div className="bg-slate-900 text-white p-6 flex justify-between items-start">
-          <div>
-            <div className="text-xs font-semibold uppercase tracking-wider text-teal-400 mb-1">
-              Accra Pac OEM & Contract Manufacturing
+        {/* Header Bar - Sticky & Prominent */}
+        <div className="bg-gradient-to-r from-[#0b182f] via-[#0f284e] to-[#1455A6] text-white p-4 sm:p-6 flex justify-between items-start border-b border-[#1455A6]/40 shrink-0 relative">
+          <div className="pr-10">
+            <div className="text-[11px] font-bold uppercase tracking-wider text-[#00B8C7] mb-1 flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-[#00B8C7] animate-pulse"></span>
+              <span>Accra Pac &bull; OEM &amp; Contract Manufacturing</span>
             </div>
-            <h3 className="text-xl font-bold">Request a Custom Proposal</h3>
-            <p className="text-xs text-slate-300 mt-1">
+            <h3 className="text-lg sm:text-xl font-extrabold text-white">Request a Custom Proposal</h3>
+            <p className="text-xs text-[#A6A9AD] mt-1 line-clamp-1 sm:line-clamp-none">
               Direct connection with our technical team in Vapi. Confidentiality guaranteed.
             </p>
           </div>
+
+          {/* PROMINENT CLOSE BUTTON - High contrast, accessible, clear hover & active states */}
           <button
             onClick={onClose}
-            className="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+            type="button"
+            className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/10 hover:bg-red-500 text-white hover:text-white flex items-center justify-center transition-all duration-200 shadow-md cursor-pointer border border-white/20 hover:border-red-400 group active:scale-95"
+            aria-label="Close modal"
+            title="Close (Esc)"
           >
-            <X className="w-5 h-5" />
+            <X className="w-5 h-5 transition-transform group-hover:rotate-90" />
           </button>
         </div>
 
-        {/* Modal Body */}
-        <div className="p-6">
+        {/* Modal Scrollable Body */}
+        <div className="p-4 sm:p-6 overflow-y-auto flex-1 overscroll-contain">
           {isSubmitted ? (
-            <div className="text-center py-8 space-y-4">
-              <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
-                <CheckCircle2 className="w-10 h-10" />
+            <div className="text-center py-6 sm:py-8 space-y-4">
+              <div className="w-16 h-16 bg-[#e0edfd] text-[#1455A6] rounded-full flex items-center justify-center mx-auto shadow-inner">
+                <CheckCircle2 className="w-10 h-10 text-[#1455A6]" />
               </div>
-              <h4 className="text-2xl font-bold text-slate-900">Inquiry Received</h4>
-              <p className="text-sm text-slate-600 max-w-md mx-auto">
-                Thank you, <strong>{formData.name || "partner"}</strong>. Our technical team (led by Mr. Sahil Shah) will review your specifications for <strong>{format}</strong> and send an initial quotation within 24 business hours.
+              <h4 className="text-2xl font-black text-slate-900">Inquiry Received</h4>
+              <p className="text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
+                Thank you, <strong>{formData.name || "partner"}</strong>. Your technical request has been transmitted directly to our sales administration (<strong>sales@accrapacindia.com</strong>).
               </p>
-              <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 text-left text-xs text-slate-600 max-w-md mx-auto space-y-1">
-                <div><strong>Format:</strong> {format}</div>
-                <div><strong>Formulation:</strong> {formulationType}</div>
-                <div><strong>Volume:</strong> {volume}</div>
-                <div><strong>Destination:</strong> {formData.country}</div>
+              
+              <div className="bg-[#f0f6fe] p-4 rounded-xl border border-blue-200 text-left text-xs text-slate-700 max-w-md mx-auto space-y-1.5 shadow-sm">
+                <div><strong className="text-[#1455A6]">Format:</strong> {format}</div>
+                <div><strong className="text-[#1455A6]">Formulation:</strong> {formulationType}</div>
+                <div><strong className="text-[#1455A6]">Volume:</strong> {volume}</div>
+                <div><strong className="text-[#1455A6]">Target Destination:</strong> {formData.country}</div>
               </div>
-              <button
-                onClick={handleReset}
-                className="mt-4 px-6 py-2.5 bg-slate-900 hover:bg-teal-700 text-white rounded-lg text-sm font-semibold transition-colors"
-              >
-                Close & Return
-              </button>
+
+              <div className="pt-2">
+                <button
+                  onClick={handleReset}
+                  className="px-7 py-3 bg-[#1455A6] hover:bg-[#0f4487] text-white rounded-xl text-sm font-bold shadow-md transition-colors"
+                >
+                  Close &amp; Return to Website
+                </button>
+              </div>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-5">
-              {/* Product Format */}
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+              {/* Error banner if submission fails */}
+              {errorMessage && (
+                <div className="p-3.5 bg-red-50 border border-red-200 rounded-xl text-xs text-red-700 flex items-start gap-2.5">
+                  <AlertCircle className="w-4 h-4 text-red-600 shrink-0 mt-0.5" />
+                  <div className="flex-1">
+                    <strong className="font-semibold">Notice:</strong> {errorMessage}
+                  </div>
+                </div>
+              )}
+
+              {/* 1. Product Format */}
               <div>
-                <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">
-                  1. Product Format & Packaging
+                <label className="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
+                  1. Product Format &amp; Packaging
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
                   {[
@@ -116,10 +207,10 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
                       type="button"
                       key={fmt}
                       onClick={() => setFormat(fmt)}
-                      className={`py-2 px-3 rounded-lg border text-left transition-all ${
+                      className={`py-2 px-2.5 rounded-xl border text-left font-medium transition-all ${
                         format === fmt 
-                          ? "border-teal-600 bg-teal-50/80 text-teal-800 font-medium ring-1 ring-teal-600" 
-                          : "border-slate-200 hover:border-slate-300 text-slate-600"
+                          ? "border-[#1455A6] bg-[#f0f6fe] text-[#1455A6] font-bold ring-2 ring-[#1455A6]/30 shadow-sm" 
+                          : "border-slate-200 hover:border-slate-300 text-slate-700 bg-slate-50/50"
                       }`}
                     >
                       {fmt}
@@ -128,29 +219,29 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
                 </div>
               </div>
 
-              {/* Formulation Status */}
+              {/* 2. Formulation Status */}
               <div>
-                <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">
+                <label className="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
                   2. Formulation Approach
                 </label>
                 <select
                   value={formulationType}
                   onChange={(e) => setFormulationType(e.target.value)}
-                  className="w-full text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-lg p-2.5 text-slate-800 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full text-xs sm:text-sm bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#1455A6] transition-all"
                 >
                   <option>Ready Library Formula (500+ available — fastest launch)</option>
-                  <option>Custom Formulation R&D (Developed in Accra Pac lab)</option>
+                  <option>Custom Formulation R&amp;D (Developed in Accra Pac lab)</option>
                   <option>Client-Supplied Formulation (Technology Transfer)</option>
                   <option>Adapt Existing Market Formulation</option>
                 </select>
               </div>
 
-              {/* Volume Target */}
+              {/* 3. Volume Target */}
               <div>
-                <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">
+                <label className="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
                   3. Anticipated Annual Run
                 </label>
-                <div className="grid grid-cols-3 gap-2 text-xs">
+                <div className="grid grid-cols-3 gap-2 text-[11px] sm:text-xs">
                   {[
                     "10,000 – 50,000 (Pilot)",
                     "50,000 – 250,000 (Commercial)",
@@ -160,10 +251,10 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
                       type="button"
                       key={vol}
                       onClick={() => setVolume(vol)}
-                      className={`p-2 rounded-lg border text-center transition-all ${
+                      className={`p-2 rounded-xl border text-center transition-all ${
                         volume === vol 
-                          ? "border-teal-600 bg-teal-50/80 text-teal-800 font-medium ring-1 ring-teal-600" 
-                          : "border-slate-200 hover:border-slate-300 text-slate-600"
+                          ? "border-[#1455A6] bg-[#f0f6fe] text-[#1455A6] font-bold ring-2 ring-[#1455A6]/30 shadow-sm" 
+                          : "border-slate-200 hover:border-slate-300 text-slate-700 bg-slate-50/50"
                       }`}
                     >
                       {vol}
@@ -172,93 +263,112 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
                 </div>
               </div>
 
-              {/* Contact Information */}
-              <div className="pt-2 border-t border-slate-100 space-y-3">
+              {/* 4. Contact Information */}
+              <div className="pt-2 border-t border-slate-200 space-y-3">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
-                    <label className="block text-xs font-medium text-slate-600 mb-1">Full Name *</label>
+                    <label className="block text-xs font-semibold text-slate-700 mb-1">Full Name *</label>
                     <input
                       type="text"
                       required
                       placeholder="e.g. John Doe"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full text-xs sm:text-sm border border-slate-200 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                      className="w-full text-xs sm:text-sm border border-slate-300 rounded-xl p-2.5 focus:outline-none focus:ring-2 focus:ring-[#1455A6] transition-all"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-slate-600 mb-1">Company / Brand Name *</label>
+                    <label className="block text-xs font-semibold text-slate-700 mb-1">Company / Brand Name</label>
                     <input
                       type="text"
-                      required
                       placeholder="e.g. Acme Consumer"
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                      className="w-full text-xs sm:text-sm border border-slate-200 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                      className="w-full text-xs sm:text-sm border border-slate-300 rounded-xl p-2.5 focus:outline-none focus:ring-2 focus:ring-[#1455A6] transition-all"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
-                    <label className="block text-xs font-medium text-slate-600 mb-1">Business Email *</label>
+                    <label className="block text-xs font-semibold text-slate-700 mb-1">Business Email *</label>
                     <input
                       type="email"
                       required
                       placeholder="john@company.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full text-xs sm:text-sm border border-slate-200 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                      className="w-full text-xs sm:text-sm border border-slate-300 rounded-xl p-2.5 focus:outline-none focus:ring-2 focus:ring-[#1455A6] transition-all"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-slate-600 mb-1">Phone / WhatsApp *</label>
+                    <label className="block text-xs font-semibold text-slate-700 mb-1">Phone / WhatsApp *</label>
                     <input
                       type="tel"
                       required
                       placeholder="+91 98251..."
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full text-xs sm:text-sm border border-slate-200 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                      className="w-full text-xs sm:text-sm border border-slate-300 rounded-xl p-2.5 focus:outline-none focus:ring-2 focus:ring-[#1455A6] transition-all"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-medium text-slate-600 mb-1">Target Market / Country</label>
+                  <label className="block text-xs font-semibold text-slate-700 mb-1">Target Market / Destination Country</label>
                   <input
                     type="text"
                     placeholder="e.g. India, United States, UAE, Africa"
                     value={formData.country}
                     onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-                    className="w-full text-xs sm:text-sm border border-slate-200 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    className="w-full text-xs sm:text-sm border border-slate-300 rounded-xl p-2.5 focus:outline-none focus:ring-2 focus:ring-[#1455A6] transition-all"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-medium text-slate-600 mb-1">Specific Product Requirements</label>
+                  <label className="block text-xs font-semibold text-slate-700 mb-1">Specific Product Requirements &amp; Notes</label>
                   <textarea
                     rows={2}
-                    placeholder="e.g. Can dimensions, active ingredients, target launch date, regulatory questions..."
+                    placeholder="e.g. Can size, active ingredients, fragrance profile, target launch date..."
                     value={formData.notes}
                     onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                    className="w-full text-xs sm:text-sm border border-slate-200 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none"
+                    className="w-full text-xs sm:text-sm border border-slate-300 rounded-xl p-2.5 focus:outline-none focus:ring-2 focus:ring-[#1455A6] resize-none transition-all"
                   />
                 </div>
               </div>
 
               {/* Action Buttons */}
-              <div className="pt-2 flex items-center justify-between gap-3">
-                <span className="text-[11px] text-slate-400">
-                  Strict NDA protected. Never shared with third parties.
+              <div className="pt-3 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <span className="text-[11px] text-[#A6A9AD] text-center sm:text-left">
+                  Strict NDA protected. Inquiries routed to sales@accrapacindia.com
                 </span>
-                <button
-                  type="submit"
-                  className="px-6 py-2.5 rounded-lg text-sm font-semibold text-white bg-slate-900 hover:bg-teal-700 shadow flex items-center gap-2 transition-all"
-                >
-                  <span>Submit RFQ</span>
-                  <Send className="w-4 h-4" />
-                </button>
+                
+                <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
+                  <button
+                    type="button"
+                    onClick={onClose}
+                    className="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="flex-1 sm:flex-initial px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-[#1455A6] hover:bg-[#0f4487] disabled:opacity-70 shadow-md shadow-blue-900/20 flex items-center justify-center gap-2 transition-all active:scale-95"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="w-4 h-4 animate-spin text-[#00B8C7]" />
+                        <span>Sending to Admin...</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>Submit RFQ</span>
+                        <Send className="w-3.5 h-3.5 text-[#00B8C7]" />
+                      </>
+                    )}
+                  </button>
+                </div>
               </div>
             </form>
           )}
@@ -267,4 +377,3 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
     </div>
   );
 }
-

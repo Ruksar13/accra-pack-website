@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -38,7 +38,7 @@ export default function CapabilitiesPage() {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
-            <span className="text-xs font-semibold uppercase tracking-wider text-teal-400">
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#00B8C7]">
               Integrated Plant Infrastructure
             </span>
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
@@ -56,7 +56,7 @@ export default function CapabilitiesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 stagger-container">
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 text-center space-y-1 hover-lift">
-              <div className="text-3xl sm:text-4xl font-extrabold text-teal-700">120M+</div>
+              <div className="text-3xl sm:text-4xl font-extrabold text-[#1455A6]">120M+</div>
               <div className="text-xs font-bold text-slate-800 uppercase tracking-wider">Annual Units Capacity</div>
               <div className="text-[11px] text-slate-500">Scalable from pilot runs to multi-million commercial orders</div>
             </div>
@@ -74,7 +74,7 @@ export default function CapabilitiesPage() {
             </div>
 
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 text-center space-y-1 hover-lift">
-              <div className="text-3xl sm:text-4xl font-extrabold text-emerald-700">6 Chambers</div>
+              <div className="text-3xl sm:text-4xl font-extrabold text-[#1455A6]">6 Chambers</div>
               <div className="text-xs font-bold text-slate-800 uppercase tracking-wider">Flame-Proof Stability</div>
               <div className="text-[11px] text-slate-500">Real-time &amp; accelerated shelf-life validation</div>
             </div>
@@ -86,7 +86,7 @@ export default function CapabilitiesPage() {
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-100/60 px-3 py-1 rounded-full">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#1455A6] bg-[#f0f6fe]/60 px-3 py-1 rounded-full">
               Core Technologies
             </span>
             <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
@@ -99,7 +99,7 @@ export default function CapabilitiesPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 stagger-container">
             {/* Tech 1: Aerosol Filling */}
-            <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:border-teal-400 transition-all flex flex-col justify-between group hover-lift">
+            <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:border-[#00B8C7] transition-all flex flex-col justify-between group hover-lift">
               <div className="relative h-48 w-full bg-slate-100 overflow-hidden">
                 <Image
                   src="/images/manufacturing/aerosol-filling-line.jpg"
@@ -107,14 +107,14 @@ export default function CapabilitiesPage() {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-bold text-teal-300">
+                <div className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-bold text-[#00B8C7]">
                   5 Automated Lines
                 </div>
               </div>
 
               <div className="p-6 sm:p-7 space-y-4">
                 <div>
-                  <span className="text-xs font-semibold text-teal-700 uppercase tracking-wider">Pressurized Gas Filling</span>
+                  <span className="text-xs font-semibold text-[#1455A6] uppercase tracking-wider">Pressurized Gas Filling</span>
                   <h3 className="text-xl font-bold text-slate-900 mt-0.5">Aerosol Manufacturing</h3>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -122,26 +122,26 @@ export default function CapabilitiesPage() {
                 </p>
                 <div className="space-y-2 text-xs text-slate-700 pt-2 border-t border-slate-100">
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#1455A6] shrink-0" />
                     <span><strong>Can Sizes:</strong> 1.5 oz to 16 oz (Aluminium &amp; Tinplate)</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#1455A6] shrink-0" />
                     <span><strong>Propellants:</strong> LPG/Hydrocarbon, DME, CO2, Nitrogen</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#1455A6] shrink-0" />
                     <span><strong>Pharma Propellants:</strong> HFA-134a, HFA-152a</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#1455A6] shrink-0" />
                     <span><strong>Safety:</strong> NFPA 30B compliant propellant handling</span>
                   </div>
                 </div>
               </div>
 
               <div className="p-6 pt-0">
-                <div className="pt-3 border-t border-slate-100 text-xs font-semibold text-teal-700">
+                <div className="pt-3 border-t border-slate-100 text-xs font-semibold text-[#1455A6]">
                   Deodorants &bull; Hair Sprays &bull; Pain Relief &bull; Air Care
                 </div>
               </div>
@@ -156,7 +156,7 @@ export default function CapabilitiesPage() {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-bold text-cyan-300">
+                <div className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-bold text-[#00B8C7]">
                   Separation Technology
                 </div>
               </div>
@@ -171,19 +171,19 @@ export default function CapabilitiesPage() {
                 </p>
                 <div className="space-y-2 text-xs text-slate-700 pt-2 border-t border-slate-100">
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-cyan-600 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#1455A6] shrink-0" />
                     <span><strong>Evacuation Rate:</strong> Up to 99.5% product dispensing</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-cyan-600 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#1455A6] shrink-0" />
                     <span><strong>360-Degree Spray:</strong> Discharges at any angle or upside-down</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-cyan-600 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#1455A6] shrink-0" />
                     <span><strong>No Preservatives:</strong> Zero contact with air or propellant</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-cyan-600 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#1455A6] shrink-0" />
                     <span><strong>Ideal For:</strong> Creams, gels, saline sprays, burn relief</span>
                   </div>
                 </div>
@@ -212,7 +212,7 @@ export default function CapabilitiesPage() {
 
               <div className="p-6 sm:p-7 space-y-4">
                 <div>
-                  <span className="text-xs font-semibold text-emerald-700 uppercase tracking-wider">Precision Multi-Format</span>
+                  <span className="text-xs font-semibold text-[#1455A6] uppercase tracking-wider">Precision Multi-Format</span>
                   <h3 className="text-xl font-bold text-slate-900 mt-0.5">Liquid &amp; Roll-On Filling</h3>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -220,26 +220,26 @@ export default function CapabilitiesPage() {
                 </p>
                 <div className="space-y-2 text-xs text-slate-700 pt-2 border-t border-slate-100">
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#00B8C7] shrink-0" />
                     <span><strong>Dedicated Line:</strong> Automated roll-on ball insertion &amp; capping</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#00B8C7] shrink-0" />
                     <span><strong>Dispenser Assembly:</strong> Trigger sprays, fine mists &amp; foaming pumps</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#00B8C7] shrink-0" />
                     <span><strong>Packaging Range:</strong> Glass, HDPE, PET, and flexible sachets</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#00B8C7] shrink-0" />
                     <span><strong>Formulation Bases:</strong> Alcohol-based, aqueous, and emulsions</span>
                   </div>
                 </div>
               </div>
 
               <div className="p-6 pt-0">
-                <div className="pt-3 border-t border-slate-100 text-xs font-semibold text-emerald-700">
+                <div className="pt-3 border-t border-slate-100 text-xs font-semibold text-[#1455A6]">
                   Roll-On Deos &bull; Hand Sanitizers &bull; Surface Cleaners
                 </div>
               </div>
@@ -253,7 +253,7 @@ export default function CapabilitiesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-50 px-3 py-1 rounded-full">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#1455A6] bg-[#f0f6fe] px-3 py-1 rounded-full">
                 Quality Assurance Built In
               </span>
               <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
@@ -307,21 +307,21 @@ export default function CapabilitiesPage() {
 
               <div className="space-y-2.5 text-xs text-slate-300">
                 <div className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-teal-400 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-[#00B8C7] shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-white">NFPA 30B Compliance:</strong> Certified storage systems for Level 1, 2, and 3 aerosol products, including explosion-proof gas houses and automatic gas detection sensors.
                   </div>
                 </div>
 
                 <div className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-teal-400 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-[#00B8C7] shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-white">Stability Validation:</strong> Six specialized chambers for accelerated testing (40&deg;C/75% RH) and real-time shelf life monitoring without explosion risk.
                   </div>
                 </div>
 
                 <div className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-teal-400 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-[#00B8C7] shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-white">Logistics Proximity:</strong> Located in G.I.D.C. Vapi, just 2.5 hours driving distance from Mumbai, enabling client audit visits and rapid container routing to JNPT sea port.
                   </div>
@@ -331,7 +331,7 @@ export default function CapabilitiesPage() {
               <div className="pt-2">
                 <button
                   onClick={() => setIsQuoteOpen(true)}
-                  className="w-full py-2.5 rounded-lg bg-teal-400 hover:bg-teal-300 text-slate-950 font-bold text-xs transition-colors shadow"
+                  className="w-full py-2.5 rounded-lg bg-[#1455A6] hover:bg-[#0f4487] text-slate-950 font-bold text-xs transition-colors shadow"
                 >
                   Request Technical Plant Tour / Dossier
                 </button>
@@ -354,7 +354,7 @@ export default function CapabilitiesPage() {
               />
             </div>
             <div className="lg:col-span-7 space-y-4">
-              <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-100/60 px-3 py-1 rounded-full">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#1455A6] bg-[#f0f6fe]/60 px-3 py-1 rounded-full">
                 Secure Warehousing &amp; Hazmat Staging
               </span>
               <h3 className="text-2xl font-extrabold text-slate-900">
@@ -377,7 +377,7 @@ export default function CapabilitiesPage() {
       <section className="py-20 bg-white border-t border-slate-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 reveal">
           <div className="text-center space-y-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-50 px-3 py-1 rounded-full">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#1455A6] bg-[#f0f6fe] px-3 py-1 rounded-full">
               Production FAQ
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
@@ -406,7 +406,7 @@ export default function CapabilitiesPage() {
             ].map((item, idx) => (
               <div key={idx} className="bg-slate-50 p-6 rounded-xl border border-slate-200 shadow-sm space-y-2 hover-lift">
                 <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                  <HelpCircle className="w-4 h-4 text-teal-600 shrink-0" />
+                  <HelpCircle className="w-4 h-4 text-[#1455A6] shrink-0" />
                   {item.q}
                 </h4>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pl-6">
@@ -430,7 +430,7 @@ export default function CapabilitiesPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={() => setIsQuoteOpen(true)}
-              className="px-6 py-3 rounded-xl bg-teal-400 hover:bg-teal-300 text-slate-950 font-bold text-xs transition-colors shadow"
+              className="px-6 py-3 rounded-xl bg-[#1455A6] hover:bg-[#0f4487] text-slate-950 font-bold text-xs transition-colors shadow"
             >
               Discuss Your Manufacturing Specs
             </button>
@@ -448,3 +448,4 @@ export default function CapabilitiesPage() {
     </div>
   );
 }
+

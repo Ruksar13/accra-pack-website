@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -26,7 +26,7 @@ export default function ExportPage() {
       <section className="bg-slate-950 text-white py-16 sm:py-24 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
-            <span className="text-xs font-semibold uppercase tracking-wider text-teal-400 bg-teal-950 border border-teal-500/30 px-3.5 py-1.5 rounded-full inline-block">
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#00B8C7] bg-[#071324] border border-[#1455A6]/30 px-3.5 py-1.5 rounded-full inline-block">
               Global Reach
             </span>
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
@@ -44,7 +44,7 @@ export default function ExportPage() {
       <section className="py-20 sm:py-24 bg-slate-900 border-b border-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 reveal">
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-950/80 border border-teal-500/30 px-3.5 py-1.5 rounded-full inline-block">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#00B8C7] bg-[#071324]/80 border border-[#1455A6]/30 px-3.5 py-1.5 rounded-full inline-block">
               Active Trade Lanes
             </span>
             <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
@@ -58,7 +58,7 @@ export default function ExportPage() {
           <WorldMap />
 
           <div className="p-5 rounded-2xl bg-slate-950 border border-slate-800 text-center text-xs text-slate-300 space-y-2 hover-lift">
-            <div className="font-bold text-teal-400 uppercase tracking-wider">
+            <div className="font-bold text-[#00B8C7] uppercase tracking-wider">
               Destinations Served:
             </div>
             <div className="flex flex-wrap items-center justify-center gap-2">
@@ -66,7 +66,7 @@ export default function ExportPage() {
                 "USA", "UAE", "Oman", "Singapore", "Malaysia", "Russia",
                 "Sri Lanka", "Bhutan", "Congo", "Ethiopia", "Djibouti", "Bangladesh"
               ].map((c) => (
-                <span key={c} className="px-3 py-1 rounded-lg bg-slate-900 text-slate-200 border border-slate-800 font-semibold hover:border-teal-400 transition-colors">
+                <span key={c} className="px-3 py-1 rounded-lg bg-slate-900 text-slate-200 border border-slate-800 font-semibold hover:border-[#00B8C7] transition-colors">
                   {c}
                 </span>
               ))}
@@ -79,7 +79,7 @@ export default function ExportPage() {
       <section className="py-20 sm:py-24 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-teal-700 bg-teal-50 px-3.5 py-1.5 rounded-full border border-teal-200 inline-block">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-[#1455A6] bg-[#f0f6fe] px-3.5 py-1.5 rounded-full border border-blue-200 inline-block">
               Seamless Logistics
             </span>
             <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
@@ -89,8 +89,8 @@ export default function ExportPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-container">
             <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 space-y-3 hover-lift">
-              <div className="w-12 h-12 rounded-xl bg-teal-100 text-teal-800 flex items-center justify-center font-bold">
-                <Ship className="w-6 h-6 text-teal-700" />
+              <div className="w-12 h-12 rounded-xl bg-[#f0f6fe] text-[#1455A6] flex items-center justify-center font-bold">
+                <Ship className="w-6 h-6 text-[#1455A6]" />
               </div>
               <h3 className="text-lg font-bold text-slate-900">Maritime IMDG Compliance</h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
@@ -109,8 +109,8 @@ export default function ExportPage() {
             </div>
 
             <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 space-y-3 hover-lift">
-              <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold">
-                <FileText className="w-6 h-6 text-emerald-700" />
+              <div className="w-12 h-12 rounded-xl bg-[#f0f6fe] text-[#1455A6] flex items-center justify-center font-bold">
+                <FileText className="w-6 h-6 text-[#1455A6]" />
               </div>
               <h3 className="text-lg font-bold text-slate-900">Complete Export Documentation</h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
@@ -122,7 +122,7 @@ export default function ExportPage() {
           <div className="text-center pt-4">
             <button
               onClick={() => setIsQuoteOpen(true)}
-              className="px-8 py-4 rounded-xl font-bold text-sm bg-teal-700 hover:bg-teal-800 text-white shadow-md transition-all hover-lift"
+              className="px-8 py-4 rounded-xl font-bold text-sm bg-[#1455A6] hover:bg-[#0f4487] text-white shadow-md transition-all hover-lift"
             >
               Discuss Your Export Requirements
             </button>
@@ -134,3 +134,4 @@ export default function ExportPage() {
     </div>
   );
 }
+

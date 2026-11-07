@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans min-h-screen flex flex-col bg-white text-slate-900 antialiased selection:bg-teal-500 selection:text-white">
+      <body className="font-sans min-h-screen flex flex-col bg-white text-slate-900 antialiased selection:bg-[#1455A6] selection:text-white">
         <ScrollObserver />
         <Navbar />
         <main className="flex-1">{children}</main>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -26,13 +26,13 @@ export default function QualityCompliancePage() {
       <section className="bg-slate-950 text-white py-16 sm:py-24 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
-            <span className="text-xs font-semibold uppercase tracking-wider text-teal-400 bg-teal-950 border border-teal-500/30 px-3.5 py-1.5 rounded-full inline-block">
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#00B8C7] bg-[#071324] border border-[#1455A6]/30 px-3.5 py-1.5 rounded-full inline-block">
               Audit-Ready Manufacturing
             </span>
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
               Quality &amp; Compliance
             </h1>
-            <p className="text-xl sm:text-2xl text-teal-400 font-bold">
+            <p className="text-xl sm:text-2xl text-[#00B8C7] font-bold">
               Audit-Ready, Every Batch
             </p>
             {/* Exact text from client doc */}
@@ -47,7 +47,7 @@ export default function QualityCompliancePage() {
       <section className="py-20 sm:py-24 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-teal-700 bg-teal-50 px-3.5 py-1.5 rounded-full border border-teal-200 inline-block">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-[#1455A6] bg-[#f0f6fe] px-3.5 py-1.5 rounded-full border border-blue-200 inline-block">
               International Accreditations
             </span>
             <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
@@ -63,23 +63,23 @@ export default function QualityCompliancePage() {
               </h3>
               <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700">
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-[#1455A6] shrink-0 mt-0.5" />
                   <span>ISO 9001:2015, Quality Management</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-[#1455A6] shrink-0 mt-0.5" />
                   <span>ISO 14001:2015, Environmental Management</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-[#1455A6] shrink-0 mt-0.5" />
                   <span>ISO 45001:2018, Occupational Health &amp; Safety</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-[#1455A6] shrink-0 mt-0.5" />
                   <span>ISO 22716:2007, Cosmetics GMP</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-[#1455A6] shrink-0 mt-0.5" />
                   <span>WHO-GMP certified facility</span>
                 </li>
               </ul>
@@ -92,19 +92,19 @@ export default function QualityCompliancePage() {
               </h3>
               <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700">
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-cyan-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-[#1455A6] shrink-0 mt-0.5" />
                   <span>US FDA registered</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-cyan-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-[#1455A6] shrink-0 mt-0.5" />
                   <span>US EPA approved</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-cyan-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-[#1455A6] shrink-0 mt-0.5" />
                   <span>21 CFR compliant</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-cyan-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-[#1455A6] shrink-0 mt-0.5" />
                   <span>NFPA 30B compliant aerosol manufacturing and storage</span>
                 </li>
               </ul>
@@ -117,11 +117,11 @@ export default function QualityCompliancePage() {
               </h3>
               <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700">
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-[#00B8C7] shrink-0 mt-0.5" />
                   <span>SEDEX approved</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-[#00B8C7] shrink-0 mt-0.5" />
                   <span>EcoVadis registered</span>
                 </li>
               </ul>
@@ -137,7 +137,7 @@ export default function QualityCompliancePage() {
       <section className="py-20 sm:py-24 bg-slate-950 text-white border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-950 border border-teal-500/30 px-3.5 py-1.5 rounded-full inline-block">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#00B8C7] bg-[#071324] border border-[#1455A6]/30 px-3.5 py-1.5 rounded-full inline-block">
               Systematic Gate Controls
             </span>
             <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
@@ -170,9 +170,9 @@ export default function QualityCompliancePage() {
             ].map((p, idx) => (
               <div
                 key={p.step}
-                className="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-3 hover:border-teal-400 transition-all flex flex-col justify-between hover-lift"
+                className="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-3 hover:border-[#00B8C7] transition-all flex flex-col justify-between hover-lift"
               >
-                <div className="w-8 h-8 rounded-full bg-teal-400 text-slate-950 text-xs font-black flex items-center justify-center">
+                <div className="w-8 h-8 rounded-full bg-[#1455A6] text-slate-950 text-xs font-black flex items-center justify-center">
                   0{idx + 1}
                 </div>
                 <div className="space-y-1.5">
@@ -234,7 +234,7 @@ export default function QualityCompliancePage() {
             <div className="inline-flex flex-col sm:flex-row items-center gap-4">
               <button
                 onClick={() => setIsQuoteOpen(true)}
-                className="px-8 py-4 rounded-xl font-bold text-sm bg-teal-700 hover:bg-teal-800 text-white shadow-md transition-all"
+                className="px-8 py-4 rounded-xl font-bold text-sm bg-[#1455A6] hover:bg-[#0f4487] text-white shadow-md transition-all"
               >
                 Discuss Your Compliance Requirement
               </button>
@@ -253,3 +253,4 @@ export default function QualityCompliancePage() {
     </div>
   );
 }
+

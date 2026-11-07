@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -54,12 +54,12 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
             <ChevronRight className="w-3.5 h-3.5" />
             <Link href="/products" className="hover:text-white transition-colors">Products</Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-teal-400 font-medium">{product.name}</span>
+            <span className="text-[#00B8C7] font-medium">{product.name}</span>
           </nav>
 
           <div className="max-w-4xl space-y-3 pt-2">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-950/80 border border-teal-500/30 text-teal-300 text-xs font-semibold">
-              <Sparkles className="w-3.5 h-3.5 text-teal-400" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#071324]/80 border border-[#1455A6]/30 text-[#00B8C7] text-xs font-semibold">
+              <Sparkles className="w-3.5 h-3.5 text-[#00B8C7]" />
               <span>{product.category} &bull; OEM &amp; Private Label</span>
             </div>
 
@@ -92,7 +92,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-6">
                   <div className="text-white space-y-1">
-                    <span className="text-[11px] uppercase tracking-wider font-bold text-teal-300">
+                    <span className="text-[11px] uppercase tracking-wider font-bold text-[#00B8C7]">
                       Accra Pac Ready Formulation Library
                     </span>
                     <h3 className="text-lg font-bold">{product.name}</h3>
@@ -105,7 +105,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
             {/* Product Overview & Quick Specification Grid */}
             <div className="lg:col-span-7 space-y-6 reveal">
               <div className="space-y-2">
-                <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-50 px-3 py-1 rounded-full">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#1455A6] bg-[#f0f6fe] px-3 py-1 rounded-full">
                   Formulation Highlights
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
@@ -117,7 +117,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
               <div className="space-y-2 text-xs sm:text-sm text-slate-700">
                 {product.features.map((feat, idx) => (
                   <div key={idx} className="flex items-start gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-4 h-4 text-[#1455A6] shrink-0 mt-0.5" />
                     <span>{feat}</span>
                   </div>
                 ))}
@@ -131,7 +131,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                 </div>
                 <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1 hover-lift">
                   <div className="text-[11px] text-slate-500">Stability Testing</div>
-                  <div className="text-xs font-bold text-teal-700">6 Flame-Proof Chambers</div>
+                  <div className="text-xs font-bold text-[#1455A6]">6 Flame-Proof Chambers</div>
                 </div>
                 <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1 col-span-2 sm:col-span-1 hover-lift">
                   <div className="text-[11px] text-slate-500">Manufacturing Plant</div>
@@ -143,7 +143,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
               <div className="pt-3 flex flex-col sm:flex-row items-center gap-3">
                 <a
                   href="#inquiry-form"
-                  className="w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-900 hover:bg-teal-700 text-white font-bold text-xs shadow transition-all text-center hover-lift"
+                  className="w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-900 hover:bg-[#1455A6] text-white font-bold text-xs shadow transition-all text-center hover-lift"
                 >
                   Request Samples &amp; Pricing
                 </a>
@@ -163,7 +163,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
       <section className="py-16 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="text-center max-w-2xl mx-auto space-y-2 reveal">
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-100/60 px-3 py-1 rounded-full">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#1455A6] bg-[#f0f6fe]/60 px-3 py-1 rounded-full">
               Formulation Versatility
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
@@ -178,9 +178,9 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
             {product.formulationOptions.map((opt, idx) => (
               <div
                 key={idx}
-                className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-3 hover:border-teal-400 transition-all hover-lift"
+                className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-3 hover:border-[#00B8C7] transition-all hover-lift"
               >
-                <div className="w-8 h-8 rounded-lg bg-teal-50 text-teal-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                <div className="w-8 h-8 rounded-lg bg-[#f0f6fe] text-[#1455A6] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
                   0{idx + 1}
                 </div>
                 <div>
@@ -203,14 +203,14 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 reveal">
             {/* Packaging */}
             <div className="p-8 rounded-2xl bg-slate-50 border border-slate-200 space-y-4 hover-lift">
-              <div className="w-10 h-10 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-[#f0f6fe] text-[#1455A6] flex items-center justify-center">
                 <Package className="w-5 h-5" />
               </div>
               <h3 className="text-lg font-bold text-slate-900">Available Packaging Configurations</h3>
               <ul className="space-y-2 text-xs text-slate-700">
                 {product.packaging.map((pkg, idx) => (
                   <li key={idx} className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#1455A6] shrink-0" />
                     <span>{pkg}</span>
                   </li>
                 ))}
@@ -226,7 +226,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
               <ul className="space-y-2 text-xs text-slate-700">
                 {product.customisation.map((cust, idx) => (
                   <li key={idx} className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-cyan-600 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#1455A6] shrink-0" />
                     <span>{cust}</span>
                   </li>
                 ))}
@@ -237,7 +237,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
           {/* 8-Step Manufacturing Process */}
           <div className="space-y-8 reveal">
             <div className="text-center max-w-2xl mx-auto space-y-1">
-              <span className="text-xs font-bold uppercase tracking-wider text-teal-700">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#1455A6]">
                 Production Integrity
               </span>
               <h3 className="text-2xl font-extrabold text-slate-900">
@@ -248,7 +248,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
             <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 text-center stagger-container">
               {product.manufacturingProcess.map((step, idx) => (
                 <div key={idx} className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-800 space-y-1 hover-lift">
-                  <div className="text-[10px] font-extrabold text-teal-700 bg-teal-100/60 w-6 h-6 rounded-full flex items-center justify-center mx-auto">
+                  <div className="text-[10px] font-extrabold text-[#1455A6] bg-[#f0f6fe]/60 w-6 h-6 rounded-full flex items-center justify-center mx-auto">
                     {idx + 1}
                   </div>
                   <div className="text-[11px] leading-tight pt-1">{step}</div>
@@ -259,7 +259,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
 
           {/* Regulatory & Export Support */}
           <div className="p-8 rounded-2xl bg-slate-900 text-white space-y-4 reveal hover-lift">
-            <div className="flex items-center gap-2 text-teal-400 font-bold text-sm">
+            <div className="flex items-center gap-2 text-[#00B8C7] font-bold text-sm">
               <ShieldCheck className="w-5 h-5" />
               <span>Regulatory Compliance &amp; Global Export Release</span>
             </div>
@@ -279,7 +279,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
       <section className="py-16 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="text-center space-y-2 reveal">
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-100/60 px-3 py-1 rounded-full">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#1455A6] bg-[#f0f6fe]/60 px-3 py-1 rounded-full">
               Common Questions
             </span>
             <h3 className="text-2xl font-extrabold text-slate-900">
@@ -291,7 +291,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
             {product.faqs.map((faq, idx) => (
               <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2 hover-lift">
                 <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                  <HelpCircle className="w-4 h-4 text-teal-600 shrink-0" />
+                  <HelpCircle className="w-4 h-4 text-[#1455A6] shrink-0" />
                   <span>{faq.q}</span>
                 </h4>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pl-6">
@@ -308,7 +308,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-slate-50 p-8 sm:p-12 rounded-3xl border border-slate-200 shadow-sm space-y-6 reveal hover-lift">
             <div className="text-center space-y-2">
-              <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-100/60 px-3 py-1 rounded-full">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#1455A6] bg-[#f0f6fe]/60 px-3 py-1 rounded-full">
                 Direct Inquiry
               </span>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
@@ -327,7 +327,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                     type="text"
                     required
                     placeholder="Your Name"
-                    className="w-full p-2.5 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    className="w-full p-2.5 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#1455A6]"
                   />
                 </div>
                 <div>
@@ -336,7 +336,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                     type="text"
                     required
                     placeholder="Company Name"
-                    className="w-full p-2.5 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    className="w-full p-2.5 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#1455A6]"
                   />
                 </div>
               </div>
@@ -348,7 +348,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                     type="email"
                     required
                     placeholder="name@company.com"
-                    className="w-full p-2.5 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    className="w-full p-2.5 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#1455A6]"
                   />
                 </div>
                 <div>
@@ -357,7 +357,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                     type="tel"
                     required
                     placeholder="+91 98251..."
-                    className="w-full p-2.5 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    className="w-full p-2.5 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#1455A6]"
                   />
                 </div>
               </div>
@@ -365,7 +365,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block font-medium text-slate-700 mb-1">Target Annual Volume</label>
-                  <select className="w-full p-2.5 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500 text-xs">
+                  <select className="w-full p-2.5 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#1455A6] text-xs">
                     <option>10,000 – 50,000 units (Pilot validation)</option>
                     <option>50,000 – 250,000 units (Commercial)</option>
                     <option>250,000+ units (Enterprise)</option>
@@ -376,7 +376,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                   <input
                     type="text"
                     placeholder="e.g. India, USA, UAE"
-                    className="w-full p-2.5 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    className="w-full p-2.5 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#1455A6]"
                   />
                 </div>
               </div>
@@ -386,13 +386,13 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                 <textarea
                   rows={3}
                   placeholder={`Specify desired can size, fragrance profile, or target launch date for ${product.name}...`}
-                  className="w-full p-2.5 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none"
+                  className="w-full p-2.5 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#1455A6] resize-none"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full py-3 rounded-xl bg-slate-900 hover:bg-teal-700 text-white font-bold text-xs transition-colors flex items-center justify-center gap-2 shadow"
+                className="w-full py-3 rounded-xl bg-slate-900 hover:bg-[#1455A6] text-white font-bold text-xs transition-colors flex items-center justify-center gap-2 shadow"
               >
                 <span>Submit Product Request</span>
                 <Send className="w-3.5 h-3.5" />

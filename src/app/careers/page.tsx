@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -34,7 +34,7 @@ export default function CareersPage() {
       <section className="bg-slate-950 text-white py-16 sm:py-24 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
-            <span className="text-xs font-semibold uppercase tracking-wider text-teal-400 bg-teal-950 border border-teal-500/30 px-3.5 py-1.5 rounded-full inline-block">
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#00B8C7] bg-[#071324] border border-[#1455A6]/30 px-3.5 py-1.5 rounded-full inline-block">
               Join Our Team
             </span>
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
@@ -52,7 +52,7 @@ export default function CareersPage() {
       <section className="py-20 sm:py-24 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-teal-700 bg-teal-50 px-3.5 py-1.5 rounded-full border border-teal-200 inline-block">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-[#1455A6] bg-[#f0f6fe] px-3.5 py-1.5 rounded-full border border-blue-200 inline-block">
               Culture of Excellence
             </span>
             <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
@@ -61,11 +61,11 @@ export default function CareersPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-container">
-            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-3 group hover:border-teal-400 transition-all hover-lift">
-              <div className="w-12 h-12 rounded-xl bg-teal-100 text-teal-800 flex items-center justify-center font-bold">
-                <Globe2 className="w-6 h-6 text-teal-700" />
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-3 group hover:border-[#00B8C7] transition-all hover-lift">
+              <div className="w-12 h-12 rounded-xl bg-[#f0f6fe] text-[#1455A6] flex items-center justify-center font-bold">
+                <Globe2 className="w-6 h-6 text-[#1455A6]" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 group-hover:text-teal-700 transition-colors">
+              <h3 className="text-xl font-bold text-slate-900 group-hover:text-[#1455A6] transition-colors">
                 Work That Travels
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
@@ -86,10 +86,10 @@ export default function CareersPage() {
             </div>
 
             <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-3 group hover:border-emerald-400 transition-all hover-lift">
-              <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold">
-                <ShieldCheck className="w-6 h-6 text-emerald-700" />
+              <div className="w-12 h-12 rounded-xl bg-[#f0f6fe] text-[#1455A6] flex items-center justify-center font-bold">
+                <ShieldCheck className="w-6 h-6 text-[#1455A6]" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">
+              <h3 className="text-xl font-bold text-slate-900 group-hover:text-[#1455A6] transition-colors">
                 Quality and Safety First
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
@@ -99,7 +99,7 @@ export default function CareersPage() {
           </div>
 
           {/* Culture & Benefits Note */}
-          <div className="p-6 rounded-2xl bg-teal-50/50 border border-teal-100 text-center text-xs text-slate-500">
+          <div className="p-6 rounded-2xl bg-[#f0f6fe]/50 border border-blue-100 text-center text-xs text-slate-500">
             [To be developed with the client: culture statement, benefits, training and growth opportunities.]
           </div>
         </div>
@@ -109,7 +109,7 @@ export default function CareersPage() {
       <section className="py-20 sm:py-24 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
           <div className="text-center space-y-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-100/70 px-3.5 py-1.5 rounded-full border border-teal-200 inline-block">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#1455A6] bg-[#f0f6fe]/70 px-3.5 py-1.5 rounded-full border border-blue-200 inline-block">
               Opportunities
             </span>
             <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
@@ -130,8 +130,8 @@ export default function CareersPage() {
             </h3>
 
             {submitted ? (
-              <div className="p-8 rounded-2xl bg-teal-50 border border-teal-200 text-center space-y-3">
-                <div className="w-12 h-12 mx-auto rounded-full bg-teal-100 text-teal-800 flex items-center justify-center">
+              <div className="p-8 rounded-2xl bg-[#f0f6fe] border border-blue-200 text-center space-y-3">
+                <div className="w-12 h-12 mx-auto rounded-full bg-[#f0f6fe] text-[#1455A6] flex items-center justify-center">
                   <CheckCircle2 className="w-6 h-6" />
                 </div>
                 <h4 className="text-lg font-bold text-slate-900">Application Submitted</h4>
@@ -150,7 +150,7 @@ export default function CareersPage() {
                       value={form.name}
                       onChange={(e) => setForm({ ...form, name: e.target.value })}
                       placeholder="Your Full Name"
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-teal-500 focus:outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-[#1455A6] focus:outline-none"
                     />
                   </div>
 
@@ -162,7 +162,7 @@ export default function CareersPage() {
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
                       placeholder="name@example.com"
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-teal-500 focus:outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-[#1455A6] focus:outline-none"
                     />
                   </div>
                 </div>
@@ -176,7 +176,7 @@ export default function CareersPage() {
                       value={form.phone}
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
                       placeholder="+91 / Mobile Number"
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-teal-500 focus:outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-[#1455A6] focus:outline-none"
                     />
                   </div>
 
@@ -188,7 +188,7 @@ export default function CareersPage() {
                       value={form.position}
                       onChange={(e) => setForm({ ...form, position: e.target.value })}
                       placeholder="Desired Role / Department"
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-teal-500 focus:outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-[#1455A6] focus:outline-none"
                     />
                   </div>
                 </div>
@@ -198,7 +198,7 @@ export default function CareersPage() {
                   <input
                     type="file"
                     accept=".pdf,.doc,.docx"
-                    className="w-full px-4 py-2 rounded-xl border border-slate-300 text-xs text-slate-600 file:mr-4 file:py-1 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-teal-50 file:text-teal-700 hover:file:bg-teal-100"
+                    className="w-full px-4 py-2 rounded-xl border border-slate-300 text-xs text-slate-600 file:mr-4 file:py-1 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-[#f0f6fe] file:text-[#1455A6] hover:file:bg-[#f0f6fe]"
                   />
                 </div>
 
@@ -209,13 +209,13 @@ export default function CareersPage() {
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                     placeholder="Briefly describe your experience and skills..."
-                    className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-teal-500 focus:outline-none"
+                    className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-[#1455A6] focus:outline-none"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-3.5 rounded-xl bg-teal-700 hover:bg-teal-800 text-white font-bold text-xs shadow-md transition-all flex items-center justify-center gap-2"
+                  className="w-full py-3.5 rounded-xl bg-[#1455A6] hover:bg-[#0f4487] text-white font-bold text-xs shadow-md transition-all flex items-center justify-center gap-2"
                 >
                   <span>Submit Application</span>
                   <Send className="w-4 h-4" />
@@ -228,3 +228,4 @@ export default function CareersPage() {
     </div>
   );
 }
+

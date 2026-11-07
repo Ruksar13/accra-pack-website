@@ -6,6 +6,12 @@
   --foreground-rgb: 15, 23, 42;
   --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 248, 250, 252;
+  
+  /* Brand CSS Variables */
+  --color-royal-blue: #1455A6;
+  --color-white: #FFFFFF;
+  --color-silver: #A6A9AD;
+  --color-aqua: #00B8C7;
 }
 
 body {
@@ -19,23 +25,23 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom subtle scrollbar */
+/* Custom subtle scrollbar with Royal Blue & Silver styling */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #f1f3f5;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #A6A9AD;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #1455A6;
 }
 
 /* ========================================================
@@ -96,11 +102,22 @@ html {
 @keyframes pulseGlow {
   0%, 100% {
     opacity: 1;
-    box-shadow: 0 0 0 0 rgba(45, 212, 191, 0.4);
+    box-shadow: 0 0 0 0 rgba(0, 184, 199, 0.45);
   }
   50% {
     opacity: 0.9;
-    box-shadow: 0 0 0 10px rgba(45, 212, 191, 0);
+    box-shadow: 0 0 0 12px rgba(0, 184, 199, 0);
+  }
+}
+
+@keyframes pulseGlowRoyal {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(20, 85, 166, 0.5);
+  }
+  50% {
+    opacity: 0.9;
+    box-shadow: 0 0 0 12px rgba(20, 85, 166, 0);
   }
 }
 
@@ -125,6 +142,21 @@ html {
   100% {
     transform: scale(2.4);
     opacity: 0;
+  }
+}
+
+@keyframes aerosolMist {
+  0% {
+    opacity: 0.2;
+    transform: scale(0.9) translateY(0);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05) translateY(-4px);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(0.9) translateY(0);
   }
 }
 
@@ -180,7 +212,7 @@ html {
 
 .hover-lift:hover {
   transform: translateY(-5px);
-  box-shadow: 0 16px 32px -8px rgba(15, 23, 42, 0.12);
+  box-shadow: 0 16px 32px -8px rgba(20, 85, 166, 0.16);
 }
 
 .hover-glow {
@@ -188,7 +220,11 @@ html {
 }
 
 .hover-glow:hover {
-  box-shadow: 0 0 25px -5px rgba(20, 184, 166, 0.25);
+  box-shadow: 0 0 25px -5px rgba(0, 184, 199, 0.35);
+}
+
+.hover-glow-royal:hover {
+  box-shadow: 0 0 25px -5px rgba(20, 85, 166, 0.4);
 }
 
 /* Standalone animation utility classes */
@@ -200,10 +236,18 @@ html {
   animation: pulseGlow 2.5s infinite;
 }
 
+.animate-pulse-glow-royal {
+  animation: pulseGlowRoyal 2.5s infinite;
+}
+
 .animate-shimmer {
-  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.18) 50%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
   background-size: 200% 100%;
   animation: shimmerWave 2.8s infinite;
+}
+
+.animate-mist {
+  animation: aerosolMist 3s ease-in-out infinite;
 }
 
 .radar-dot {
@@ -219,5 +263,3 @@ html {
   opacity: 0.75;
   animation: radarPing 2.2s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
-
-

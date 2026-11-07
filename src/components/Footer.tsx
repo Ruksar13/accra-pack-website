@@ -16,13 +16,13 @@ import { CERTIFICATIONS, PRODUCT_CATEGORIES } from "@/data/websiteData";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-950 text-slate-300 border-t border-slate-800">
+    <footer className="bg-[#0b182f] text-slate-300 border-t border-[#1455A6]/30">
       {/* Top Value / Certifications Marquee Bar */}
-      <div className="border-b border-slate-900 bg-slate-900/50 py-5 px-4">
+      <div className="border-b border-slate-800/80 bg-[#071324] py-5 px-4">
         <div className="max-w-[1440px] mx-auto flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span className="text-xs font-semibold tracking-wider uppercase text-slate-400">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#00B8C7] animate-pulse"></span>
+            <span className="text-xs font-semibold tracking-wider uppercase text-[#A6A9AD]">
               International Standards &amp; Accreditations
             </span>
           </div>
@@ -30,7 +30,7 @@ export default function Footer() {
             {CERTIFICATIONS.slice(0, 6).map((cert) => (
               <span
                 key={cert.code}
-                className="px-2.5 py-1 text-xs font-medium rounded bg-slate-800/80 text-teal-300 border border-slate-700/60"
+                className="px-2.5 py-1 text-xs font-medium rounded bg-[#1455A6]/20 text-[#00B8C7] border border-[#1455A6]/40"
               >
                 {cert.code}
               </span>
@@ -55,19 +55,19 @@ export default function Footer() {
               </div>
             </Link>
 
-            <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
+            <p className="text-sm text-[#A6A9AD] max-w-sm leading-relaxed">
               India&apos;s pioneering contract manufacturer for aerosols and liquids. 
               Delivering high-precision OEM, private label, and CDMO solutions 
               for world-class healthcare, personal care, and industrial brands.
             </p>
 
-            <div className="pt-2 space-y-2 text-xs text-slate-400">
+            <div className="pt-2 space-y-2 text-xs text-slate-300">
               <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+                <ShieldCheck className="w-4 h-4 text-[#00B8C7] shrink-0" />
                 <span>WHO-GMP Certified &bull; US FDA Registered &bull; NFPA 30B Compliant</span>
               </div>
               <div className="flex items-center gap-2">
-                <Factory className="w-4 h-4 text-cyan-400 shrink-0" />
+                <Factory className="w-4 h-4 text-[#A6A9AD] shrink-0" />
                 <span>120+ Million Units Annual Capacity &bull; 11 Specialized Lines</span>
               </div>
             </div>
@@ -80,52 +80,52 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="/about" className="text-slate-400 hover:text-teal-400 transition-colors">
+                <Link href="/about" className="text-[#A6A9AD] hover:text-[#00B8C7] transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/#why-choose-us" className="text-slate-400 hover:text-teal-400 transition-colors">
-                  Why Choose Accra Pac
-                </Link>
-              </li>
-              <li>
-                <Link href="/about#history" className="text-slate-400 hover:text-teal-400 transition-colors">
-                  History &amp; Milestones (Roadmap)
-                </Link>
-              </li>
-              <li>
-                <Link href="/capabilities" className="text-slate-400 hover:text-teal-400 transition-colors">
+                <Link href="/capabilities" className="text-[#A6A9AD] hover:text-[#00B8C7] transition-colors">
                   Manufacturing Capabilities
                 </Link>
               </li>
               <li>
-                <Link href="/contract-manufacturing" className="text-slate-400 hover:text-teal-400 transition-colors">
+                <Link href="/products" className="text-[#A6A9AD] hover:text-[#00B8C7] transition-colors">
+                  Products
+                </Link>
+              </li>
+              <li>
+                <Link href="/contract-manufacturing" className="text-[#A6A9AD] hover:text-[#00B8C7] transition-colors">
                   Contract Manufacturing
                 </Link>
               </li>
               <li>
-                <Link href="/oem-private-labelling" className="text-slate-400 hover:text-teal-400 transition-colors">
-                  OEM &amp; Private Labelling
+                <Link href="/oem-private-labelling" className="text-[#A6A9AD] hover:text-[#00B8C7] transition-colors">
+                  OEM &amp; Private Label
                 </Link>
               </li>
               <li>
-                <Link href="/cdmo" className="text-slate-400 hover:text-teal-400 transition-colors">
+                <Link href="/cdmo" className="text-[#A6A9AD] hover:text-[#00B8C7] transition-colors">
                   CDMO &amp; Custom R&amp;D
                 </Link>
               </li>
               <li>
-                <Link href="/quality" className="text-slate-400 hover:text-teal-400 transition-colors">
+                <Link href="/quality" className="text-[#A6A9AD] hover:text-[#00B8C7] transition-colors">
                   Quality &amp; Compliance
                 </Link>
               </li>
               <li>
-                <Link href="/export" className="text-slate-400 hover:text-teal-400 transition-colors">
-                  Global Export
+                <Link href="/export" className="text-[#A6A9AD] hover:text-[#00B8C7] transition-colors">
+                  Export Solutions
                 </Link>
               </li>
               <li>
-                <Link href="/careers" className="text-teal-400 hover:text-teal-300 font-semibold flex items-center gap-1">
+                <Link href="/contact" className="text-[#A6A9AD] hover:text-[#00B8C7] transition-colors">
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/careers" className="text-[#00B8C7] hover:text-white font-semibold flex items-center gap-1 transition-colors">
                   <Briefcase className="w-3.5 h-3.5" />
                   <span>Careers at Accra Pac</span>
                 </Link>
@@ -133,44 +133,44 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Product Categories (with #hairid anchor) */}
+          {/* Product Categories */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
               Products We Manufacture
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="/products#pharma-otc" className="text-slate-400 hover:text-teal-400 transition-colors truncate block">
+                <Link href="/products#pharma-otc" className="text-[#A6A9AD] hover:text-[#00B8C7] transition-colors truncate block">
                   Pharmaceutical OTC &amp; Health
                 </Link>
               </li>
               <li>
-                <Link href="/products#personal-care" className="text-slate-400 hover:text-teal-400 transition-colors truncate block">
+                <Link href="/products#personal-care" className="text-[#A6A9AD] hover:text-[#00B8C7] transition-colors truncate block">
                   Personal Care &amp; Grooming
                 </Link>
               </li>
               <li>
-                <Link href="/products#hairid" className="text-slate-400 hover:text-teal-400 transition-colors truncate block">
+                <Link href="/products#hairid" className="text-[#A6A9AD] hover:text-[#00B8C7] transition-colors truncate block">
                   Hair Care &amp; Styling
                 </Link>
               </li>
               <li>
-                <Link href="/products#ayurveda-herbal" className="text-slate-400 hover:text-teal-400 transition-colors truncate block">
+                <Link href="/products#ayurveda-herbal" className="text-[#A6A9AD] hover:text-[#00B8C7] transition-colors truncate block">
                   Ayurveda &amp; Herbal
                 </Link>
               </li>
               <li>
-                <Link href="/products#fragrances" className="text-slate-400 hover:text-teal-400 transition-colors truncate block">
+                <Link href="/products#fragrances" className="text-[#A6A9AD] hover:text-[#00B8C7] transition-colors truncate block">
                   Fragrances &amp; Perfumes
                 </Link>
               </li>
               <li>
-                <Link href="/products#air-care" className="text-slate-400 hover:text-teal-400 transition-colors truncate block">
+                <Link href="/products#air-care" className="text-[#A6A9AD] hover:text-[#00B8C7] transition-colors truncate block">
                   Air Care &amp; Fresheners
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="text-teal-400 hover:text-teal-300 font-medium inline-flex items-center gap-1 mt-1">
+                <Link href="/products" className="text-[#00B8C7] hover:text-white font-medium inline-flex items-center gap-1 mt-1 transition-colors">
                   View All 12 Sectors <ArrowUpRight className="w-3.5 h-3.5" />
                 </Link>
               </li>
@@ -182,19 +182,19 @@ export default function Footer() {
             <h4 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
               Offices &amp; Facilities
             </h4>
-            <div className="space-y-4 text-xs text-slate-400">
+            <div className="space-y-4 text-xs text-[#A6A9AD]">
               <div>
                 <div className="font-semibold text-slate-200 flex items-center gap-1.5 mb-1">
-                  <Factory className="w-3.5 h-3.5 text-teal-400" />
+                  <Factory className="w-3.5 h-3.5 text-[#00B8C7]" />
                   Manufacturing Plant
                 </div>
                 <p>Plot No. 1105, Phase III, G.I.D.C., Vapi, Gujarat – 396195, India</p>
-                <p className="text-slate-500 mt-0.5">Tel: +91-260-2430996</p>
+                <p className="text-slate-400 mt-0.5">Tel: +91-260-2430996</p>
               </div>
 
               <div>
                 <div className="font-semibold text-slate-200 flex items-center gap-1.5 mb-1">
-                  <Building2 className="w-3.5 h-3.5 text-cyan-400" />
+                  <Building2 className="w-3.5 h-3.5 text-[#00B8C7]" />
                   Mumbai Corporate Office
                 </div>
                 <p>503, Rajanigandha, Dadar (W), Mumbai – 400028</p>
@@ -202,15 +202,15 @@ export default function Footer() {
 
               <div>
                 <div className="font-semibold text-slate-200 flex items-center gap-1.5 mb-1">
-                  <Globe2 className="w-3.5 h-3.5 text-emerald-400" />
+                  <Globe2 className="w-3.5 h-3.5 text-[#A6A9AD]" />
                   USA Sales Office
                 </div>
                 <p>Accra Pac Holding Co., LLC, Fort Wayne, IN 46804</p>
               </div>
 
-              <div className="pt-2 border-t border-slate-900">
+              <div className="pt-2 border-t border-slate-800">
                 <div className="text-slate-300 font-medium">Business Inquiries:</div>
-                <div className="text-teal-400 font-medium mt-0.5">Mr. Sahil Shah &bull; +91 98251 49522</div>
+                <div className="text-[#00B8C7] font-medium mt-0.5">Mr. Sahil Shah &bull; +91 98251 49522</div>
                 <div className="text-slate-400">sahil.shah@accrapacindia.com</div>
               </div>
             </div>
@@ -226,10 +226,10 @@ export default function Footer() {
             Legacy of aerosol manufacturing excellence since 1979.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="/about" className="hover:text-slate-400 transition-colors">About Us</Link>
-            <Link href="/quality" className="hover:text-slate-400 transition-colors">Quality &amp; Compliance</Link>
-            <Link href="/careers" className="hover:text-slate-400 transition-colors">Careers</Link>
-            <Link href="/contact" className="hover:text-slate-400 transition-colors">Contact Us</Link>
+            <Link href="/about" className="hover:text-slate-300 transition-colors">About Us</Link>
+            <Link href="/quality" className="hover:text-slate-300 transition-colors">Quality &amp; Compliance</Link>
+            <Link href="/careers" className="hover:text-slate-300 transition-colors">Careers</Link>
+            <Link href="/contact" className="hover:text-slate-300 transition-colors">Contact Us</Link>
           </div>
         </div>
       </div>

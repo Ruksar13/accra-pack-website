@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -27,13 +27,13 @@ export default function ContractManufacturingPage() {
       <section className="bg-slate-950 text-white py-16 sm:py-24 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
-            <span className="text-xs font-semibold uppercase tracking-wider text-teal-400 bg-teal-950 border border-teal-500/30 px-3.5 py-1.5 rounded-full inline-block">
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#00B8C7] bg-[#071324] border border-[#1455A6]/30 px-3.5 py-1.5 rounded-full inline-block">
               Solutions &bull; Model 01
             </span>
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
               Contract Manufacturing
             </h1>
-            <p className="text-xl sm:text-2xl text-teal-400 font-bold">
+            <p className="text-xl sm:text-2xl text-[#00B8C7] font-bold">
               Your Formulation. Our Production.
             </p>
             {/* Exact text from client doc */}
@@ -48,7 +48,7 @@ export default function ContractManufacturingPage() {
       <section className="py-20 sm:py-24 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-teal-700 bg-teal-50 px-3.5 py-1.5 rounded-full border border-teal-200 inline-block">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-[#1455A6] bg-[#f0f6fe] px-3.5 py-1.5 rounded-full border border-blue-200 inline-block">
               Full-Scope Capabilities
             </span>
             <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
@@ -89,13 +89,13 @@ export default function ContractManufacturingPage() {
             ].map((item, i) => (
               <div
                 key={item.title}
-                className="p-7 rounded-2xl bg-slate-50 border border-slate-200 hover:border-teal-400 hover:shadow-lg transition-all space-y-3 group flex flex-col justify-between hover-lift"
+                className="p-7 rounded-2xl bg-slate-50 border border-slate-200 hover:border-[#00B8C7] hover:shadow-lg transition-all space-y-3 group flex flex-col justify-between hover-lift"
               >
                 <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-teal-700 font-black text-xs uppercase tracking-wider">
+                  <div className="flex items-center gap-2 text-[#1455A6] font-black text-xs uppercase tracking-wider">
                     <span>Feature 0{i + 1}</span>
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-teal-700 transition-colors">
+                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-[#1455A6] transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
@@ -112,7 +112,7 @@ export default function ContractManufacturingPage() {
       <section className="py-20 sm:py-24 bg-slate-950 text-white border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 reveal">
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-950 border border-teal-500/30 px-3.5 py-1.5 rounded-full inline-block">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#00B8C7] bg-[#071324] border border-[#1455A6]/30 px-3.5 py-1.5 rounded-full inline-block">
               7-Step Process
             </span>
             <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
@@ -132,9 +132,9 @@ export default function ContractManufacturingPage() {
             ].map((step, idx) => (
               <div
                 key={step}
-                className="p-5 rounded-2xl bg-slate-900 border border-slate-800 text-center space-y-3 hover:border-teal-400 transition-all flex flex-col justify-between hover-lift"
+                className="p-5 rounded-2xl bg-slate-900 border border-slate-800 text-center space-y-3 hover:border-[#00B8C7] transition-all flex flex-col justify-between hover-lift"
               >
-                <div className="w-9 h-9 mx-auto rounded-full bg-teal-400 text-slate-950 text-xs font-black flex items-center justify-center">
+                <div className="w-9 h-9 mx-auto rounded-full bg-[#1455A6] text-slate-950 text-xs font-black flex items-center justify-center">
                   0{idx + 1}
                 </div>
                 <div className="text-xs font-bold text-slate-200 leading-snug">
@@ -149,7 +149,7 @@ export default function ContractManufacturingPage() {
       {/* 4. Why Contract Manufacturing With Accra Pac */}
       <section className="py-20 sm:py-24 bg-white border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 reveal">
-          <span className="text-xs font-extrabold uppercase tracking-widest text-teal-700 bg-teal-50 px-3.5 py-1.5 rounded-full border border-teal-200 inline-block">
+          <span className="text-xs font-extrabold uppercase tracking-widest text-[#1455A6] bg-[#f0f6fe] px-3.5 py-1.5 rounded-full border border-blue-200 inline-block">
             Confidence &amp; Repeatability
           </span>
           <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
@@ -163,7 +163,7 @@ export default function ContractManufacturingPage() {
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={() => setIsQuoteOpen(true)}
-              className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-sm bg-teal-700 hover:bg-teal-800 text-white shadow-md transition-all"
+              className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-sm bg-[#1455A6] hover:bg-[#0f4487] text-white shadow-md transition-all"
             >
               Start Your Contract Manufacturing Project
             </button>
@@ -181,3 +181,4 @@ export default function ContractManufacturingPage() {
     </div>
   );
 }
+

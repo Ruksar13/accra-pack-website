@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -40,7 +40,7 @@ export default function InsightsPage() {
       <section className="bg-slate-950 text-white py-16 sm:py-20 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
-            <span className="text-xs font-semibold uppercase tracking-wider text-teal-400">
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#00B8C7]">
               Industry Knowledge &amp; Technical Analysis
             </span>
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
@@ -64,7 +64,7 @@ export default function InsightsPage() {
                 placeholder="Search engineering insights..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-xl text-slate-800 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full pl-10 pr-4 py-2 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-xl text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#1455A6]"
               />
               {searchQuery && (
                 <button
@@ -104,11 +104,11 @@ export default function InsightsPage() {
                 key={article.id}
                 id={article.id}
                 onClick={() => setActiveArticle(article)}
-                className="cursor-pointer bg-white p-7 rounded-2xl border border-slate-200 shadow-sm hover:border-teal-400 hover:shadow-md transition-all flex flex-col justify-between space-y-5 group scroll-mt-28 hover-lift"
+                className="cursor-pointer bg-white p-7 rounded-2xl border border-slate-200 shadow-sm hover:border-[#00B8C7] hover:shadow-md transition-all flex flex-col justify-between space-y-5 group scroll-mt-28 hover-lift"
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between text-xs text-slate-500">
-                    <span className="px-2.5 py-0.5 rounded-full bg-teal-50 text-teal-800 font-semibold border border-teal-100">
+                    <span className="px-2.5 py-0.5 rounded-full bg-[#f0f6fe] text-[#1455A6] font-semibold border border-blue-100">
                       {article.category}
                     </span>
                     <span className="flex items-center gap-1">
@@ -117,7 +117,7 @@ export default function InsightsPage() {
                     </span>
                   </div>
 
-                  <h3 className="text-base sm:text-lg font-bold text-slate-900 group-hover:text-teal-700 transition-colors leading-snug">
+                  <h3 className="text-base sm:text-lg font-bold text-slate-900 group-hover:text-[#1455A6] transition-colors leading-snug">
                     {article.title}
                   </h3>
 
@@ -130,7 +130,7 @@ export default function InsightsPage() {
                   <div className="text-[11px] text-slate-500 line-clamp-2 italic">
                     <strong>Key Takeaway:</strong> {article.takeaway}
                   </div>
-                  <div className="text-xs font-bold text-teal-700 group-hover:text-teal-800 flex items-center justify-between pt-1">
+                  <div className="text-xs font-bold text-[#1455A6] group-hover:text-[#1455A6] flex items-center justify-between pt-1">
                     <span>Read Executive Summary</span>
                     <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -150,7 +150,7 @@ export default function InsightsPage() {
           >
             <div className="bg-slate-900 text-white p-6 flex justify-between items-start">
               <div>
-                <span className="text-xs font-semibold uppercase tracking-wider text-teal-400">
+                <span className="text-xs font-semibold uppercase tracking-wider text-[#00B8C7]">
                   {activeArticle.category} &bull; {activeArticle.readTime}
                 </span>
                 <h3 className="text-xl sm:text-2xl font-bold mt-1">
@@ -175,9 +175,9 @@ export default function InsightsPage() {
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-teal-50 border border-teal-100 text-teal-950 space-y-1.5">
-                <div className="font-bold text-xs uppercase tracking-wider text-teal-800 flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-teal-600" />
+              <div className="p-4 rounded-xl bg-[#f0f6fe] border border-blue-100 text-teal-950 space-y-1.5">
+                <div className="font-bold text-xs uppercase tracking-wider text-[#1455A6] flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-[#1455A6]" />
                   Engineering &amp; Business Takeaway
                 </div>
                 <p className="text-xs sm:text-sm leading-relaxed">
@@ -201,7 +201,7 @@ export default function InsightsPage() {
                     setActiveArticle(null);
                     setIsQuoteOpen(true);
                   }}
-                  className="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-teal-700 text-white font-semibold text-xs transition-colors shadow"
+                  className="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-[#1455A6] text-white font-semibold text-xs transition-colors shadow"
                 >
                   Consult an Engineer
                 </button>
@@ -223,7 +223,7 @@ export default function InsightsPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={() => setIsQuoteOpen(true)}
-              className="px-6 py-3 rounded-xl bg-slate-900 hover:bg-teal-700 text-white font-semibold text-xs transition-all shadow"
+              className="px-6 py-3 rounded-xl bg-slate-900 hover:bg-[#1455A6] text-white font-semibold text-xs transition-all shadow"
             >
               Ask Our Technical Team
             </button>
@@ -241,4 +241,5 @@ export default function InsightsPage() {
     </div>
   );
 }
+
 
