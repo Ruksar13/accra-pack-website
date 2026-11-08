@@ -62,22 +62,22 @@ export default function HomePage() {
             className="object-cover object-center scale-105 transition-transform duration-1000"
             sizes="100vw"
           />
-          {/* Deep Cinematic Royal Navy & Dark Gradient Overlay for high readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#071324]/95 via-[#0b182f]/85 to-[#071324]/90" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#071324] via-transparent to-[#071324]/60" />
+          {/* Light, balanced overlay so the aerosol manufacturing plant is clearly visible while text stays sharp */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#071324]/55 via-[#0b182f]/40 to-[#071324]/55" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#071324]/70 via-transparent to-black/30" />
         </div>
 
         {/* Hero Content - Clean, elegant & well-proportioned */}
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8 z-10">
           {/* Trust Badge */}
-          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#0b182f]/90 backdrop-blur-md border border-[#00B8C7]/50 text-[#00B8C7] text-sm sm:text-base font-bold tracking-wide shadow-xl">
+          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#0b182f]/85 backdrop-blur-md border border-[#00B8C7]/60 text-[#00B8C7] text-sm sm:text-base font-bold tracking-wide shadow-2xl">
             <span className="w-2.5 h-2.5 rounded-full bg-[#00B8C7] animate-ping"></span>
             <span>Pioneering Aerosol &amp; Liquid Contract Manufacturing Since 1979</span>
           </div>
 
           {/* Exact Headline from Client Doc */}
           <div className="space-y-5 max-w-5xl mx-auto">
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight drop-shadow-md">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
               India&apos;s Trusted OEM &amp; Private Label Manufacturing Partner for{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00B8C7] via-cyan-300 to-white">
                 Aerosols &amp; Liquids
@@ -85,7 +85,7 @@ export default function HomePage() {
             </h1>
 
             {/* Exact Subtitle from Client Doc */}
-            <p className="text-lg sm:text-xl text-slate-100 max-w-3xl mx-auto font-normal leading-relaxed drop-shadow">
+            <p className="text-lg sm:text-xl text-white max-w-3xl mx-auto font-medium leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
               We help global brands develop, manufacture, package and export aerosol and liquid products, from concept to commercial success.
             </p>
           </div>
