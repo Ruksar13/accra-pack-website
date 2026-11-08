@@ -191,10 +191,10 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
 
               {/* 1. Product Format */}
               <div>
-                <label className="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
+                <label className="block text-sm font-bold text-slate-900 uppercase tracking-wider mb-2.5">
                   1. Product Format &amp; Packaging
                 </label>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 text-xs sm:text-sm">
                   {[
                     "Aerosol Spray",
                     "BOV (Bag-on-Valve)",
@@ -207,10 +207,10 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
                       type="button"
                       key={fmt}
                       onClick={() => setFormat(fmt)}
-                      className={`py-2 px-2.5 rounded-xl border text-left font-medium transition-all ${
+                      className={`py-2.5 px-3 rounded-xl border text-left font-semibold transition-all ${
                         format === fmt 
                           ? "border-[#1455A6] bg-[#f0f6fe] text-[#1455A6] font-bold ring-2 ring-[#1455A6]/30 shadow-sm" 
-                          : "border-slate-200 hover:border-slate-300 text-slate-700 bg-slate-50/50"
+                          : "border-slate-200 hover:border-slate-300 text-slate-800 bg-slate-50/50"
                       }`}
                     >
                       {fmt}
@@ -221,13 +221,13 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
 
               {/* 2. Formulation Status */}
               <div>
-                <label className="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
+                <label className="block text-sm font-bold text-slate-900 uppercase tracking-wider mb-2">
                   2. Formulation Approach
                 </label>
                 <select
                   value={formulationType}
                   onChange={(e) => setFormulationType(e.target.value)}
-                  className="w-full text-xs sm:text-sm bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#1455A6] transition-all"
+                  className="w-full text-sm bg-slate-50 border border-slate-300 rounded-xl p-3 text-slate-900 font-medium focus:outline-none focus:ring-2 focus:ring-[#1455A6] transition-all"
                 >
                   <option>Ready Library Formula (500+ available — fastest launch)</option>
                   <option>Custom Formulation R&amp;D (Developed in Accra Pac lab)</option>
@@ -238,10 +238,10 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
 
               {/* 3. Volume Target */}
               <div>
-                <label className="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
+                <label className="block text-sm font-bold text-slate-900 uppercase tracking-wider mb-2">
                   3. Anticipated Annual Run
                 </label>
-                <div className="grid grid-cols-3 gap-2 text-[11px] sm:text-xs">
+                <div className="grid grid-cols-3 gap-2 text-xs sm:text-sm">
                   {[
                     "10,000 – 50,000 (Pilot)",
                     "50,000 – 250,000 (Commercial)",
@@ -251,10 +251,10 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
                       type="button"
                       key={vol}
                       onClick={() => setVolume(vol)}
-                      className={`p-2 rounded-xl border text-center transition-all ${
+                      className={`p-2.5 rounded-xl border text-center font-medium transition-all ${
                         volume === vol 
                           ? "border-[#1455A6] bg-[#f0f6fe] text-[#1455A6] font-bold ring-2 ring-[#1455A6]/30 shadow-sm" 
-                          : "border-slate-200 hover:border-slate-300 text-slate-700 bg-slate-50/50"
+                          : "border-slate-200 hover:border-slate-300 text-slate-800 bg-slate-50/50"
                       }`}
                     >
                       {vol}
@@ -264,97 +264,97 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
               </div>
 
               {/* 4. Contact Information */}
-              <div className="pt-2 border-t border-slate-200 space-y-3">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="pt-3 border-t border-slate-200 space-y-3.5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                   <div>
-                    <label className="block text-xs font-semibold text-slate-700 mb-1">Full Name *</label>
+                    <label className="block text-xs sm:text-sm font-bold text-slate-800 mb-1">Full Name *</label>
                     <input
                       type="text"
                       required
                       placeholder="e.g. John Doe"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full text-xs sm:text-sm border border-slate-300 rounded-xl p-2.5 focus:outline-none focus:ring-2 focus:ring-[#1455A6] transition-all"
+                      className="w-full text-sm border border-slate-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-[#1455A6] transition-all font-medium text-slate-900"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-slate-700 mb-1">Company / Brand Name</label>
+                    <label className="block text-xs sm:text-sm font-bold text-slate-800 mb-1">Company / Brand Name</label>
                     <input
                       type="text"
                       placeholder="e.g. Acme Consumer"
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                      className="w-full text-xs sm:text-sm border border-slate-300 rounded-xl p-2.5 focus:outline-none focus:ring-2 focus:ring-[#1455A6] transition-all"
+                      className="w-full text-sm border border-slate-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-[#1455A6] transition-all font-medium text-slate-900"
                     />
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                   <div>
-                    <label className="block text-xs font-semibold text-slate-700 mb-1">Business Email *</label>
+                    <label className="block text-xs sm:text-sm font-bold text-slate-800 mb-1">Business Email *</label>
                     <input
                       type="email"
                       required
                       placeholder="john@company.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full text-xs sm:text-sm border border-slate-300 rounded-xl p-2.5 focus:outline-none focus:ring-2 focus:ring-[#1455A6] transition-all"
+                      className="w-full text-sm border border-slate-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-[#1455A6] transition-all font-medium text-slate-900"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-slate-700 mb-1">Phone / WhatsApp *</label>
+                    <label className="block text-xs sm:text-sm font-bold text-slate-800 mb-1">Phone / WhatsApp *</label>
                     <input
                       type="tel"
                       required
                       placeholder="+91 98251..."
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full text-xs sm:text-sm border border-slate-300 rounded-xl p-2.5 focus:outline-none focus:ring-2 focus:ring-[#1455A6] transition-all"
+                      className="w-full text-sm border border-slate-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-[#1455A6] transition-all font-medium text-slate-900"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 mb-1">Target Market / Destination Country</label>
+                  <label className="block text-xs sm:text-sm font-bold text-slate-800 mb-1">Target Market / Destination Country</label>
                   <input
                     type="text"
                     placeholder="e.g. India, United States, UAE, Africa"
                     value={formData.country}
                     onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-                    className="w-full text-xs sm:text-sm border border-slate-300 rounded-xl p-2.5 focus:outline-none focus:ring-2 focus:ring-[#1455A6] transition-all"
+                    className="w-full text-sm border border-slate-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-[#1455A6] transition-all font-medium text-slate-900"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 mb-1">Specific Product Requirements &amp; Notes</label>
+                  <label className="block text-xs sm:text-sm font-bold text-slate-800 mb-1">Specific Product Requirements &amp; Notes</label>
                   <textarea
-                    rows={2}
+                    rows={3}
                     placeholder="e.g. Can size, active ingredients, fragrance profile, target launch date..."
                     value={formData.notes}
                     onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                    className="w-full text-xs sm:text-sm border border-slate-300 rounded-xl p-2.5 focus:outline-none focus:ring-2 focus:ring-[#1455A6] resize-none transition-all"
+                    className="w-full text-sm border border-slate-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-[#1455A6] resize-none transition-all font-medium text-slate-900"
                   />
                 </div>
               </div>
 
               {/* Action Buttons */}
               <div className="pt-3 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3">
-                <span className="text-[11px] text-[#A6A9AD] text-center sm:text-left">
+                <span className="text-xs text-slate-500 text-center sm:text-left font-medium">
                   Strict NDA protected. Inquiries routed to sales@accrapacindia.com
                 </span>
                 
-                <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
+                <div className="flex items-center gap-2.5 w-full sm:w-auto justify-end">
                   <button
                     type="button"
                     onClick={onClose}
-                    className="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
+                    className="px-5 py-3 rounded-xl text-sm font-semibold text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition-colors"
                   >
                     Cancel
                   </button>
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="flex-1 sm:flex-initial px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-[#1455A6] hover:bg-[#0f4487] disabled:opacity-70 shadow-md shadow-blue-900/20 flex items-center justify-center gap-2 transition-all active:scale-95"
+                    className="flex-1 sm:flex-initial px-7 py-3 rounded-xl text-sm font-bold text-white bg-[#1455A6] hover:bg-[#0f4487] disabled:opacity-70 shadow-md shadow-blue-900/20 flex items-center justify-center gap-2 transition-all active:scale-95"
                   >
                     {isSubmitting ? (
                       <>
@@ -364,7 +364,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
                     ) : (
                       <>
                         <span>Submit RFQ</span>
-                        <Send className="w-3.5 h-3.5 text-[#00B8C7]" />
+                        <Send className="w-4 h-4 text-[#00B8C7]" />
                       </>
                     )}
                   </button>

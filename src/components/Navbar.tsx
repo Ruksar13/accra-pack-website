@@ -80,40 +80,40 @@ export default function Navbar() {
   return (
     <>
       {/* Top Notification & Utility Bar */}
-      <div className="bg-[#0b182f] text-slate-300 text-xs py-1.5 px-4 border-b border-slate-800">
+      <div className="bg-[#0b182f] text-slate-200 text-xs sm:text-sm py-2 px-4 border-b border-slate-800 font-medium">
         <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
           <div className="flex items-center gap-3 flex-wrap justify-center sm:justify-start">
-            <span className="flex items-center gap-1.5 text-[#00B8C7] font-medium whitespace-nowrap">
-              <ShieldCheck className="w-3.5 h-3.5 shrink-0 text-[#00B8C7]" />
+            <span className="flex items-center gap-1.5 text-[#00B8C7] font-semibold whitespace-nowrap">
+              <ShieldCheck className="w-4 h-4 shrink-0 text-[#00B8C7]" />
               WHO-GMP &amp; US FDA Registered Facility
             </span>
             <span className="hidden md:inline-block text-[#A6A9AD]/40">|</span>
-            <span className="hidden md:flex items-center gap-1 text-slate-300 whitespace-nowrap">
-              <Factory className="w-3.5 h-3.5 text-[#A6A9AD] shrink-0" />
+            <span className="hidden md:flex items-center gap-1.5 text-slate-200 whitespace-nowrap">
+              <Factory className="w-4 h-4 text-[#A6A9AD] shrink-0" />
               Vapi Plant &bull; 120M+ Annual Units Capacity
             </span>
           </div>
 
-          <div className="flex items-center gap-4 text-slate-300 text-xs">
+          <div className="flex items-center gap-4 text-slate-200 text-xs sm:text-sm">
             <a 
               href="tel:+919825149522" 
-              className="flex items-center gap-1 hover:text-white transition-colors whitespace-nowrap"
+              className="flex items-center gap-1.5 hover:text-white transition-colors whitespace-nowrap font-semibold"
             >
-              <Phone className="w-3.5 h-3.5 text-[#00B8C7] shrink-0" />
+              <Phone className="w-4 h-4 text-[#00B8C7] shrink-0" />
               <span>+91 98251 49522</span>
             </a>
             <span className="text-[#A6A9AD]/40">|</span>
             <a 
               href="mailto:sales@accrapacindia.com" 
-              className="flex items-center gap-1 hover:text-white transition-colors whitespace-nowrap"
+              className="flex items-center gap-1.5 hover:text-white transition-colors whitespace-nowrap font-semibold"
             >
-              <Mail className="w-3.5 h-3.5 text-[#00B8C7] shrink-0" />
+              <Mail className="w-4 h-4 text-[#00B8C7] shrink-0" />
               <span>sales@accrapacindia.com</span>
             </a>
             <span className="text-[#A6A9AD]/40 hidden lg:inline">|</span>
             <Link 
               href="/careers" 
-              className="hidden lg:inline hover:text-[#00B8C7] transition-colors whitespace-nowrap text-[#A6A9AD]"
+              className="hidden lg:inline hover:text-[#00B8C7] transition-colors whitespace-nowrap text-[#A6A9AD] font-semibold"
             >
               Careers
             </Link>
@@ -163,23 +163,23 @@ export default function Navbar() {
                       onMouseLeave={() => setSolutionsDropdown(false)}
                     >
                       <button
-                        className={`flex items-center gap-1.5 px-3.5 py-2 text-xs xl:text-sm font-bold tracking-wide whitespace-nowrap rounded-lg transition-colors ${
+                        className={`flex items-center gap-1.5 px-3.5 py-2 text-sm xl:text-[15px] font-bold tracking-wide whitespace-nowrap rounded-lg transition-colors ${
                           isSolutionsActive
                             ? "text-[#1455A6] bg-[#f0f6fe] font-extrabold" 
-                            : "text-slate-700 hover:text-[#1455A6] hover:bg-slate-50"
+                            : "text-slate-800 hover:text-[#1455A6] hover:bg-slate-50"
                         }`}
                       >
                         <span>{link.label}</span>
-                        <ChevronDown className="w-3.5 h-3.5 shrink-0 transition-transform duration-200 group-hover:rotate-180" />
+                        <ChevronDown className="w-4 h-4 shrink-0 transition-transform duration-200 group-hover:rotate-180" />
                       </button>
 
                       {solutionsDropdown && (
                         <div className="absolute top-full left-0 w-84 sm:w-96 bg-white rounded-2xl shadow-2xl border border-slate-200 py-3 mt-1 animate-in fade-in zoom-in-95 duration-150 z-50">
                           <div className="px-4 pb-2 border-b border-slate-100 flex items-center justify-between">
-                            <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#1455A6]">
+                            <span className="text-xs font-black uppercase tracking-wider text-[#1455A6]">
                               Manufacturing &amp; Turnkey Solutions
                             </span>
-                            <span className="text-[10px] font-semibold text-slate-400">
+                            <span className="text-xs font-semibold text-slate-500">
                               Under One Roof
                             </span>
                           </div>
@@ -194,18 +194,18 @@ export default function Navbar() {
                                   key={sub.label}
                                   href={sub.href}
                                   onClick={() => setSolutionsDropdown(false)}
-                                  className={`flex items-start gap-3 px-4 py-2.5 transition-colors group ${
+                                  className={`flex items-start gap-3 px-4 py-3 transition-colors group ${
                                     isSubActive ? "bg-[#f0f6fe]" : "hover:bg-[#f0f6fe]"
                                   }`}
                                 >
-                                  <div className="w-8 h-8 rounded-lg bg-[#f0f6fe] text-[#1455A6] flex items-center justify-center shrink-0 group-hover:bg-[#1455A6] group-hover:text-white transition-all">
-                                    <SubIcon className="w-4 h-4" />
+                                  <div className="w-9 h-9 rounded-lg bg-[#f0f6fe] text-[#1455A6] flex items-center justify-center shrink-0 group-hover:bg-[#1455A6] group-hover:text-white transition-all shadow-xs">
+                                    <SubIcon className="w-4.5 h-4.5" />
                                   </div>
                                   <div>
-                                    <div className="text-xs xl:text-sm font-bold text-slate-800 group-hover:text-[#1455A6] whitespace-nowrap">
+                                    <div className="text-sm font-bold text-slate-900 group-hover:text-[#1455A6] whitespace-nowrap">
                                       {sub.label}
                                     </div>
-                                    <div className="text-[11px] text-slate-500 mt-0.5 leading-snug">
+                                    <div className="text-xs text-slate-600 mt-0.5 leading-snug font-normal">
                                       {sub.desc}
                                     </div>
                                   </div>
@@ -225,10 +225,10 @@ export default function Navbar() {
                   <Link
                     key={link.label}
                     href={link.href!}
-                    className={`px-3.5 py-2 text-xs xl:text-sm font-bold tracking-wide whitespace-nowrap rounded-lg transition-colors ${
+                    className={`px-3.5 py-2 text-sm xl:text-[15px] font-bold tracking-wide whitespace-nowrap rounded-lg transition-colors ${
                       isActive 
                         ? "text-[#1455A6] bg-[#f0f6fe] font-extrabold border-b-2 border-[#1455A6]" 
-                        : "text-slate-700 hover:text-[#1455A6] hover:bg-slate-50"
+                        : "text-slate-800 hover:text-[#1455A6] hover:bg-slate-50"
                     }`}
                   >
                     {link.label}
@@ -241,10 +241,10 @@ export default function Navbar() {
             <div className="hidden sm:flex items-center shrink-0">
               <button
                 onClick={() => setIsQuoteOpen(true)}
-                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-xs xl:text-sm font-bold uppercase tracking-wider text-white bg-[#1455A6] hover:bg-[#0f4487] shadow-md shadow-blue-900/25 transition-all duration-200 active:scale-95 whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-xs xl:text-sm font-extrabold uppercase tracking-wider text-white bg-[#1455A6] hover:bg-[#0f4487] shadow-md shadow-blue-900/25 transition-all duration-200 active:scale-95 whitespace-nowrap"
               >
                 <span>REQUEST A QUOTE</span>
-                <ArrowRight className="w-3.5 h-3.5 text-[#00B8C7] shrink-0" />
+                <ArrowRight className="w-4 h-4 text-[#00B8C7] shrink-0" />
               </button>
             </div>
 

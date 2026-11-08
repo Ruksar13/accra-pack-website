@@ -62,7 +62,16 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        sans: [
+          "'Plus Jakarta Sans'",
+          "var(--font-plus-jakarta)",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "'Segoe UI'",
+          "Roboto",
+          "sans-serif"
+        ],
       },
     },
   },

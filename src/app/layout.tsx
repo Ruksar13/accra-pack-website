@@ -19,7 +19,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans min-h-screen flex flex-col bg-white text-slate-900 antialiased selection:bg-[#1455A6] selection:text-white">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="font-sans min-h-screen flex flex-col bg-white text-slate-900 antialiased selection:bg-[#1455A6] selection:text-white text-base">
         <ScrollObserver />
         <Navbar />
         <main className="flex-1">{children}</main>
