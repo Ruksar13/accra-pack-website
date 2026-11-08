@@ -144,7 +144,7 @@ export default function HistoryTimeline({ theme = "light" }: { theme?: "light" |
                   }`}>
                     {item.period}
                   </span>
-                  <div className={`text-[11px] font-semibold truncate max-w-[140px] block ${
+                  <div className={`text-base font-semibold truncate max-w-[140px] block ${
                     isDark ? "text-[#A6A9AD]" : "text-slate-600"
                   }`}>
                     {item.title}

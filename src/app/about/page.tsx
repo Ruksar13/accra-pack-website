@@ -273,7 +273,7 @@ export default function AboutPage() {
                   Our leadership combines decades of hands-on manufacturing experience with a global outlook. The philosophy is simple: invest ahead of demand, protect every customer&apos;s confidentiality, and never let scale come at the cost of quality.
                 </p>
               </div>
-              <div className="pt-3 border-t border-slate-200 text-[11px] text-slate-400">
+              <div className="pt-3 border-t border-slate-200 text-base text-slate-400">
                 [Leadership profiles to be added once the client shares names, titles and bios.]
               </div>
             </div>
@@ -291,7 +291,7 @@ export default function AboutPage() {
                   Behind every batch is a multidisciplinary team of formulation scientists, chemists, quality professionals, production experts and regulatory specialists who have spent years perfecting the craft.
                 </p>
               </div>
-              <div className="pt-3 border-t border-slate-200 text-[11px] text-slate-400">
+              <div className="pt-3 border-t border-slate-200 text-base text-slate-400">
                 [Team photos and stories to be added based on client input.]
               </div>
             </div>
@@ -309,7 +309,7 @@ export default function AboutPage() {
                   We manufacture responsibly, with efficient use of resources, environmental compliance, workplace safety and fair treatment of every person on our production floor.
                 </p>
               </div>
-              <div className="pt-3 border-t border-slate-200 text-[11px] text-slate-400">
+              <div className="pt-3 border-t border-slate-200 text-base text-slate-400">
                 [Specific initiatives or policies to be added once confirmed by the client.]
               </div>
             </div>

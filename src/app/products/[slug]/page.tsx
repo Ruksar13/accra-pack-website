@@ -92,7 +92,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-6">
                   <div className="text-white space-y-1">
-                    <span className="text-[11px] uppercase tracking-wider font-bold text-[#00B8C7]">
+                    <span className="text-base uppercase tracking-wider font-bold text-[#00B8C7]">
                       Accra Pac Ready Formulation Library
                     </span>
                     <h3 className="text-lg font-bold">{product.name}</h3>
@@ -126,15 +126,15 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
               {/* Quick Spec Pills */}
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
                 <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1 hover-lift">
-                  <div className="text-[11px] text-slate-500">Quality Benchmark</div>
+                  <div className="text-base text-slate-500">Quality Benchmark</div>
                   <div className="text-xs font-bold text-slate-900">WHO-GMP &bull; US FDA</div>
                 </div>
                 <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1 hover-lift">
-                  <div className="text-[11px] text-slate-500">Stability Testing</div>
+                  <div className="text-base text-slate-500">Stability Testing</div>
                   <div className="text-xs font-bold text-[#1455A6]">6 Flame-Proof Chambers</div>
                 </div>
                 <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1 col-span-2 sm:col-span-1 hover-lift">
-                  <div className="text-[11px] text-slate-500">Manufacturing Plant</div>
+                  <div className="text-base text-slate-500">Manufacturing Plant</div>
                   <div className="text-xs font-bold text-slate-900">Vapi, Gujarat (India)</div>
                 </div>
               </div>
@@ -185,7 +185,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                 </div>
                 <div>
                   <h4 className="text-xs font-bold text-slate-900">{opt}</h4>
-                  <p className="text-[11px] text-slate-500 mt-0.5">
+                  <p className="text-base text-slate-500 mt-0.5">
                     Validated stability &amp; analytical HPLC release assays available.
                   </p>
                 </div>
@@ -248,10 +248,10 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
             <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 text-center stagger-container">
               {product.manufacturingProcess.map((step, idx) => (
                 <div key={idx} className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-800 space-y-1 hover-lift">
-                  <div className="text-[10px] font-extrabold text-[#1455A6] bg-[#f0f6fe]/60 w-6 h-6 rounded-full flex items-center justify-center mx-auto">
+                  <div className="text-base font-extrabold text-[#1455A6] bg-[#f0f6fe]/60 w-8 h-8 rounded-full flex items-center justify-center mx-auto">
                     {idx + 1}
                   </div>
-                  <div className="text-[11px] leading-tight pt-1">{step}</div>
+                  <div className="text-base leading-tight pt-1">{step}</div>
                 </div>
               ))}
             </div>

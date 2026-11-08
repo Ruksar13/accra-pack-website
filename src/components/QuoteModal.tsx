@@ -127,7 +127,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
         {/* Header Bar - Sticky & Prominent */}
         <div className="bg-gradient-to-r from-[#0b182f] via-[#0f284e] to-[#1455A6] text-white p-4 sm:p-6 flex justify-between items-start border-b border-[#1455A6]/40 shrink-0 relative">
           <div className="pr-10">
-            <div className="text-[11px] font-bold uppercase tracking-wider text-[#00B8C7] mb-1 flex items-center gap-1.5">
+            <div className="text-base font-bold uppercase tracking-wider text-[#00B8C7] mb-1 flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-[#00B8C7] animate-pulse"></span>
               <span>Accra Pac &bull; OEM &amp; Contract Manufacturing</span>
             </div>

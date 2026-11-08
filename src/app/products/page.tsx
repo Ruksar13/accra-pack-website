@@ -185,7 +185,7 @@ export default function ProductsPage() {
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute top-3 left-3">
-                      <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-slate-950/80 backdrop-blur-md text-[#00B8C7] border border-slate-700">
+                      <span className="px-2.5 py-1 rounded-full text-base font-bold bg-slate-950/80 backdrop-blur-md text-[#00B8C7] border border-slate-700">
                         {prod.category.split(" ")[0]}
                       </span>
                     </div>
@@ -294,7 +294,7 @@ export default function ProductsPage() {
                         : "bg-slate-50 text-slate-600 hover:bg-slate-100 hover:text-slate-900 border border-slate-200/60"
                     }`}
                   >
-                    <span className={`text-[10px] font-mono font-bold px-1.5 py-0.5 rounded ${
+                    <span className={`text-base font-mono font-bold px-1.5 py-0.5 rounded ${
                       isActive ? "bg-[#f0f6fe]0/20 text-[#00B8C7]" : "bg-slate-200 text-slate-600"
                     }`}>
                       {sector.num}
@@ -333,7 +333,7 @@ export default function ProductsPage() {
                     <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
                       Select Sector
                     </span>
-                    <span className="text-[10px] font-bold text-[#1455A6] bg-[#f0f6fe] px-2 py-0.5 rounded-full border border-blue-100">
+                    <span className="text-base font-bold text-[#1455A6] bg-[#f0f6fe] px-2 py-0.5 rounded-full border border-blue-100">
                       12 Core Lines
                     </span>
                   </div>
@@ -354,7 +354,7 @@ export default function ProductsPage() {
                           }`}
                         >
                           <div className="flex items-center gap-2.5 truncate">
-                            <span className={`text-[10px] font-mono font-bold px-1.5 py-0.5 rounded shrink-0 ${
+                            <span className={`text-base font-mono font-bold px-1.5 py-0.5 rounded shrink-0 ${
                               isCurrent ? "bg-[#f0f6fe]0/30 text-[#00B8C7]" : "bg-slate-200 text-slate-600"
                             }`}>
                               {item.num}
@@ -372,7 +372,7 @@ export default function ProductsPage() {
                     })}
                   </div>
 
-                  <div className="pt-3 border-t border-slate-100 text-[11px] text-slate-500 space-y-1">
+                  <div className="pt-3 border-t border-slate-100 text-base text-slate-500 space-y-1">
                     <p className="font-semibold text-slate-700">Custom Category Requirements?</p>
                     <p>Our Vapi analytical lab formulates custom actives to your specification.</p>
                     <button
@@ -402,10 +402,10 @@ export default function ProductsPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent flex flex-col justify-end p-6 sm:p-8">
                       <div className="space-y-2">
                         <div className="flex items-center gap-2 flex-wrap">
-                          <span className="px-3 py-1 rounded-full text-[10px] font-bold bg-[#1455A6] text-slate-950 uppercase tracking-wider">
+                          <span className="px-3 py-1 rounded-full text-base font-bold bg-[#1455A6] text-white uppercase tracking-wider">
                             Sector {activeSectorMeta.num} of 12
                           </span>
-                          <span className="px-3 py-1 rounded-full text-[10px] font-bold bg-slate-900/90 text-[#00B8C7] border border-[#1455A6]/30 backdrop-blur-md">
+                          <span className="px-3 py-1 rounded-full text-base font-bold bg-slate-900/90 text-[#00B8C7] border border-[#1455A6]/30 backdrop-blur-md">
                             {activeCategory.tagline}
                           </span>
                         </div>
@@ -440,7 +440,7 @@ export default function ProductsPage() {
                           <Layers className="w-3.5 h-3.5 text-[#1455A6]" />
                           Validated Commercial Formulations
                         </h3>
-                        <span className="text-[11px] font-medium text-slate-400">
+                        <span className="text-base font-medium text-slate-400">
                           {activeCategory.popularProducts.length} Ready Lines
                         </span>
                       </div>
@@ -456,17 +456,17 @@ export default function ProductsPage() {
                                 <h4 className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-[#1455A6] transition-colors">
                                   {prod}
                                 </h4>
-                                <div className="text-[11px] text-slate-500 mt-0.5">
+                                <div className="text-base text-slate-500 mt-0.5">
                                   Standard &amp; Custom Actives &bull; Stable Shelf-Life
                                 </div>
                               </div>
-                              <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-[#f0f6fe] text-[#1455A6] border border-blue-200 shrink-0">
+                              <span className="px-2 py-0.5 rounded text-base font-bold bg-[#f0f6fe] text-[#1455A6] border border-blue-200 shrink-0">
                                 Ready
                               </span>
                             </div>
 
                             <div className="pt-2 border-t border-slate-200/60 flex items-center justify-between text-xs">
-                              <span className="text-[11px] text-slate-400">Rapid 7-Day Lab Sample</span>
+                              <span className="text-base text-slate-400">Rapid 7-Day Lab Sample</span>
                               <button
                                 onClick={() => handleOpenQuote(`${activeCategory.name} - ${prod}`)}
                                 className="font-bold text-[#1455A6] group-hover:text-[#0b182f] hover:underline flex items-center gap-1"
@@ -514,12 +514,12 @@ export default function ProductsPage() {
                     {/* Compliance & Certifications */}
                     <div className="p-4 rounded-2xl bg-slate-900 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                       <div className="space-y-1">
-                        <span className="text-[10px] font-bold uppercase tracking-wider text-[#00B8C7]">
+                        <span className="text-base font-bold uppercase tracking-wider text-[#00B8C7]">
                           Quality Assurance Standards
                         </span>
                         <div className="flex flex-wrap gap-1.5">
                           {activeCategory.compliance.map((c) => (
-                            <span key={c} className="px-2.5 py-0.5 rounded-md bg-slate-800 text-teal-200 border border-slate-700 text-[11px] font-medium">
+                            <span key={c} className="px-2.5 py-0.5 rounded-md bg-slate-800 text-teal-200 border border-slate-700 text-base font-medium">
                               {c}
                             </span>
                           ))}
@@ -564,7 +564,7 @@ export default function ProductsPage() {
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-between p-5">
                             <div className="flex items-center justify-between">
-                              <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#1455A6] text-slate-950 uppercase tracking-wider">
+                              <span className="px-2.5 py-1 rounded-full text-base font-bold bg-[#1455A6] text-white uppercase tracking-wider">
                                 Sector {sectorMeta.num}
                               </span>
                               <div className="p-1.5 rounded-full bg-slate-900/80 backdrop-blur-md text-[#00B8C7]">
@@ -572,7 +572,7 @@ export default function ProductsPage() {
                               </div>
                             </div>
                             <div>
-                              <span className="text-[10px] font-bold text-[#00B8C7] uppercase tracking-wider block">
+                              <span className="text-base font-bold text-[#00B8C7] uppercase tracking-wider block">
                                 {category.tagline}
                               </span>
                               <h3 className="text-xl font-bold text-white mt-0.5">
@@ -590,14 +590,14 @@ export default function ProductsPage() {
 
                           {/* Popular Products Tags */}
                           <div className="space-y-1.5">
-                            <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
+                            <span className="text-base font-bold text-slate-400 uppercase tracking-wider block">
                               Key Formulations:
                             </span>
                             <div className="flex flex-wrap gap-1.5">
                               {category.popularProducts.map((p) => (
                                 <span 
                                   key={p} 
-                                  className="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-800 text-[11px] font-semibold border border-slate-200/60"
+                                  className="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-800 text-base font-semibold border border-slate-200/60"
                                 >
                                   {p}
                                 </span>

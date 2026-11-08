@@ -125,7 +125,7 @@ export default function QualityCompliancePage() {
                   <span>EcoVadis registered</span>
                 </li>
               </ul>
-              <div className="pt-4 text-[11px] text-slate-400 italic">
+              <div className="pt-4 text-base text-slate-400 italic">
                 [Certification logos and downloadable certificates, subject to client approval.]
               </div>
             </div>

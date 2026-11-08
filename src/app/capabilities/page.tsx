@@ -58,25 +58,25 @@ export default function CapabilitiesPage() {
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 text-center space-y-1 hover-lift">
               <div className="text-3xl sm:text-4xl font-extrabold text-[#1455A6]">120M+</div>
               <div className="text-xs font-bold text-slate-800 uppercase tracking-wider">Annual Units Capacity</div>
-              <div className="text-[11px] text-slate-500">Scalable from pilot runs to multi-million commercial orders</div>
+              <div className="text-base text-slate-500">Scalable from pilot runs to multi-million commercial orders</div>
             </div>
 
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 text-center space-y-1 hover-lift">
               <div className="text-3xl sm:text-4xl font-extrabold text-cyan-700">5 Lines</div>
               <div className="text-xs font-bold text-slate-800 uppercase tracking-wider">Aerosol Filling</div>
-              <div className="text-[11px] text-slate-500">Hydrocarbon, BOV &amp; Compressed Gas systems</div>
+              <div className="text-base text-slate-500">Hydrocarbon, BOV &amp; Compressed Gas systems</div>
             </div>
 
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 text-center space-y-1 hover-lift">
               <div className="text-3xl sm:text-4xl font-extrabold text-slate-900">6 Lines</div>
               <div className="text-xs font-bold text-slate-800 uppercase tracking-wider">Liquid &amp; Roll-On Filling</div>
-              <div className="text-[11px] text-slate-500">Precision dosing from 2 ml up to 5 Liters</div>
+              <div className="text-base text-slate-500">Precision dosing from 2 ml up to 5 Liters</div>
             </div>
 
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 text-center space-y-1 hover-lift">
               <div className="text-3xl sm:text-4xl font-extrabold text-[#1455A6]">6 Chambers</div>
               <div className="text-xs font-bold text-slate-800 uppercase tracking-wider">Flame-Proof Stability</div>
-              <div className="text-[11px] text-slate-500">Real-time &amp; accelerated shelf-life validation</div>
+              <div className="text-base text-slate-500">Real-time &amp; accelerated shelf-life validation</div>
             </div>
           </div>
         </div>
@@ -107,7 +107,7 @@ export default function CapabilitiesPage() {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-bold text-[#00B8C7]">
+                <div className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md px-3 py-1 rounded-full text-base font-bold text-[#00B8C7]">
                   5 Automated Lines
                 </div>
               </div>
@@ -156,7 +156,7 @@ export default function CapabilitiesPage() {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-bold text-[#00B8C7]">
+                <div className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md px-3 py-1 rounded-full text-base font-bold text-[#00B8C7]">
                   Separation Technology
                 </div>
               </div>
@@ -205,7 +205,7 @@ export default function CapabilitiesPage() {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-bold text-emerald-300">
+                <div className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md px-3 py-1 rounded-full text-base font-bold text-emerald-300">
                   6 Liquid Lines
                 </div>
               </div>

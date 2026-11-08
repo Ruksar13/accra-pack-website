@@ -127,7 +127,7 @@ export default function InsightsPage() {
                 </div>
 
                 <div className="pt-4 border-t border-slate-100 space-y-2">
-                  <div className="text-[11px] text-slate-500 line-clamp-2 italic">
+                  <div className="text-base text-slate-500 line-clamp-2 italic">
                     <strong>Key Takeaway:</strong> {article.takeaway}
                   </div>
                   <div className="text-xs font-bold text-[#1455A6] group-hover:text-[#1455A6] flex items-center justify-between pt-1">

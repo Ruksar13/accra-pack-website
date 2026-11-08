@@ -433,13 +433,13 @@ export default function WorldMap() {
                 <h4 className="text-sm sm:text-base font-extrabold text-white flex items-center gap-2">
                   <span>{activeDestination.name}</span>
                 </h4>
-                <span className="text-[10px] font-semibold text-[#00B8C7] uppercase tracking-wider">
+                <span className="text-base font-semibold text-[#00B8C7] uppercase tracking-wider">
                   {activeDestination.region} Trade Corridor
                 </span>
               </div>
             </div>
 
-            <span className="text-[11px] font-semibold text-slate-300 bg-slate-800 px-2.5 py-1 rounded-full border border-slate-700 flex items-center gap-1">
+            <span className="text-base font-semibold text-slate-300 bg-slate-800 px-2.5 py-1 rounded-full border border-slate-700 flex items-center gap-1">
               <Ship className="w-3 h-3 text-[#00B8C7]" />
               <span>{activeDestination.transitMode}</span>
             </span>
@@ -450,13 +450,13 @@ export default function WorldMap() {
               <span className="text-[#A6A9AD] font-semibold">Flagship Exports:</span>{" "}
               <strong className="text-teal-300 font-medium">{activeDestination.categories}</strong>
             </div>
-            <div className="text-[11px] text-slate-400">
+            <div className="text-base text-slate-400">
               <span className="text-slate-500 font-semibold">Compliance:</span>{" "}
               <span dangerouslySetInnerHTML={{ __html: activeDestination.compliance }} />
             </div>
           </div>
 
-          <div className="pt-1 flex items-center justify-between text-[11px] text-slate-400 border-t border-slate-800/80">
+          <div className="pt-1 flex items-center justify-between text-base text-slate-400 border-t border-slate-800/80">
             <span>Direct dispatch from Vapi via Mumbai JNPT</span>
             <span className="text-teal-400 font-bold flex items-center gap-1">
               Active Trade Lane <ArrowRight className="w-3 h-3" />

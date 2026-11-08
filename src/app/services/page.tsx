@@ -233,7 +233,7 @@ export default function ServicesPage() {
                       "9. QA Testing",
                       "10. Export Dispatch"
                     ].map((step, idx) => (
-                      <div key={idx} className="p-2.5 rounded-xl bg-[#f0f6fe] border border-blue-100 text-[11px] font-semibold text-[#0b182f]">
+                      <div key={idx} className="p-2.5 rounded-xl bg-[#f0f6fe] border border-blue-100 text-base font-semibold text-[#0b182f]">
                         {step}
                       </div>
                     ))}
@@ -307,7 +307,7 @@ export default function ServicesPage() {
                       "9. Scale Production",
                       "10. QA & Dispatch"
                     ].map((step, idx) => (
-                      <div key={idx} className="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-[11px] font-semibold text-slate-800">
+                      <div key={idx} className="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-base font-semibold text-slate-800">
                         {step}
                       </div>
                     ))}

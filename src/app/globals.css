@@ -17,29 +17,30 @@
   --color-aqua: #00B8C7;
 }
 
+html {
+  font-size: 16px !important;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-sans);
   color: rgb(var(--foreground-rgb));
   background: #ffffff;
-  font-size: 16px;
+  font-size: 16px !important;
   line-height: 1.6;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Ensure clean logo-matched typography rendering */
+/* Enforce minimum 16px across all text elements site-wide (desktop & mobile) */
+p, span, a, button, input, select, textarea, label, li, td, th {
+  font-size: max(16px, 1rem);
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-sans);
   letter-spacing: -0.02em;
-}
-
-p {
-  line-height: 1.65;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 /* Custom subtle scrollbar with Royal Blue & Silver styling */

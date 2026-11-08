@@ -163,7 +163,7 @@ export default function Navbar() {
                       onMouseLeave={() => setSolutionsDropdown(false)}
                     >
                       <button
-                        className={`flex items-center gap-1.5 px-3.5 py-2 text-sm xl:text-[15px] font-bold tracking-wide whitespace-nowrap rounded-lg transition-colors ${
+                        className={`flex items-center gap-1.5 px-3.5 py-2 text-base font-bold tracking-wide whitespace-nowrap rounded-lg transition-colors ${
                           isSolutionsActive
                             ? "text-[#1455A6] bg-[#f0f6fe] font-extrabold" 
                             : "text-slate-800 hover:text-[#1455A6] hover:bg-slate-50"
@@ -225,7 +225,7 @@ export default function Navbar() {
                   <Link
                     key={link.label}
                     href={link.href!}
-                    className={`px-3.5 py-2 text-sm xl:text-[15px] font-bold tracking-wide whitespace-nowrap rounded-lg transition-colors ${
+                    className={`px-3.5 py-2 text-base font-bold tracking-wide whitespace-nowrap rounded-lg transition-colors ${
                       isActive 
                         ? "text-[#1455A6] bg-[#f0f6fe] font-extrabold border-b-2 border-[#1455A6]" 
                         : "text-slate-800 hover:text-[#1455A6] hover:bg-slate-50"

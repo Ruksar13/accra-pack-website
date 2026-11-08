@@ -73,6 +73,18 @@ const config: Config = {
           "sans-serif"
         ],
       },
+      fontSize: {
+        xs: ["16px", { lineHeight: "24px" }],
+        sm: ["16px", { lineHeight: "24px" }],
+        base: ["16px", { lineHeight: "26px" }],
+        lg: ["18px", { lineHeight: "28px" }],
+        xl: ["20px", { lineHeight: "30px" }],
+        "2xl": ["24px", { lineHeight: "32px" }],
+        "3xl": ["30px", { lineHeight: "38px" }],
+        "4xl": ["36px", { lineHeight: "44px" }],
+        "5xl": ["48px", { lineHeight: "1.15" }],
+        "6xl": ["60px", { lineHeight: "1.1" }],
+      },
     },
   },
   plugins: [],
