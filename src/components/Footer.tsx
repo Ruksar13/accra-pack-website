@@ -1,14 +1,14 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  ShieldCheck, 
-  ArrowUpRight, 
-  Factory, 
-  Building2, 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  ShieldCheck,
+  ArrowUpRight,
+  Factory,
+  Building2,
   Globe2,
   Briefcase
 } from "lucide-react";
@@ -56,8 +56,8 @@ export default function Footer() {
             </Link>
 
             <p className="text-sm sm:text-base text-slate-300 max-w-sm leading-relaxed">
-              India&apos;s pioneering contract manufacturer for aerosols and liquids. 
-              Delivering high-precision OEM, private label, and CDMO solutions 
+              India&apos;s pioneering contract manufacturer for aerosols and liquids.
+              Delivering high-precision OEM, private label, and CDMO solutions
               for world-class healthcare, personal care, and industrial brands.
             </p>
 
@@ -211,8 +211,8 @@ export default function Footer() {
 
               <div className="pt-2 border-t border-slate-800">
                 <div className="text-white font-bold">Business Inquiries:</div>
-                <div className="text-[#00B8C7] font-bold mt-0.5">Mr. Sahil Shah &bull; +91 98251 49522</div>
-                <div className="text-slate-300">sahil.shah@accrapacindia.com</div>
+                <div className="text-[#00B8C7] font-bold mt-0.5">Mr. Samir Shah &bull; +91 98251 49522</div>
+                <div className="text-slate-300">sales@accrapacindia.com</div>
               </div>
             </div>
           </div>
@@ -223,7 +223,7 @@ export default function Footer() {
       <div className="border-t border-slate-900 py-6 px-4 text-xs sm:text-sm text-slate-400">
         <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
           <p>
-            &copy; {new Date().getFullYear()} Accra Pac India Pvt. Ltd. All rights reserved. 
+            &copy; {new Date().getFullYear()} Accra Pac India Pvt. Ltd. All rights reserved.
             Legacy of aerosol manufacturing excellence since 1979.
           </p>
           <div className="flex items-center gap-6 font-medium">

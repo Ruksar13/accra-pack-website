@@ -2,15 +2,15 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Factory, 
-  Building2, 
-  Globe2, 
-  Send, 
-  CheckCircle2, 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Factory,
+  Building2,
+  Globe2,
+  Send,
+  CheckCircle2,
   UserCheck
 } from "lucide-react";
 
@@ -95,25 +95,25 @@ export default function ContactPage() {
                 For Business Enquiries
               </div>
               <div className="text-sm font-extrabold">
-                Mr. Sahil Shah
+                Mr. Samir Shah
               </div>
             </div>
           </div>
 
           <div className="flex items-center gap-4 text-xs font-semibold">
-            <a 
+            <a
               href="tel:+919825149522"
               className="flex items-center gap-1.5 bg-[#0f4487]/80 hover:bg-[#1455A6] px-4 py-2 rounded-lg transition-colors hover-lift"
             >
               <Phone className="w-3.5 h-3.5 text-[#00B8C7]" />
               <span>+91 98251 49522</span>
             </a>
-            <a 
-              href="mailto:sahil.shah@accrapacindia.com"
+            <a
+              href="mailto:samir.shah@accrapacindia.com"
               className="flex items-center gap-1.5 bg-white text-slate-900 hover:bg-slate-100 px-4 py-2 rounded-lg transition-colors hover-lift shadow-sm"
             >
               <Mail className="w-3.5 h-3.5 text-[#1455A6]" />
-              <span>sahil.shah@accrapacindia.com</span>
+              <span>samir.shah@accrapacindia.com</span>
             </a>
           </div>
         </div>
