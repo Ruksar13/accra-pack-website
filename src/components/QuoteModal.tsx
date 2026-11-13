@@ -33,12 +33,35 @@ export default function QuoteModal({ isOpen, onClose, preselectedCategory }: Quo
     notes: ""
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setSubmitting(true);
+
+    try {
+      await fetch("/api/inquiries", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          company: formData.company,
+          email: formData.email,
+          phone: formData.phone,
+          country: formData.country,
+          service: `${format} (${formulationType}, Volume: ${volume})`,
+          message: formData.notes,
+          formType: "Accra Pack Quote Modal",
+        }),
+      });
+    } catch (err) {
+      console.error("Quote submit error:", err);
+    } finally {
+      setSubmitting(false);
+      setIsSubmitted(true);
+    }
   };
 
   const handleReset = () => {

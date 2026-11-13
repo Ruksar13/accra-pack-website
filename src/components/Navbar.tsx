@@ -107,7 +107,7 @@ export default function Navbar() {
               <div className="relative h-14 sm:h-16 w-52 sm:w-64 xl:w-72 shrink-0">
                 <Image
                   src="/accra-pac-logo.png"
-                  alt="Accra Pac - Highest Quality Aerosol Filler"
+                  alt="Accra Pac - Aerosol Manufacturing Experts Since 1979"
                   fill
                   sizes="(max-width: 640px) 208px, (max-width: 1280px) 256px, 288px"
                   className="object-contain object-left transition-transform duration-300 group-hover:scale-[1.02]"

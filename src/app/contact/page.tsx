@@ -16,6 +16,8 @@ import {
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const [form, setForm] = useState({
     name: "",
     company: "",
@@ -26,9 +28,39 @@ export default function ContactPage() {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setErrorMessage("");
+
+    try {
+      const res = await fetch("/api/inquiries", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          company: form.company,
+          email: form.email,
+          phone: form.phone,
+          country: form.country,
+          enquiryType: form.enquiryType,
+          message: form.message,
+          formType: "Contact Us Page",
+        }),
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        const data = await res.json().catch(() => null);
+        setErrorMessage(data?.error || "Failed to submit enquiry. Please try again.");
+      }
+    } catch (err) {
+      console.error("Submission error:", err);
+      setSubmitted(true);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -286,9 +318,10 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full py-3.5 rounded-xl bg-teal-700 hover:bg-teal-800 text-white font-bold text-xs shadow-md transition-all flex items-center justify-center gap-2"
+                    disabled={submitting}
+                    className="w-full py-3.5 rounded-xl bg-teal-700 hover:bg-teal-800 disabled:opacity-50 text-white font-bold text-xs shadow-md transition-all flex items-center justify-center gap-2"
                   >
-                    <span>Send Enquiry</span>
+                    <span>{submitting ? "Sending Enquiry..." : "Send Enquiry"}</span>
                     <Send className="w-4 h-4" />
                   </button>
                 </form>

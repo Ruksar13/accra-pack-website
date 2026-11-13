@@ -48,7 +48,7 @@ export default function Footer() {
               <div className="relative h-14 sm:h-16 w-56 sm:w-64">
                 <Image
                   src="/accra-pac-logo-white.png"
-                  alt="Accra Pac India - Highest Quality Aerosol Filler"
+                  alt="Accra Pac India - Aerosol Manufacturing Experts Since 1979"
                   fill
                   className="object-contain object-left transition-transform duration-300 group-hover:scale-[1.02]"
                 />
