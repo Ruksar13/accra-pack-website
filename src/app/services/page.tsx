@@ -35,7 +35,7 @@ export default function ServicesPage() {
       <section className="bg-slate-950 text-white py-16 sm:py-20 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
-            <span className="text-xs font-semibold uppercase tracking-wider text-teal-400">
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#00B8C7]">
               Turnkey Engagement Models
             </span>
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
@@ -56,11 +56,11 @@ export default function ServicesPage() {
               onClick={() => setActiveTab("contract-mfg")}
               className={`p-4 rounded-xl text-left border transition-all ${
                 activeTab === "contract-mfg"
-                  ? "border-teal-600 bg-teal-50/80 ring-1 ring-teal-600 text-teal-950"
+                  ? "border-[#1455A6] bg-[#f0f6fe]/80 ring-1 ring-[#1455A6] text-teal-950"
                   : "border-slate-200 hover:border-slate-300 bg-slate-50 text-slate-700"
               }`}
             >
-              <div className="text-xs font-bold uppercase tracking-wider text-teal-700">Model 01</div>
+              <div className="text-xs font-bold uppercase tracking-wider text-[#1455A6]">Model 01</div>
               <div className="text-base font-extrabold text-slate-900 mt-0.5">Contract Manufacturing</div>
               <div className="text-xs text-slate-500 mt-1">Your formulation, our high-speed lines</div>
             </button>
@@ -69,11 +69,11 @@ export default function ServicesPage() {
               onClick={() => setActiveTab("oem-private-label")}
               className={`p-4 rounded-xl text-left border transition-all ${
                 activeTab === "oem-private-label"
-                  ? "border-teal-600 bg-teal-50/80 ring-1 ring-teal-600 text-teal-950"
+                  ? "border-[#1455A6] bg-[#f0f6fe]/80 ring-1 ring-[#1455A6] text-teal-950"
                   : "border-slate-200 hover:border-slate-300 bg-slate-50 text-slate-700"
               }`}
             >
-              <div className="text-xs font-bold uppercase tracking-wider text-teal-700">Model 02</div>
+              <div className="text-xs font-bold uppercase tracking-wider text-[#1455A6]">Model 02</div>
               <div className="text-base font-extrabold text-slate-900 mt-0.5">OEM &amp; Private Label</div>
               <div className="text-xs text-slate-500 mt-1">500+ ready formulations &amp; turnkey launch</div>
             </button>
@@ -82,11 +82,11 @@ export default function ServicesPage() {
               onClick={() => setActiveTab("cdmo")}
               className={`p-4 rounded-xl text-left border transition-all ${
                 activeTab === "cdmo"
-                  ? "border-teal-600 bg-teal-50/80 ring-1 ring-teal-600 text-teal-950"
+                  ? "border-[#1455A6] bg-[#f0f6fe]/80 ring-1 ring-[#1455A6] text-teal-950"
                   : "border-slate-200 hover:border-slate-300 bg-slate-50 text-slate-700"
               }`}
             >
-              <div className="text-xs font-bold uppercase tracking-wider text-teal-700">Model 03</div>
+              <div className="text-xs font-bold uppercase tracking-wider text-[#1455A6]">Model 03</div>
               <div className="text-base font-extrabold text-slate-900 mt-0.5">CDMO &amp; Custom R&amp;D</div>
               <div className="text-xs text-slate-500 mt-1">End-to-end development &amp; stability</div>
             </button>
@@ -103,7 +103,7 @@ export default function ServicesPage() {
               <div className="bg-white p-8 sm:p-12 rounded-2xl border border-slate-200 shadow-sm space-y-8">
                 <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 pb-6 border-b border-slate-100">
                   <div className="space-y-2">
-                    <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-50 px-3 py-1 rounded-full">
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#1455A6] bg-[#f0f6fe] px-3 py-1 rounded-full">
                       Contract Manufacturing
                     </span>
                     <h2 className="text-3xl font-extrabold text-slate-900">
@@ -115,7 +115,7 @@ export default function ServicesPage() {
                   </div>
                   <button
                     onClick={() => handleOpenQuote("Contract Manufacturing")}
-                    className="shrink-0 px-6 py-3 rounded-xl bg-slate-900 hover:bg-teal-700 text-white font-semibold text-xs transition-all shadow hover-lift"
+                    className="shrink-0 px-6 py-3 rounded-xl bg-slate-900 hover:bg-[#1455A6] text-white font-semibold text-xs transition-all shadow hover-lift"
                   >
                     Initiate Tech Transfer
                   </button>
@@ -175,7 +175,7 @@ export default function ServicesPage() {
               <div className="bg-white p-8 sm:p-12 rounded-2xl border border-slate-200 shadow-sm space-y-8">
                 <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 pb-6 border-b border-slate-100">
                   <div className="space-y-2">
-                    <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-50 px-3 py-1 rounded-full">
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#1455A6] bg-[#f0f6fe] px-3 py-1 rounded-full">
                       Turnkey OEM &amp; Private Label
                     </span>
                     <h2 className="text-3xl font-extrabold text-slate-900">
@@ -187,7 +187,7 @@ export default function ServicesPage() {
                   </div>
                   <button
                     onClick={() => handleOpenQuote("OEM & Private Label")}
-                    className="shrink-0 px-6 py-3 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-xs transition-all shadow"
+                    className="shrink-0 px-6 py-3 rounded-xl bg-[#1455A6] hover:bg-[#1455A6] text-white font-semibold text-xs transition-all shadow"
                   >
                     Explore Ready Formulations
                   </button>
@@ -233,7 +233,7 @@ export default function ServicesPage() {
                       "9. QA Testing",
                       "10. Export Dispatch"
                     ].map((step, idx) => (
-                      <div key={idx} className="p-2.5 rounded-xl bg-teal-50 border border-teal-100 text-[11px] font-semibold text-teal-900">
+                      <div key={idx} className="p-2.5 rounded-xl bg-[#f0f6fe] border border-blue-100 text-base font-semibold text-[#0b182f]">
                         {step}
                       </div>
                     ))}
@@ -249,7 +249,7 @@ export default function ServicesPage() {
               <div className="bg-white p-8 sm:p-12 rounded-2xl border border-slate-200 shadow-sm space-y-8">
                 <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 pb-6 border-b border-slate-100">
                   <div className="space-y-2">
-                    <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-50 px-3 py-1 rounded-full">
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#1455A6] bg-[#f0f6fe] px-3 py-1 rounded-full">
                       CDMO &amp; Custom R&amp;D
                     </span>
                     <h2 className="text-3xl font-extrabold text-slate-900">
@@ -261,7 +261,7 @@ export default function ServicesPage() {
                   </div>
                   <button
                     onClick={() => handleOpenQuote("CDMO Custom R&D")}
-                    className="shrink-0 px-6 py-3 rounded-xl bg-slate-900 hover:bg-teal-700 text-white font-semibold text-xs transition-all shadow"
+                    className="shrink-0 px-6 py-3 rounded-xl bg-slate-900 hover:bg-[#1455A6] text-white font-semibold text-xs transition-all shadow"
                   >
                     Schedule R&amp;D Consultation
                   </button>
@@ -307,7 +307,7 @@ export default function ServicesPage() {
                       "9. Scale Production",
                       "10. QA & Dispatch"
                     ].map((step, idx) => (
-                      <div key={idx} className="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-[11px] font-semibold text-slate-800">
+                      <div key={idx} className="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-base font-semibold text-slate-800">
                         {step}
                       </div>
                     ))}
@@ -323,7 +323,7 @@ export default function ServicesPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-50 px-3 py-1 rounded-full">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#1455A6] bg-[#f0f6fe] px-3 py-1 rounded-full">
               Side-By-Side Comparison
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
@@ -337,7 +337,7 @@ export default function ServicesPage() {
                 <tr className="bg-slate-900 text-white">
                   <th className="p-4 font-bold border-b border-slate-800">Dimension</th>
                   <th className="p-4 font-bold border-b border-slate-800">Contract Manufacturing</th>
-                  <th className="p-4 font-bold border-b border-slate-800 text-teal-300">OEM &amp; Private Label</th>
+                  <th className="p-4 font-bold border-b border-slate-800 text-[#00B8C7]">OEM &amp; Private Label</th>
                   <th className="p-4 font-bold border-b border-slate-800">CDMO &amp; Custom R&amp;D</th>
                 </tr>
               </thead>
@@ -345,31 +345,31 @@ export default function ServicesPage() {
                 <tr className="hover:bg-slate-50">
                   <td className="p-4 font-bold text-slate-900 bg-slate-50/50">Formulation Ownership</td>
                   <td className="p-4">Client owns 100% of formula</td>
-                  <td className="p-4 text-teal-800 font-medium">Licensed from Accra Pac library</td>
+                  <td className="p-4 text-[#1455A6] font-medium">Licensed from Accra Pac library</td>
                   <td className="p-4">Custom developed for client</td>
                 </tr>
                 <tr className="hover:bg-slate-50">
                   <td className="p-4 font-bold text-slate-900 bg-slate-50/50">Speed to Market</td>
                   <td className="p-4">4 – 6 Weeks (after tech transfer)</td>
-                  <td className="p-4 text-teal-800 font-bold">Fastest (pre-tested formulas)</td>
+                  <td className="p-4 text-[#1455A6] font-bold">Fastest (pre-tested formulas)</td>
                   <td className="p-4">3 – 6 Months (includes stability)</td>
                 </tr>
                 <tr className="hover:bg-slate-50">
                   <td className="p-4 font-bold text-slate-900 bg-slate-50/50">R&amp;D Testing Scope</td>
                   <td className="p-4">Process verification &amp; inline QC</td>
-                  <td className="p-4 text-teal-800 font-medium">Pre-validated stability data</td>
+                  <td className="p-4 text-[#1455A6] font-medium">Pre-validated stability data</td>
                   <td className="p-4 font-medium">Full GC/HPLC &amp; 6-chamber stability</td>
                 </tr>
                 <tr className="hover:bg-slate-50">
                   <td className="p-4 font-bold text-slate-900 bg-slate-50/50">Packaging Support</td>
                   <td className="p-4">Client specs or sourced by us</td>
-                  <td className="p-4 text-teal-800 font-medium">Turnkey curation &amp; artwork support</td>
+                  <td className="p-4 text-[#1455A6] font-medium">Turnkey curation &amp; artwork support</td>
                   <td className="p-4">Custom valve &amp; pouch engineering</td>
                 </tr>
                 <tr className="hover:bg-slate-50">
                   <td className="p-4 font-bold text-slate-900 bg-slate-50/50">Best Suited For</td>
                   <td className="p-4">Established FMCG &amp; Pharma brands</td>
-                  <td className="p-4 text-teal-800 font-medium">Retailers, Private Labels &amp; Startups</td>
+                  <td className="p-4 text-[#1455A6] font-medium">Retailers, Private Labels &amp; Startups</td>
                   <td className="p-4">Novel therapeutics &amp; innovative concepts</td>
                 </tr>
               </tbody>
@@ -390,7 +390,7 @@ export default function ServicesPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={() => handleOpenQuote("Engagement Model Review")}
-              className="px-6 py-3 rounded-xl bg-teal-400 hover:bg-teal-300 text-slate-950 font-bold text-xs transition-colors shadow"
+              className="px-6 py-3 rounded-xl bg-[#1455A6] hover:bg-[#0f4487] text-slate-950 font-bold text-xs transition-colors shadow"
             >
               Request a Technical Feasibility Review
             </button>
@@ -412,4 +412,5 @@ export default function ServicesPage() {
     </div>
   );
 }
+
 

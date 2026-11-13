@@ -332,9 +332,9 @@ export default function WorldMap() {
                   <path
                     d={pathD}
                     fill="none"
-                    stroke={isSelected ? "#2dd4bf" : "#38bdf8"}
+                    stroke={isSelected ? "#00B8C7" : "#1455A6"}
                     strokeWidth={isSelected ? "2.5" : "1"}
-                    strokeOpacity={isSelected ? "0.9" : "0.25"}
+                    strokeOpacity={isSelected ? "0.95" : "0.35"}
                     strokeDasharray={isSelected ? "6 4" : "4 4"}
                     className={isSelected ? "animate-pulse" : ""}
                     filter={isSelected ? "url(#glowEffect)" : undefined}
@@ -342,7 +342,7 @@ export default function WorldMap() {
 
                   {/* Animated flow particle dot on active route */}
                   {isSelected && (
-                    <circle r="3.5" fill="#5eead4" filter="url(#glowEffect)">
+                    <circle r="3.5" fill="#00B8C7" filter="url(#glowEffect)">
                       <animateMotion path={pathD} dur="2.2s" repeatCount="indefinite" />
                     </circle>
                   )}
@@ -355,13 +355,13 @@ export default function WorldMap() {
           <g className="cursor-pointer">
             {/* Outer radar pulse rings */}
             <circle cx={ORIGIN_INDIA.x} cy={ORIGIN_INDIA.y} r="18" fill="url(#originGlow)" opacity="0.6" className="animate-ping" />
-            <circle cx={ORIGIN_INDIA.x} cy={ORIGIN_INDIA.y} r="10" fill="#0d9488" opacity="0.3" />
-            <circle cx={ORIGIN_INDIA.x} cy={ORIGIN_INDIA.y} r="5.5" fill="#14b8a6" stroke="#ffffff" strokeWidth="1.5" />
+            <circle cx={ORIGIN_INDIA.x} cy={ORIGIN_INDIA.y} r="10" fill="#1455A6" opacity="0.4" />
+            <circle cx={ORIGIN_INDIA.x} cy={ORIGIN_INDIA.y} r="5.5" fill="#00B8C7" stroke="#ffffff" strokeWidth="1.5" />
             
             {/* Origin Label Tag */}
             <g transform={`translate(${ORIGIN_INDIA.x + 8}, ${ORIGIN_INDIA.y - 12})`}>
-              <rect x="-4" y="-12" width="134" height="20" rx="5" fill="#022c22" stroke="#14b8a6" strokeWidth="1" opacity="0.95" />
-              <text x="3" y="1" fill="#5eead4" fontSize="9.5" fontWeight="bold" fontFamily="sans-serif">
+              <rect x="-4" y="-12" width="134" height="20" rx="5" fill="#0b182f" stroke="#00B8C7" strokeWidth="1" opacity="0.95" />
+              <text x="3" y="1" fill="#00B8C7" fontSize="9.5" fontWeight="bold" fontFamily="sans-serif">
                 ★ Accra Pac Plant (Vapi)
               </text>
             </g>
@@ -380,7 +380,7 @@ export default function WorldMap() {
               >
                 {/* Active radar ring */}
                 {isSelected && (
-                  <circle cx={dest.x} cy={dest.y} r="14" fill="#38bdf8" opacity="0.35" className="animate-ping" />
+                  <circle cx={dest.x} cy={dest.y} r="14" fill="#00B8C7" opacity="0.4" className="animate-ping" />
                 )}
 
                 {/* Pin base circle */}
@@ -388,8 +388,8 @@ export default function WorldMap() {
                   cx={dest.x} 
                   cy={dest.y} 
                   r={isSelected ? "6" : "4"} 
-                  fill={isSelected ? "#38bdf8" : "#94a3b8"} 
-                  stroke={isSelected ? "#ffffff" : "#0f172a"} 
+                  fill={isSelected ? "#00B8C7" : "#A6A9AD"} 
+                  stroke={isSelected ? "#ffffff" : "#0b182f"} 
                   strokeWidth={isSelected ? "2" : "1"}
                   className="transition-all duration-150"
                   filter={isSelected ? "url(#glowEffect)" : undefined}
@@ -403,8 +403,8 @@ export default function WorldMap() {
                     width={dest.name.length * 6.2 + 10} 
                     height="16" 
                     rx="4" 
-                    fill={isSelected ? "#0f172a" : "#090d16"} 
-                    stroke={isSelected ? "#38bdf8" : "#334155"} 
+                    fill={isSelected ? "#0b182f" : "#090d16"} 
+                    stroke={isSelected ? "#00B8C7" : "#334155"} 
                     strokeWidth={isSelected ? "1.2" : "0.6"} 
                     opacity={isSelected ? "0.98" : "0.85"}
                   />
@@ -425,7 +425,7 @@ export default function WorldMap() {
         </svg>
 
         {/* Floating Active Country Detail Card (Glassmorphism) */}
-        <div className="absolute bottom-4 left-4 right-4 sm:right-auto sm:max-w-md bg-slate-900/95 backdrop-blur-xl p-4 sm:p-5 rounded-2xl border border-slate-700 shadow-2xl space-y-3 z-10 animate-in fade-in duration-150">
+        <div className="absolute bottom-4 left-4 right-4 sm:right-auto sm:max-w-md bg-[#0b182f]/95 backdrop-blur-xl p-4 sm:p-5 rounded-2xl border border-[#1455A6]/50 shadow-2xl space-y-3 z-10 animate-in fade-in duration-150">
           <div className="flex items-center justify-between border-b border-slate-800 pb-2.5">
             <div className="flex items-center gap-2.5">
               <span className="text-2xl">{activeDestination.flag}</span>
@@ -433,30 +433,30 @@ export default function WorldMap() {
                 <h4 className="text-sm sm:text-base font-extrabold text-white flex items-center gap-2">
                   <span>{activeDestination.name}</span>
                 </h4>
-                <span className="text-[10px] font-semibold text-teal-400 uppercase tracking-wider">
+                <span className="text-base font-semibold text-[#00B8C7] uppercase tracking-wider">
                   {activeDestination.region} Trade Corridor
                 </span>
               </div>
             </div>
 
-            <span className="text-[11px] font-semibold text-slate-300 bg-slate-800 px-2.5 py-1 rounded-full border border-slate-700 flex items-center gap-1">
-              <Ship className="w-3 h-3 text-cyan-400" />
+            <span className="text-base font-semibold text-slate-300 bg-slate-800 px-2.5 py-1 rounded-full border border-slate-700 flex items-center gap-1">
+              <Ship className="w-3 h-3 text-[#00B8C7]" />
               <span>{activeDestination.transitMode}</span>
             </span>
           </div>
 
           <div className="space-y-1.5 text-xs">
             <div className="text-slate-300">
-              <span className="text-slate-500 font-semibold">Flagship Exports:</span>{" "}
+              <span className="text-[#A6A9AD] font-semibold">Flagship Exports:</span>{" "}
               <strong className="text-teal-300 font-medium">{activeDestination.categories}</strong>
             </div>
-            <div className="text-[11px] text-slate-400">
+            <div className="text-base text-slate-400">
               <span className="text-slate-500 font-semibold">Compliance:</span>{" "}
               <span dangerouslySetInnerHTML={{ __html: activeDestination.compliance }} />
             </div>
           </div>
 
-          <div className="pt-1 flex items-center justify-between text-[11px] text-slate-400 border-t border-slate-800/80">
+          <div className="pt-1 flex items-center justify-between text-base text-slate-400 border-t border-slate-800/80">
             <span>Direct dispatch from Vapi via Mumbai JNPT</span>
             <span className="text-teal-400 font-bold flex items-center gap-1">
               Active Trade Lane <ArrowRight className="w-3 h-3" />
